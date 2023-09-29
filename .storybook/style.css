@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: "Inter", sans-serif !important;
+}
+
+/* Sidebar */
+.sidebar-container {
+    background-color: #F8FAFC;
+}
+
+/* Style the Search Input field in Sidebar */
+#storybook-explorer-searchfield {
+    border-radius: 0px !important;
+    background-color: white;
+}

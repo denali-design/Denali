@@ -1,13 +1,11 @@
 // Button.stories.ts
-
-// Replace your-renderer with the renderer you are using (e.g., react, vue3, etc.)
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '../components/atoms/Button';
+import { Button } from '../../../components/atoms/Button';
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: 'Components/Atoms/Button',
+  title: 'Components/Buttons/Button',
   tags: ['autodocs']
 };
 export default meta;
