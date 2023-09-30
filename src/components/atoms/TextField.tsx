@@ -14,6 +14,7 @@ import {
   Label,
   Input
 } from 'react-aria-components';
+import '../../App.css';
 
 /**
  * @typedef {Object} TextFieldProps
@@ -94,7 +95,7 @@ function TextField({
   }, [inputMode]);
 
   return (
-    <AriaTextField className="border-primary py-1.75 focus-within:outline-brand-primary relative flex w-full items-center rounded-lg border bg-white px-2 text-black focus-within:outline focus-within:outline-offset-2">
+    <AriaTextField className="border-primary relative flex w-full items-center rounded-lg border bg-white px-2 py-1.75 text-black focus-within:outline focus-within:outline-offset-2 focus-within:outline-brand-primary">
       {iconSrc && iconAlt && (
         <img
           src={iconSrc}
