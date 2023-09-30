@@ -43,9 +43,9 @@ const logo = `<svg width="548" height="142" viewBox="0 0 548 142" fill="none" xm
 </svg>
 `;
 
-
 export default create({
   base: 'light',
+
   // Colors
   colorPrimary: '#000',
   colorSecondary: '#1E293B',
@@ -76,8 +76,8 @@ export default create({
   inputTextColor: '#000',
   inputBorderRadius: 4,
 
-  // Band 
+  // Brand
   brandTitle: 'Denali',
   brandUrl: '/',
-  brandImage: `data:image/svg+xml;base64,${btoa(logo)}`,
+  brandImage: `data:image/svg+xml;base64,${btoa(logo)}`
 });

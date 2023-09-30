@@ -6,7 +6,7 @@ import { TextField } from '../../components/atoms/TextField';
 
 const meta: Meta<typeof TextField> = {
   component: TextField,
-  title: 'Components/Atoms/TextField',
+  title: 'Components/Forms/TextField',
   tags: ['autodocs'],
   argTypes: {
     inputMode: {

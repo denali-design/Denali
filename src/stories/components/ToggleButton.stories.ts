@@ -6,7 +6,7 @@ import { ToggleButton } from '../../components/atoms/ToggleButton';
 
 const meta: Meta<typeof ToggleButton> = {
   component: ToggleButton,
-  title: 'Components/Atoms/ToggleButton',
+  title: 'Components/Buttons/ToggleButton',
   tags: ['autodocs']
 };
 export default meta;
