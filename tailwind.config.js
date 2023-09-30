@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const getTailwindColors = require('./get-tailwind-colors.mjs');
+const getTailwindCompatibleColors = require('./get-tailwind-colors.mjs');
 
 export default {
   darkMode: 'class',
@@ -11,7 +11,7 @@ export default {
   ],
   theme: {
     extend: {
-      colors: getTailwindColors(),
+      colors: getTailwindCompatibleColors(),
       spacing: {
         1.75: ' 7px'
       }

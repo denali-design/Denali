@@ -15,7 +15,10 @@ import getTailwindColors from '../../../get-tailwind-colors';
  * @returns {string} The title-cased string.
  */
 const toTitleCase = (str) => {
-  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+  return str.replace(
+    /\w\S*/g,
+    (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  );
 };
 
 /**
@@ -38,9 +41,12 @@ export const ColorPaletteStory = () => {
             <ColorItem
               key={status}
               title={toTitleCase(status)}
+              subtitle={groupedColors[status].desc}
               colors={Object.keys(statusColors).reduce((acc, key) => {
-                const kebabKey = `${status}-${key}`.toLowerCase();
-                acc[kebabKey] = statusColors[key];
+                if (key !== 'desc') {
+                  const kebabKey = `${status}-${key}`.toLowerCase();
+                  acc[kebabKey] = statusColors[key];
+                }
                 return acc;
               }, {})}
             />
