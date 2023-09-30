@@ -21,10 +21,10 @@ const button = tv({
     color: {
       default: 'bg-black text-white dark:bg-white dark:text-black',
       primary: 'bg-brand-primary text-white',
-      success: 'bg-success text-white',
-      warning: 'bg-warning text-black',
-      danger: 'bg-danger text-white',
-      info: 'bg-info text-white'
+      success: 'bg-success-base text-white',
+      warning: 'bg-warning-base text-black',
+      danger: 'bg-danger-base text-white',
+      info: 'bg-info-base text-white'
     },
     size: {
       small: 'py-2 px-2',

@@ -89,8 +89,8 @@ export const Heading = memo(
   forwardRef<HTMLHeadingElement, HeadingProps>((props, ref) => {
     const {
       children,
-      level = 2,
-      styleLevel,
+      level = 1,
+      styleLevel = level,
       fontWeight = 'bold',
       className,
       ...domProps
@@ -99,7 +99,7 @@ export const Heading = memo(
     /**
      * Determines the appropriate HTML tag for the heading level.
      */
-    const Element = HeadingTagMap[level] || HeadingTagMap[2]; // Default to 'h2' if the provided level is invalid
+    const Element = HeadingTagMap[level];
 
     /**
      * Determines the applied style level, defaulting to the semantic level.

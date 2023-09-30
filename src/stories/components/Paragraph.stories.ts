@@ -2,7 +2,7 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Paragraph } from '../components/atoms/Paragraph';
+import { Paragraph } from '../../components/atoms/Paragraph';
 
 const meta: Meta<typeof Paragraph> = {
   component: Paragraph,

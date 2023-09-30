@@ -40,10 +40,10 @@ export const paragraph = tv({
     },
     color: {
       black: 'text-black dark:text-white',
-      success: 'bg-success text-white p-2 rounded',
-      warning: 'bg-warning text-black p-2 rounded',
-      danger: 'bg-danger text-white p-2 rounded',
-      info: 'bg-info text-white p-2 rounded'
+      success: 'bg-success-base text-white p-2 rounded',
+      warning: 'bg-warning-base text-black p-2 rounded',
+      danger: 'bg-danger-base text-white p-2 rounded',
+      info: 'bg-info-base text-white p-2 rounded'
     }
   }
 });
