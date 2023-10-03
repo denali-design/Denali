@@ -1,24 +1,24 @@
 import './style.css';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*", },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'centered',
   docs: {
-    toc: true,
+    toc: true
   },
   html: {
     prettier: {
       tabWidth: 4,
       useTabs: false,
-      htmlWhitespaceSensitivity: 'strict',
-    },
+      htmlWhitespaceSensitivity: 'strict'
+    }
   },
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Welcome', 'Getting Started', 'Contributing', 'Principles', 'Design File', 'Styling', 'Components'],
-    },
-  },
+      order: ['Denali', 'Styling', 'Components']
+    }
+  }
 };
 
 export const globalTypes = {
@@ -28,7 +28,7 @@ export const globalTypes = {
     defaultValue: 'light',
     toolbar: {
       icon: 'circlehollow',
-      items: ['light', 'dark'],
-    },
-  },
+      items: ['light', 'dark']
+    }
+  }
 };
