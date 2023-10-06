@@ -8,7 +8,7 @@ import {
 
 const meta: Meta<typeof DescriptionList> = {
   component: DescriptionList,
-  title: 'Components/Description List',
+  title: 'Components/Typography/Description List',
   tags: ['autodocs']
 };
 export default meta;
