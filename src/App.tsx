@@ -1,8 +1,11 @@
 import './App.css';
-import { Button } from './components/atoms/Button';
-import { Heading } from './components/atoms/Heading';
-import { Icon } from './components/icon/Icon';
-import { DescriptionItem, DescriptionList } from './components/DescriptionList';
+import { Button } from './components/forms/Button';
+import { Heading } from './components/typography/Heading';
+import { Icon } from './components/iconography/Icon';
+import {
+  DescriptionItem,
+  DescriptionList
+} from './components/typography/DescriptionList';
 
 function App() {
   return (

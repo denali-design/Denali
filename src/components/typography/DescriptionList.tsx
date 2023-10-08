@@ -14,7 +14,7 @@ import React, {
   Children,
   isValidElement
 } from 'react';
-import '../App.css';
+import '../../App.css';
 
 /** Base styles for the DescriptionList component. */
 const descriptionListStyles = {

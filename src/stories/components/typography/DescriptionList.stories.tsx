@@ -1,23 +1,23 @@
-// DescriptionList.stories.ts
+/**
+ * DescriptionList Stories
+ *
+ * @file   This file defines stories for the DescriptionList component.
+ * @since  x.x.x
+ */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import { Meta } from '@storybook/react';
 import {
   DescriptionItem,
   DescriptionList
-} from '../../components/DescriptionList';
+} from '../../../components/typography/DescriptionList';
 
-const meta: Meta<typeof DescriptionList> = {
+export default {
   component: DescriptionList,
   title: 'Components/Typography/Description List',
   tags: ['autodocs']
-};
-export default meta;
+} as Meta;
 
-DescriptionList.displayName = 'DescriptionList';
-
-type Story = StoryObj<typeof DescriptionList>;
-
-export const UsingArray: Story = {
+export const UsingArray = {
   args: {
     items: [
       {
@@ -34,7 +34,7 @@ export const UsingArray: Story = {
   }
 };
 
-export const UsingChildren: Story = (args) => (
+export const UsingChildren = (args: any) => (
   <DescriptionList {...args}>
     <DescriptionItem
       term="Serif"

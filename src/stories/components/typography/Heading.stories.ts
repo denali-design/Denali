@@ -2,7 +2,7 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Heading } from '../../components/atoms/Heading';
+import { Heading } from '../../../components/typography/Heading';
 
 const meta: Meta<typeof Heading> = {
   component: Heading,
