@@ -2,14 +2,13 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Icon } from '../../components/icon/Icon';
-
+import { Icon } from '../../../components/iconography/Icon';
 
 /** Meta information for the Icon stories. */
 const meta: Meta<typeof Icon> = {
   component: Icon,
-  title: 'Components/Icon',
-  tags: ['autodocs'],
+  title: 'Components/Iconography/Icon',
+  tags: ['autodocs']
 };
 export default meta;
 
@@ -22,7 +21,7 @@ export const Default: Story = {
   args: {
     name: 'icon-control-home',
     size: 'md',
-    color: 'default',
+    color: 'default'
   }
 };
 
@@ -33,7 +32,7 @@ export const SmallSize: Story = {
   args: {
     name: 'icon-control-home',
     size: 'sm',
-    color: 'default',
+    color: 'default'
   }
 };
 
@@ -44,7 +43,7 @@ export const LargeSize: Story = {
   args: {
     name: 'icon-control-home',
     size: 'lg',
-    color: 'default',
+    color: 'default'
   }
 };
 
@@ -55,7 +54,7 @@ export const PrimaryColor: Story = {
   args: {
     name: 'icon-control-home',
     size: 'md',
-    color: 'primary',
+    color: 'primary'
   }
 };
 
@@ -66,7 +65,7 @@ export const SuccessColor: Story = {
   args: {
     name: 'icon-control-home',
     size: 'md',
-    color: 'success',
+    color: 'success'
   }
 };
 
@@ -77,7 +76,7 @@ export const WarningColor: Story = {
   args: {
     name: 'icon-control-home',
     size: 'md',
-    color: 'warning',
+    color: 'warning'
   }
 };
 
@@ -88,7 +87,7 @@ export const DangerColor: Story = {
   args: {
     name: 'icon-control-home',
     size: 'md',
-    color: 'danger',
+    color: 'danger'
   }
 };
 
@@ -99,6 +98,6 @@ export const InfoColor: Story = {
   args: {
     name: 'icon-control-home',
     size: 'md',
-    color: 'info',
+    color: 'info'
   }
 };

@@ -27,6 +27,6 @@ div[data-item-id='denali'] {
   border-width: 0;
 }
 
-#storybook-explorer-tree a > svg {
+div[data-parent-id='denali'] a > svg {
   display: none;
 }

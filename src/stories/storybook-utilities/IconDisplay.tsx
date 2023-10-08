@@ -8,7 +8,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Icon } from '../../components/icon/Icon';
+import { Icon } from '../../components/iconography/Icon';
 
 // Dynamic import of SVGs
 const iconModules = import.meta.glob('/public/assets/icons/*.svg');

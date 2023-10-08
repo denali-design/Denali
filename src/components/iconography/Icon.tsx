@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { ReactSVG } from 'react-svg';
 import { tv } from 'tailwind-variants';
 import '../../App.css';
