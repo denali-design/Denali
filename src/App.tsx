@@ -1,11 +1,11 @@
 import './App.css';
-import { Button } from './components/forms/Button';
-import { Heading } from './components/typography/Heading';
-import { Icon } from './components/iconography/Icon';
+import { Button } from './components/Button/Button';
+import { Heading } from './components/Heading/Heading';
+import { Icon } from './components/Icon/Icon';
 import {
   DescriptionItem,
   DescriptionList
-} from './components/typography/DescriptionList';
+} from './components/DescriptionList/DescriptionList';
 
 function App() {
   return (

@@ -4,6 +4,7 @@ const getTailwindCompatibleColors = require('./get-tailwind-colors.mjs');
 export default {
   darkMode: 'class',
   content: [
+    './src/stories/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',

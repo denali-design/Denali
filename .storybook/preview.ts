@@ -16,8 +16,9 @@ export const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Denali', 'Styling', 'Components']
-    }
+      order: ['Denali', ['Welcome','Getting Started', 'Design File', 'Contributing'], 'Foundations','Content','Components'],
+      locales: '',
+    },
   }
 };
 
