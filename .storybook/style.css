@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-body {
-  font-family: 'Inter', sans-serif !important;
-}
-
 /* Sidebar */
 .sidebar-container {
-  background-color: #f8fafc;
+  /* background-color: #f8fafc; */
+}
+
+.sidebar-container .sidebar-item {
+  /* font-size: 1rem; */
+}
+
+.sidebar-subheading {
+  margin-top: 16px !important;
 }
 
 /* Style the Search Input field in Sidebar */
@@ -14,7 +18,10 @@ body {
   border-radius: 0px !important;
   background-color: white;
 }
-
+.sidebar-subheading button {
+  color:black;
+  letter-spacing: normal;
+}
 div[data-item-id='denali'] {
   position: absolute;
   width: 1px;
@@ -26,7 +33,40 @@ div[data-item-id='denali'] {
   white-space: nowrap;
   border-width: 0;
 }
+div[data-item-id='denali'] * {
+  background-color: red !important;
+  font-weight: bold !important;
+}
 
 div[data-parent-id='denali'] a > svg {
   display: none;
+}
+
+/* Style Headings */
+#storybook-docs h1 {
+  font-size: 2.25rem; /* text-4xl */
+  color:black;
+  font-family: 'Inter';
+  margin-bottom:0px !important;
+}
+
+.lead {
+  font-size: 1.5rem !important;
+  line-height:1.8rem !important;
+  font-weight: normal !important;
+  color:black !important;
+}
+.subheading {
+  font-size: 1rem !important;
+  color:#2563EB !important;
+  margin:0px !important;
+  font-weight: bold;
+}
+
+/* Document wrapper */
+#storybook-docs {
+  padding: 16px;
+}
+#storybook-docs .sbdocs-wrapper {
+  padding:16px
 }
