@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 
-const Grid: React.FC = (props) => {
+const Grid: React.FC = () => {
   return 'Grid Coming Soon';
 };
 

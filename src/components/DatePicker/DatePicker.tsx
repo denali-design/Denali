@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const DatePicker: React.FC = (props) => {
+const DatePicker: React.FC = () => {
   return 'DatePicker Coming Soon';
 };
-
 export default DatePicker;
 export { DatePicker };

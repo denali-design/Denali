@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Textarea: React.FC = (props) => {
+const Textarea: React.FC = () => {
   return 'Textarea Coming Soon';
 };
-
 export default Textarea;
 export { Textarea };

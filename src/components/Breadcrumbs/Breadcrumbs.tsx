@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Breadcrumbs: React.FC = (props) => {
+const Breadcrumbs: React.FC = () => {
   return 'Breadcrumbs Coming Soon';
 };
-
 export default Breadcrumbs;
 export { Breadcrumbs };

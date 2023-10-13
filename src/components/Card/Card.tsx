@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Card: React.FC = (props) => {
+const Card: React.FC = () => {
   return 'Card Coming Soon';
 };
-
 export default Card;
 export { Card };

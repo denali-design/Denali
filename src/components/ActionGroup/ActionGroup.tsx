@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const ActionGroup: React.FC = (props) => {
+const ActionGroup: React.FC = () => {
   return 'ActionGroup Coming Soon';
 };
-
 export default ActionGroup;
 export { ActionGroup };

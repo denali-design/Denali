@@ -5,7 +5,7 @@
  * @since 1.0.0
  */
 
-const FloatingButton: React.FC = (props) => {
+const FloatingButton: React.FC = () => {
   return 'Floating Button Coming Soon';
 };
 

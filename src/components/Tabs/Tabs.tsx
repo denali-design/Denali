@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Tabs: React.FC = (props) => {
+const Tabs: React.FC = () => {
   return 'Tabs Coming Soon';
 };
-
 export default Tabs;
 export { Tabs };

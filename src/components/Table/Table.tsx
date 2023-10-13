@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Table: React.FC = (props) => {
+const Table: React.FC = () => {
   return 'Table Coming Soon';
 };
-
 export default Table;
 export { Table };

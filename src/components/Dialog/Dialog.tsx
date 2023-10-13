@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Dialog: React.FC = (props) => {
+const Dialog: React.FC = () => {
   return 'Dialog Coming Soon';
 };
-
 export default Dialog;
 export { Dialog };

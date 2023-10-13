@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Image: React.FC = (props) => {
+const Image: React.FC = () => {
   return 'Image Coming Soon';
 };
-
 export default Image;
 export { Image };

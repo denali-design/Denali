@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Empty: React.FC = (props) => {
+const Empty: React.FC = () => {
   return 'Empty Coming Soon';
 };
-
 export default Empty;
 export { Empty };

@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Slider: React.FC = (props) => {
+const Slider: React.FC = () => {
   return 'Slider Coming Soon';
 };
-
 export default Slider;
 export { Slider };

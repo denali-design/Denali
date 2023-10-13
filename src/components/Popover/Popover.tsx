@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Popover: React.FC = (props) => {
+const Popover: React.FC = () => {
   return 'Popover Coming Soon';
 };
-
 export default Popover;
 export { Popover };

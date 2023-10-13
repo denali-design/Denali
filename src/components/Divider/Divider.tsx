@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Divider: React.FC = (props) => {
+const Divider: React.FC = () => {
   return 'Divider Coming Soon';
 };
-
 export default Divider;
 export { Divider };

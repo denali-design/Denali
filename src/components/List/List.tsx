@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const List: React.FC = (props) => {
+const List: React.FC = () => {
   return 'List Coming Soon';
 };
-
 export default List;
 export { List };

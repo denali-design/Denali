@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const DropZone: React.FC = (props) => {
+const DropZone: React.FC = () => {
   return 'DropZone Coming Soon';
 };
-
 export default DropZone;
 export { DropZone };

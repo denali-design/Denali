@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const RadioGroup: React.FC = (props) => {
+const RadioGroup: React.FC = () => {
   return 'RadioGroup Coming Soon';
 };
-
 export default RadioGroup;
 export { RadioGroup };

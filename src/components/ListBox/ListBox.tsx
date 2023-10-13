@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const ListBox: React.FC = (props) => {
+const ListBox: React.FC = () => {
   return 'ListBox Coming Soon';
 };
-
 export default ListBox;
 export { ListBox };

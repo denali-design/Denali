@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Accordion: React.FC = (props) => {
+const Accordion: React.FC = () => {
   return 'Accordion Coming Soon';
 };
-
 export default Accordion;
 export { Accordion };

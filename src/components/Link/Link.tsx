@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Link: React.FC = (props) => {
+const Link: React.FC = () => {
   return 'Link Coming Soon';
 };
-
 export default Link;
 export { Link };

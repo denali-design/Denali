@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Switch: React.FC = (props) => {
+const Switch: React.FC = () => {
   return 'Switch Coming Soon';
 };
-
 export default Switch;
 export { Switch };
