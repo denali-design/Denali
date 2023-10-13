@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const GridList: React.FC = (props) => {
+const GridList: React.FC = () => {
   return 'GridList Coming Soon';
 };
-
 export default GridList;
 export { GridList };

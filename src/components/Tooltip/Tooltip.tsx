@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Tooltip: React.FC = (props) => {
+const Tooltip: React.FC = () => {
   return 'Tooltip Coming Soon';
 };
-
 export default Tooltip;
 export { Tooltip };

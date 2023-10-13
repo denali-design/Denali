@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const ComboBox: React.FC = (props) => {
+const ComboBox: React.FC = () => {
   return 'ComboBox Coming Soon';
 };
-
 export default ComboBox;
 export { ComboBox };

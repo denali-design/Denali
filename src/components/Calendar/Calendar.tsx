@@ -5,11 +5,7 @@
  * @since 1.0.0
  */
 
-import { useRef } from 'react';
-
-const Calendar: React.FC = (props) => {
-  let ref = useRef(null);
-
+const Calendar: React.FC = () => {
   return 'Calendar Coming Soon';
 };
 

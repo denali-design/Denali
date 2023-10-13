@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Modal: React.FC = (props) => {
+const Modal: React.FC = () => {
   return 'Modal Coming Soon';
 };
-
 export default Modal;
 export { Modal };

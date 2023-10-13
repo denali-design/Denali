@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const TagGroup: React.FC = (props) => {
+const TagGroup: React.FC = () => {
   return 'TagGroup Coming Soon';
 };
-
 export default TagGroup;
 export { TagGroup };

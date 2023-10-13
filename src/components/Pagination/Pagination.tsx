@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Pagination: React.FC = (props) => {
+const Pagination: React.FC = () => {
   return 'Pagination Coming Soon';
 };
-
 export default Pagination;
 export { Pagination };

@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const DateField: React.FC = (props) => {
+const DateField: React.FC = () => {
   return 'DateField Coming Soon';
 };
-
 export default DateField;
 export { DateField };

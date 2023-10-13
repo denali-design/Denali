@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Badge: React.FC = (props) => {
+const Badge: React.FC = () => {
   return 'Badge Coming Soon';
 };
-
 export default Badge;
 export { Badge };

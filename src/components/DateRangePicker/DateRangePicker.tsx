@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const DateRangePicker: React.FC = (props) => {
+const DateRangePicker: React.FC = () => {
   return 'DateRangePicker Coming Soon';
 };
-
 export default DateRangePicker;
 export { DateRangePicker };

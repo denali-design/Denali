@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const NumberField: React.FC = (props) => {
+const NumberField: React.FC = () => {
   return 'NumberField Coming Soon';
 };
-
 export default NumberField;
 export { NumberField };

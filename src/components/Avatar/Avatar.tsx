@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Avatar: React.FC = (props) => {
+const Avatar: React.FC = () => {
   return 'Avatar Coming Soon';
 };
-
 export default Avatar;
 export { Avatar };

@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const SelectField: React.FC = (props) => {
+const SelectField: React.FC = () => {
   return 'SelectField Coming Soon';
 };
-
 export default SelectField;
 export { SelectField };

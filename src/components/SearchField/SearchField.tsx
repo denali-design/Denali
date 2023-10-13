@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const SearchField: React.FC = (props) => {
+const SearchField: React.FC = () => {
   return 'SearchField Coming Soon';
 };
-
 export default SearchField;
 export { SearchField };

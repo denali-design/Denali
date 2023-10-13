@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Stats: React.FC = (props) => {
+const Stats: React.FC = () => {
   return 'Stats Coming Soon';
 };
-
 export default Stats;
 export { Stats };

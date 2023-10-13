@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Code: React.FC = (props) => {
+const Code: React.FC = () => {
   return 'Code Coming Soon';
 };
-
 export default Code;
 export { Code };

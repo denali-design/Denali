@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Menu: React.FC = (props) => {
+const Menu: React.FC = () => {
   return 'Menu Coming Soon';
 };
-
 export default Menu;
 export { Menu };

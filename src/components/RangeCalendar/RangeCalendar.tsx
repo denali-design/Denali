@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const RangeCalendar: React.FC = (props) => {
+const RangeCalendar: React.FC = () => {
   return 'RangeCalendar Coming Soon';
 };
-
 export default RangeCalendar;
 export { RangeCalendar };

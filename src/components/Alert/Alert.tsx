@@ -5,9 +5,8 @@
  * @since 1.0.0
  */
 
-const Alert: React.FC = (props) => {
+const Alert: React.FC = () => {
   return 'Alert Coming Soon';
 };
-
 export default Alert;
 export { Alert };
