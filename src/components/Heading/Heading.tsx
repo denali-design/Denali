@@ -126,3 +126,5 @@ export const Heading = memo(
     );
   })
 );
+
+export default Heading;

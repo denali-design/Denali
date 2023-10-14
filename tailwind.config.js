@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-const getTailwindCompatibleColors = require('./get-tailwind-colors.mjs');
+const {
+  getTailwindCompatibleSemanticColors
+} = require('./get-tailwind-colors');
+const generateSafelist = require('./tailwind-plugins/generate-safelist'); // Adjust the import path according to your project structure
 
 export default {
   darkMode: 'class',
@@ -11,13 +14,18 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/stories/**/*.{js,ts,jsx,tsx,mdx}'
   ],
+  safelist: [...generateSafelist()],
   theme: {
     extend: {
-      colors: getTailwindCompatibleColors(),
+      colors: {
+        white: '#fff',
+        black: '#000'
+      },
+      semanticColors: getTailwindCompatibleSemanticColors(),
       spacing: {
         1.75: ' 7px'
       }
     }
   },
-  plugins: []
+  plugins: [require('./tailwind-plugins/semantic-colors')]
 };

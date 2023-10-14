@@ -1,12 +1,22 @@
 import { Meta } from '@storybook/blocks';
-import ColorPaletteStory from '../storybook-utilities/ColorPaletteStory';
+import SwatchBook from '../storybook-utilities/SwatchBook';
+import Heading from '../components/Heading/Heading';
 import Lead from '../storybook-utilities/Lead';
 import Subheading from '../storybook-utilities/Subheading';
 
 <Meta title="Foundations/Colors" />
 
 <Subheading>Foundations</Subheading>
-# Colors
-<Lead>Harness the power of color to convey meaning, evoke emotions, and elevate design aesthetics.</Lead>
-Denali leverages the [Tailwind CSS Color Palette](https://tailwindcss.com/docs/customizing-colors) to use in components plus several custom additions, documented below. Like all Tailwind color classes, you can use these custom colors by appending a context to the start of the name, for example, bg-success-base will generate a background color using the success-base color; using text-danger-base and hover:text-danger-focus will use the base and focus versions of the danger color when viewed or hovered on.
-<ColorPaletteStory />
+<Heading>Color</Heading>
+<Lead>
+  Harness the power of color to convey meaning, evoke emotions, and elevate
+  design aesthetics.
+</Lead>
+Denali leverages the [Tailwind CSS Color Palette](https://tailwindcss.com/docs/customizing-colors)
+to use in components plus several custom additions, documented below. Like all Tailwind
+color classes, you can use these custom colors by appending a context to the start
+of the name, for example, bg-success-base will generate a background color using
+the success-base color; using text-danger-base and hover:text-danger-focus will use
+the base and focus versions of the danger color when viewed or hovered on.
+
+<SwatchBook />
