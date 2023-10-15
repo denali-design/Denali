@@ -10,6 +10,7 @@
 
 import React from 'react';
 import Swatch from './Swatch';
+import Heading from '../components/Heading/Heading';
 import { semanticColorSwatches } from '../../get-tailwind-colors';
 import '../App.css';
 
@@ -25,18 +26,22 @@ const SwatchBook: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-12">
       {Object.entries(semanticColorSwatches.semanticColors).map(
         ([category, colors]) => (
           <div key={category} className="flex flex-col gap-4">
-            <h2>{toTitleCase(category)}</h2>
-            {Object.keys(colors).map((colorKey) => (
-              <Swatch
-                key={colorKey}
-                className={colorKey}
-                description={colors[colorKey]?.desc || ''}
-              />
-            ))}
+            <Heading fontWeight="bold" level={2} styleLevel={4}>
+              {toTitleCase(category)}
+            </Heading>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
+              {Object.keys(colors).map((colorKey) => (
+                <Swatch
+                  key={colorKey}
+                  className={colorKey}
+                  description={colors[colorKey]?.desc || ''}
+                />
+              ))}
+            </div>
           </div>
         )
       )}

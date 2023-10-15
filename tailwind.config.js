@@ -2,7 +2,7 @@
 const {
   getTailwindCompatibleSemanticColors
 } = require('./get-tailwind-colors');
-const generateSafelist = require('./tailwind-plugins/generate-safelist'); // Adjust the import path according to your project structure
+const generateSafelist = require('./tailwind-plugins/generate-safelist');
 
 export default {
   darkMode: 'class',
