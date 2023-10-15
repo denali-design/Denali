@@ -198,8 +198,8 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
       type: {
         desc: 'Use as a font color.',
         light: {
-          bg: colors.slate[100],
-          txt: colors.black
+          bg: colors.slate[900],
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[900],
