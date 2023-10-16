@@ -12,19 +12,18 @@ import '../../App.css';
 export interface ButtonProps extends AriaButtonProps {
   label: string;
   size?: 'small' | 'large';
-  variety?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info';
+  variety?: 'default' | 'success' | 'warning' | 'danger' | 'info';
 }
 
 const button = tv({
   base: 'bg-black rounded text-white',
   variants: {
     color: {
-      default: 'bg-black text-white dark:bg-white dark:text-black',
-      primary: 'bg-brand-primary text-white',
-      success: 'bg-success-base text-white',
-      warning: 'bg-warning-base text-black',
-      danger: 'bg-danger-base text-white',
-      info: 'bg-info-base text-white'
+      default: 'action',
+      success: 'action-success',
+      warning: 'action-warning',
+      danger: 'action-danger',
+      info: 'action-info'
     },
     size: {
       small: 'py-2 px-2',

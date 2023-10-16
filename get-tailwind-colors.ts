@@ -45,10 +45,20 @@ interface TypeColors {
   'type-info': SemanticColor;
 }
 
+interface ActionColors {
+  action: SemanticColor;
+  'action-alt': SemanticColor;
+  'action-success': SemanticColor;
+  'action-warning': SemanticColor;
+  'action-danger': SemanticColor;
+  'action-info': SemanticColor;
+}
+
 interface SemanticColors {
   Canvas: CanvasColors;
   Stroke: StrokeColors;
   Type: TypeColors;
+  Action: ActionColors;
 }
 
 /**
@@ -258,6 +268,74 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         },
         dark: {
           bg: colors.blue[300],
+          txt: colors.black
+        }
+      }
+    },
+    Action: {
+      action: {
+        desc: 'Used for action backgrounds',
+        light: {
+          bg: colors.black,
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.white,
+          txt: colors.black
+        }
+      },
+      'action-alt': {
+        desc: 'Alternate action backgrounds',
+        light: {
+          bg: colors.slate[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.slate[200],
+          txt: colors.black
+        }
+      },
+      'action-success': {
+        desc: 'Indicates successful validation or state',
+        light: {
+          bg: colors.green[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.green[200],
+          txt: colors.black
+        }
+      },
+      'action-warning': {
+        desc: 'Used for alerts and warnings',
+        light: {
+          bg: colors.yellow[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.yellow[200],
+          txt: colors.black
+        }
+      },
+      'action-danger': {
+        desc: 'Indicates danger or errors',
+        light: {
+          bg: colors.red[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.red[200],
+          txt: colors.black
+        }
+      },
+      'action-info': {
+        desc: 'Used for informational elements',
+        light: {
+          bg: colors.blue[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.blue[200],
           txt: colors.black
         }
       }
