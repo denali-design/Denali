@@ -21,10 +21,22 @@ const generateSafelist = (): string[] => {
   const safelist: string[] = [];
 
   // Iterate through each category in semanticColors
-  for (const category of Object.values(semanticColors)) {
+  for (const [categoryKey, category] of Object.entries(semanticColors)) {
     // Iterate through each colorKey (e.g., 'canvas', 'canvas-alt', etc.) in the category
     for (const colorKey of Object.keys(category)) {
-      safelist.push(colorKey);
+      // The main class based on 'use'
+      safelist.push(`${colorKey}`);
+
+      // The variants: 'canvas-', 'type-', 'stroke-'
+      safelist.push(`canvas-${colorKey}`);
+      safelist.push(`type-${colorKey}`);
+      safelist.push(`stroke-${colorKey}`);
+
+      // Adding dark mode variants
+      safelist.push(`dark:${colorKey}`);
+      safelist.push(`dark:canvas-${colorKey}`);
+      safelist.push(`dark:type-${colorKey}`);
+      safelist.push(`dark:stroke-${colorKey}`);
     }
   }
 

@@ -1,3 +1,13 @@
+/**
+ * This file defines the semanticColors Tailwind plugin.
+ *
+ * This plugin dynamically generates utility classes for
+ * semantic color handling based on provided configurations.
+ *
+ * @file   This file defines the Tailwind semanticColors plugin.
+ * @since  1.0.0
+ */
+
 const plugin = require('tailwindcss/plugin');
 
 const semanticColors = plugin(
@@ -6,15 +16,36 @@ const semanticColors = plugin(
     addUtilities(
       [
         Object.entries(values).map(([key, value]) => {
+          let defaultClasses = {};
+
+          // Determine the default class based on the 'use' key
+          if (value.use === 'bg') {
+            defaultClasses = {
+              [`.${e(`${key}`)}`]: {
+                backgroundColor: `${value.light.bg}`,
+                color: `${value.light.txt}`
+              }
+            };
+          } else if (value.use === 'border') {
+            defaultClasses = {
+              [`.${e(`${key}`)}`]: {
+                borderColor: `${value.light.bg}`
+              }
+            };
+          } else if (value.use === 'text') {
+            defaultClasses = {
+              [`.${e(`${key}`)}`]: {
+                color: `${value.light.bg}`
+              }
+            };
+          }
+
           return {
-            [`.${e(`${key}`)}`]: {
-              backgroundColor: `${value.light.bg}`,
-              color: `${value.light.txt}`
-            },
+            ...defaultClasses,
             [`.type-${e(`${key}`)}`]: {
               color: `${value.light.bg}`
             },
-            [`.block-${e(`${key}`)}`]: {
+            [`.canvas-${e(`${key}`)}`]: {
               backgroundColor: `${value.light.bg}`
             },
             [`.stroke-${e(`${key}`)}`]: {
@@ -28,7 +59,7 @@ const semanticColors = plugin(
               [`& .type-${e(`${key}`)}`]: {
                 color: `${value.dark.bg}`
               },
-              [`& .block-${e(`${key}`)}`]: {
+              [`& .canvas-${e(`${key}`)}`]: {
                 backgroundColor: `${value.dark.bg}`
               },
               [`& .stroke-${e(`${key}`)}`]: {

@@ -13,6 +13,7 @@ interface ColorScheme {
 }
 
 interface SemanticColor {
+  use: string;
   desc: string;
   light: ColorScheme;
   dark: ColorScheme;
@@ -70,6 +71,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
   semanticColors: {
     Canvas: {
       canvas: {
+        use: 'bg',
         desc: 'Used for canvas backgrounds',
         light: {
           bg: colors.white,
@@ -81,6 +83,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'canvas-alt': {
+        use: 'bg',
         desc: 'Alternate canvas backgrounds',
         light: {
           bg: colors.slate[100],
@@ -92,6 +95,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'canvas-success': {
+        use: 'bg',
         desc: 'Indicates successful validation or state',
         light: {
           bg: colors.green[200],
@@ -103,6 +107,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'canvas-warning': {
+        use: 'bg',
         desc: 'Used for alerts and warnings',
         light: {
           bg: colors.yellow[200],
@@ -114,6 +119,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'canvas-danger': {
+        use: 'bg',
         desc: 'Indicates danger or errors',
         light: {
           bg: colors.red[200],
@@ -125,6 +131,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'canvas-info': {
+        use: 'bg',
         desc: 'Used for informational elements',
         light: {
           bg: colors.blue[200],
@@ -138,6 +145,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
     },
     Stroke: {
       stroke: {
+        use: 'border',
         desc: 'Use as a border color.',
         light: {
           bg: colors.slate[100],
@@ -149,6 +157,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'stroke-alt': {
+        use: 'border',
         desc: 'Use as a border color.',
         light: {
           bg: colors.slate[600],
@@ -160,6 +169,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'stroke-success': {
+        use: 'border',
         desc: 'Use as a border color.',
         light: {
           bg: colors.green[600],
@@ -171,6 +181,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'stroke-warning': {
+        use: 'border',
         desc: 'Use as a border color.',
         light: {
           bg: colors.yellow[600],
@@ -182,6 +193,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'stroke-danger': {
+        use: 'border',
         desc: 'Use as a border color.',
         light: {
           bg: colors.red[600],
@@ -193,6 +205,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'stroke-info': {
+        use: 'border',
         desc: 'Use as a border color.',
         light: {
           bg: colors.blue[600],
@@ -206,6 +219,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
     },
     Type: {
       type: {
+        use: 'text',
         desc: 'Use as a font color.',
         light: {
           bg: colors.slate[900],
@@ -217,6 +231,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'type-alt': {
+        use: 'text',
         desc: 'Use as a font color.',
         light: {
           bg: colors.slate[600],
@@ -228,6 +243,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'type-success': {
+        use: 'text',
         desc: 'Use as a font color.',
         light: {
           bg: colors.green[600],
@@ -239,6 +255,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'type-warning': {
+        use: 'text',
         desc: 'Use as a font color.',
         light: {
           bg: colors.yellow[600],
@@ -250,6 +267,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'type-danger': {
+        use: 'text',
         desc: 'Use as a font color.',
         light: {
           bg: colors.red[600],
@@ -261,6 +279,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'type-info': {
+        use: 'text',
         desc: 'Use as a font color.',
         light: {
           bg: colors.blue[600],
@@ -274,6 +293,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
     },
     Action: {
       action: {
+        use: 'bg',
         desc: 'Used for action backgrounds',
         light: {
           bg: colors.black,
@@ -285,6 +305,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'action-alt': {
+        use: 'bg',
         desc: 'Alternate action backgrounds',
         light: {
           bg: colors.slate[600],
@@ -296,6 +317,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'action-success': {
+        use: 'bg',
         desc: 'Indicates successful validation or state',
         light: {
           bg: colors.green[600],
@@ -307,6 +329,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'action-warning': {
+        use: 'bg',
         desc: 'Used for alerts and warnings',
         light: {
           bg: colors.yellow[600],
@@ -318,6 +341,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'action-danger': {
+        use: 'bg',
         desc: 'Indicates danger or errors',
         light: {
           bg: colors.red[600],
@@ -329,6 +353,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         }
       },
       'action-info': {
+        use: 'bg',
         desc: 'Used for informational elements',
         light: {
           bg: colors.blue[600],

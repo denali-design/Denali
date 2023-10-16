@@ -72,7 +72,7 @@ const Swatch: React.FC<SwatchProps> = ({ className, description }) => {
     <div>
       <div
         ref={colorDivRef}
-        className={`${className} h-16 rounded border p-4 text-center font-bold`}
+        className={`canvas-${className} h-16 rounded border p-4 text-center font-bold`}
       ></div>
       <p className="font-bold capitalize" style={{ marginBottom: '0' }}>
         {toTitleCase(className)}
