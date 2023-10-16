@@ -55,11 +55,51 @@ interface ActionColors {
   'action-info': SemanticColor;
 }
 
+interface LinkColors {
+  link: SemanticColor;
+  'link-alt': SemanticColor;
+  'link-success': SemanticColor;
+  'link-warning': SemanticColor;
+  'link-danger': SemanticColor;
+  'link-info': SemanticColor;
+}
+
+interface HoverColors {
+  hover: SemanticColor;
+  'hover-alt': SemanticColor;
+  'hover-success': SemanticColor;
+  'hover-warning': SemanticColor;
+  'hover-danger': SemanticColor;
+  'hover-info': SemanticColor;
+}
+
+interface FocusColors {
+  focus: SemanticColor;
+  'focus-alt': SemanticColor;
+  'focus-success': SemanticColor;
+  'focus-warning': SemanticColor;
+  'focus-danger': SemanticColor;
+  'focus-info': SemanticColor;
+}
+
+interface ClickColors {
+  click: SemanticColor;
+  'click-alt': SemanticColor;
+  'click-success': SemanticColor;
+  'click-warning': SemanticColor;
+  'click-danger': SemanticColor;
+  'click-info': SemanticColor;
+}
+
 interface SemanticColors {
   Canvas: CanvasColors;
   Stroke: StrokeColors;
   Type: TypeColors;
   Action: ActionColors;
+  Link: LinkColors;
+  Hover: HoverColors;
+  Focus: FocusColors;
+  Click: ClickColors;
 }
 
 /**
@@ -361,6 +401,302 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         },
         dark: {
           bg: colors.blue[200],
+          txt: colors.black
+        }
+      }
+    },
+    Link: {
+      link: {
+        use: 'text',
+        desc: 'Used for link backgrounds',
+        light: {
+          bg: colors.black,
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.white,
+          txt: colors.black
+        }
+      },
+      'link-alt': {
+        use: 'text',
+        desc: 'Alternate link backgrounds',
+        light: {
+          bg: colors.slate[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.slate[200],
+          txt: colors.black
+        }
+      },
+      'link-success': {
+        use: 'text',
+        desc: 'Indicates successful validation or state',
+        light: {
+          bg: colors.green[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.green[200],
+          txt: colors.black
+        }
+      },
+      'link-warning': {
+        use: 'text',
+        desc: 'Used for alerts and warnings',
+        light: {
+          bg: colors.yellow[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.yellow[200],
+          txt: colors.black
+        }
+      },
+      'link-danger': {
+        use: 'text',
+        desc: 'Indicates danger or errors',
+        light: {
+          bg: colors.red[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.red[200],
+          txt: colors.black
+        }
+      },
+      'link-info': {
+        use: 'text',
+        desc: 'Used for informational elements',
+        light: {
+          bg: colors.blue[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.blue[200],
+          txt: colors.black
+        }
+      }
+    },
+    Hover: {
+      hover: {
+        use: 'text',
+        desc: 'Used for hover backgrounds',
+        light: {
+          bg: colors.black,
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.white,
+          txt: colors.black
+        }
+      },
+      'hover-alt': {
+        use: 'text',
+        desc: 'Alternate hover backgrounds',
+        light: {
+          bg: colors.slate[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.slate[200],
+          txt: colors.black
+        }
+      },
+      'hover-success': {
+        use: 'text',
+        desc: 'Indicates successful validation or state',
+        light: {
+          bg: colors.green[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.green[200],
+          txt: colors.black
+        }
+      },
+      'hover-warning': {
+        use: 'text',
+        desc: 'Used for alerts and warnings',
+        light: {
+          bg: colors.yellow[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.yellow[200],
+          txt: colors.black
+        }
+      },
+      'hover-danger': {
+        use: 'text',
+        desc: 'Indicates danger or errors',
+        light: {
+          bg: colors.red[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.red[200],
+          txt: colors.black
+        }
+      },
+      'hover-info': {
+        use: 'text',
+        desc: 'Used for informational elements',
+        light: {
+          bg: colors.blue[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.blue[200],
+          txt: colors.black
+        }
+      }
+    },
+    Focus: {
+      focus: {
+        use: 'text',
+        desc: 'Used for focus backgrounds',
+        light: {
+          bg: colors.blue[700],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.blue[100],
+          txt: colors.black
+        }
+      },
+      'focus-alt': {
+        use: 'text',
+        desc: 'Alternate focus backgrounds',
+        light: {
+          bg: colors.slate[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.slate[200],
+          txt: colors.black
+        }
+      },
+      'focus-success': {
+        use: 'text',
+        desc: 'Indicates successful validation or state',
+        light: {
+          bg: colors.green[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.green[200],
+          txt: colors.black
+        }
+      },
+      'focus-warning': {
+        use: 'text',
+        desc: 'Used for alerts and warnings',
+        light: {
+          bg: colors.yellow[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.yellow[200],
+          txt: colors.black
+        }
+      },
+      'focus-danger': {
+        use: 'text',
+        desc: 'Indicates danger or errors',
+        light: {
+          bg: colors.red[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.red[200],
+          txt: colors.black
+        }
+      },
+      'focus-info': {
+        use: 'text',
+        desc: 'Used for informational elements',
+        light: {
+          bg: colors.blue[600],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.blue[200],
+          txt: colors.black
+        }
+      }
+    },
+    Click: {
+      click: {
+        use: 'text',
+        desc: 'Used for click backgrounds',
+        light: {
+          bg: colors.blue[800],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.blue[50],
+          txt: colors.black
+        }
+      },
+      'click-alt': {
+        use: 'text',
+        desc: 'Alternate click backgrounds',
+        light: {
+          bg: colors.slate[800],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.slate[50],
+          txt: colors.black
+        }
+      },
+      'click-success': {
+        use: 'text',
+        desc: 'Indicates successful validation or state',
+        light: {
+          bg: colors.green[800],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.green[50],
+          txt: colors.black
+        }
+      },
+      'click-warning': {
+        use: 'text',
+        desc: 'Used for alerts and warnings',
+        light: {
+          bg: colors.yellow[800],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.yellow[50],
+          txt: colors.black
+        }
+      },
+      'click-danger': {
+        use: 'text',
+        desc: 'Indicates danger or errors',
+        light: {
+          bg: colors.red[800],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.red[50],
+          txt: colors.black
+        }
+      },
+      'click-info': {
+        use: 'text',
+        desc: 'Used for informational elements',
+        light: {
+          bg: colors.blue[800],
+          txt: colors.white
+        },
+        dark: {
+          bg: colors.blue[50],
           txt: colors.black
         }
       }
