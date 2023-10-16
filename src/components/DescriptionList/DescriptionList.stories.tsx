@@ -10,7 +10,7 @@ import { DescriptionItem, DescriptionList } from './DescriptionList';
 
 export default {
   component: DescriptionList,
-  title: 'Components/Description List',
+  title: 'Components/Data Display/Description List',
   tags: ['autodocs']
 } as Meta;
 

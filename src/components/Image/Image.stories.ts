@@ -4,7 +4,7 @@ import { Image } from './Image';
 
 const meta: Meta<typeof Image> = {
   component: Image,
-  title: 'Components/Image',
+  title: 'Components/Data Display/Image',
   tags: ['autodocs']
 };
 export default meta;

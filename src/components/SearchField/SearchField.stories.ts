@@ -4,7 +4,7 @@ import { SearchField } from './SearchField';
 
 const meta: Meta<typeof SearchField> = {
   component: SearchField,
-  title: 'Components/SearchField',
+  title: 'Components/Data Entry/SearchField',
   tags: ['autodocs']
 };
 export default meta;

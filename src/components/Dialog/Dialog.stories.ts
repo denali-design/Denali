@@ -4,7 +4,7 @@ import { Dialog } from './Dialog';
 
 const meta: Meta<typeof Dialog> = {
   component: Dialog,
-  title: 'Components/Dialog',
+  title: 'Components/Data Display/Dialog',
   tags: ['autodocs']
 };
 export default meta;

@@ -4,7 +4,7 @@ import { TagGroup } from './TagGroup';
 
 const meta: Meta<typeof TagGroup> = {
   component: TagGroup,
-  title: 'Components/TagGroup',
+  title: 'Components/Data Entry/TagGroup',
   tags: ['autodocs']
 };
 export default meta;

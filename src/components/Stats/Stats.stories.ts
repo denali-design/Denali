@@ -4,7 +4,7 @@ import { Stats } from './Stats';
 
 const meta: Meta<typeof Stats> = {
   component: Stats,
-  title: 'Components/Stats',
+  title: 'Components/Data Display/Stats',
   tags: ['autodocs']
 };
 export default meta;

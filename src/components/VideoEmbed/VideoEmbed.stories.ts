@@ -4,7 +4,7 @@ import { VideoEmbed } from './VideoEmbed';
 
 const meta: Meta<typeof VideoEmbed> = {
   component: VideoEmbed,
-  title: 'Components/VideoEmbed',
+  title: 'Components/Data Display/VideoEmbed',
   tags: ['autodocs']
 };
 export default meta;

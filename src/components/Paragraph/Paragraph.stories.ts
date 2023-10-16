@@ -6,7 +6,7 @@ import { Paragraph } from './Paragraph';
 
 const meta: Meta<typeof Paragraph> = {
   component: Paragraph,
-  title: 'Components/Paragraph',
+  title: 'Components/Data Display/Paragraph',
   tags: ['autodocs']
 };
 export default meta;

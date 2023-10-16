@@ -4,7 +4,7 @@ import { GridList } from './GridList';
 
 const meta: Meta<typeof GridList> = {
   component: GridList,
-  title: 'Components/GridList',
+  title: 'Components/Layout/GridList',
   tags: ['autodocs']
 };
 export default meta;

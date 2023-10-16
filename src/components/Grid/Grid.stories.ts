@@ -4,7 +4,7 @@ import { Grid } from './Grid';
 
 const meta: Meta<typeof Grid> = {
   component: Grid,
-  title: 'Components/Grid',
+  title: 'Components/Layout/Grid',
   tags: ['autodocs']
 };
 export default meta;

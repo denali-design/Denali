@@ -4,7 +4,7 @@ import { Empty } from './Empty';
 
 const meta: Meta<typeof Empty> = {
   component: Empty,
-  title: 'Components/Empty',
+  title: 'Components/Data Display/Empty',
   tags: ['autodocs']
 };
 export default meta;

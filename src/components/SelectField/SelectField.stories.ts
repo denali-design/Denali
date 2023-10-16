@@ -4,7 +4,7 @@ import { SelectField } from './SelectField';
 
 const meta: Meta<typeof SelectField> = {
   component: SelectField,
-  title: 'Components/SelectField',
+  title: 'Components/Data Entry/SelectField',
   tags: ['autodocs']
 };
 export default meta;

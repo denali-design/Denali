@@ -4,7 +4,7 @@ import { Alert } from './Alert';
 
 const meta: Meta<typeof Alert> = {
   component: Alert,
-  title: 'Components/Alert',
+  title: 'Components/Data Display/Alert',
   tags: ['autodocs']
 };
 export default meta;

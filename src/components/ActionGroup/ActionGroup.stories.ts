@@ -4,7 +4,7 @@ import { ActionGroup } from './ActionGroup';
 
 const meta: Meta<typeof ActionGroup> = {
   component: ActionGroup,
-  title: 'Components/ActionGroup',
+  title: 'Components/Data Entry/ActionGroup',
   tags: ['autodocs']
 };
 export default meta;
