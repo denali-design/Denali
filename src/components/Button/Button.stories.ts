@@ -33,13 +33,6 @@ export const Small: Story = {
   }
 };
 
-export const Primary: Story = {
-  args: {
-    label: 'Primary',
-    variety: 'primary'
-  }
-};
-
 export const Success: Story = {
   args: {
     label: 'Success',
