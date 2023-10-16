@@ -11,13 +11,13 @@ const semanticColors = plugin(
               backgroundColor: `${value.light.bg}`,
               color: `${value.light.txt}`
             },
-            [`.txt-${e(`${key}`)}`]: {
+            [`.type-${e(`${key}`)}`]: {
               color: `${value.light.bg}`
             },
             [`.block-${e(`${key}`)}`]: {
               backgroundColor: `${value.light.bg}`
             },
-            [`.bord-${e(`${key}`)}`]: {
+            [`.stroke-${e(`${key}`)}`]: {
               borderColor: `${value.light.bg}`
             },
             '.dark': {
@@ -25,13 +25,13 @@ const semanticColors = plugin(
                 backgroundColor: `${value.dark.bg}`,
                 color: `${value.dark.txt}`
               },
-              [`& .txt-${e(`${key}`)}`]: {
+              [`& .type-${e(`${key}`)}`]: {
                 color: `${value.dark.bg}`
               },
               [`& .block-${e(`${key}`)}`]: {
                 backgroundColor: `${value.dark.bg}`
               },
-              [`& .bord-${e(`${key}`)}`]: {
+              [`& .stroke-${e(`${key}`)}`]: {
                 borderColor: `${value.dark.bg}`
               }
             }

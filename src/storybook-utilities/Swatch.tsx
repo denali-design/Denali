@@ -80,6 +80,9 @@ const Swatch: React.FC<SwatchProps> = ({ className, description }) => {
       <p className="uppercase" style={{ margin: '0' }}>
         {hexColor && `${hexColor}`}
       </p>
+      <p>
+        <code>{className}</code>
+      </p>
       <p className="sr-only">{description}</p>
     </div>
   );
