@@ -4,7 +4,7 @@ import { Card } from './Card';
 
 const meta: Meta<typeof Card> = {
   component: Card,
-  title: 'Components/Card',
+  title: 'Components/Data Display/Card',
   tags: ['autodocs']
 };
 export default meta;

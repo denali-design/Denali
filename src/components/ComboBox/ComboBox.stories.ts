@@ -4,7 +4,7 @@ import { ComboBox } from './ComboBox';
 
 const meta: Meta<typeof ComboBox> = {
   component: ComboBox,
-  title: 'Components/ComboBox',
+  title: 'Components/Data Entry/ComboBox',
   tags: ['autodocs']
 };
 export default meta;

@@ -4,7 +4,7 @@ import { DropZone } from './DropZone';
 
 const meta: Meta<typeof DropZone> = {
   component: DropZone,
-  title: 'Components/DropZone',
+  title: 'Components/Data Entry/DropZone',
   tags: ['autodocs']
 };
 export default meta;

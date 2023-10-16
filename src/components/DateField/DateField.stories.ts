@@ -4,7 +4,7 @@ import { DateField } from './DateField';
 
 const meta: Meta<typeof DateField> = {
   component: DateField,
-  title: 'Components/DateField',
+  title: 'Components/Data Entry/DateField',
   tags: ['autodocs']
 };
 export default meta;

@@ -7,7 +7,7 @@ import { Icon } from './Icon';
 /** Meta information for the Icon stories. */
 const meta: Meta<typeof Icon> = {
   component: Icon,
-  title: 'Components/Icon',
+  title: 'Components/Data Display/Icon',
   tags: ['autodocs']
 };
 export default meta;

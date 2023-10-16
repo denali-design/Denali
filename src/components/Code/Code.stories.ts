@@ -4,7 +4,7 @@ import { Code } from './Code';
 
 const meta: Meta<typeof Code> = {
   component: Code,
-  title: 'Components/Code',
+  title: 'Components/Data Display/Code',
   tags: ['autodocs']
 };
 export default meta;

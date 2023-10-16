@@ -4,7 +4,7 @@ import { TimeField } from './TimeField';
 
 const meta: Meta<typeof TimeField> = {
   component: TimeField,
-  title: 'Components/TimeField',
+  title: 'Components/Data Entry/TimeField',
   tags: ['autodocs']
 };
 export default meta;

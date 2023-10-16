@@ -11,7 +11,7 @@ import { Checkbox } from '../Checkbox/Checkbox';
 
 export default {
   component: CheckboxGroup,
-  title: 'Components/Checkbox Group',
+  title: 'Components/Data Entry/Checkbox Group',
   tags: ['autodocs']
 } as Meta;
 

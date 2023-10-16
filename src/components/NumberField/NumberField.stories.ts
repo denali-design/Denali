@@ -4,7 +4,7 @@ import { NumberField } from './NumberField';
 
 const meta: Meta<typeof NumberField> = {
   component: NumberField,
-  title: 'Components/NumberField',
+  title: 'Components/Data Entry/NumberField',
   tags: ['autodocs']
 };
 export default meta;

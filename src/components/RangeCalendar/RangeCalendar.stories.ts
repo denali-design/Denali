@@ -4,7 +4,7 @@ import { RangeCalendar } from './RangeCalendar';
 
 const meta: Meta<typeof RangeCalendar> = {
   component: RangeCalendar,
-  title: 'Components/RangeCalendar',
+  title: 'Components/Data Entry/RangeCalendar',
   tags: ['autodocs']
 };
 export default meta;

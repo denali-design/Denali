@@ -4,7 +4,7 @@ import { FloatingButton } from './FloatingButton';
 
 const meta: Meta<typeof FloatingButton> = {
   component: FloatingButton,
-  title: 'Components/FloatingButton',
+  title: 'Components/Navigation/FloatingButton',
   tags: ['autodocs']
 };
 export default meta;
