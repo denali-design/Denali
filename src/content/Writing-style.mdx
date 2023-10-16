@@ -1,9 +1,72 @@
 import { Meta } from '@storybook/blocks';
-import Lead from '../storybook-utilities/Lead';
 import Subheading from '../storybook-utilities/Subheading';
+import DoAndDont from '../storybook-utilities/DoAndDont';
+import Lead from '../storybook-utilities/Lead';
 
 <Meta title="Content/Writing Style" />
 
 <Subheading>Content</Subheading>
 
 # Writing style
+<Lead>Our writing guidelines ensure clarity, consistency, and inclusivity across all communications.</Lead>
+
+The writing style used in your app is an extension of its brand and a key part of its UX. A consistent, well-articulated writing style can enhance usability, comprehension, and the overall user experience. This guide outlines the core principles and best practices.
+
+<h2>Principles of Writing Style</h2>
+<h3>Simplicity</h3>
+Opt for clear and concise language that gets straight to the point. This makes your content accessible to a broader audience, including people who are not native English speakers or who have cognitive impairments.
+
+<h3>Consistency</h3>
+Maintain a consistent tone and vocabulary across all elements of your design system, from UI components to documentation.
+
+<h3>Empathy</h3>
+Write with the user's perspective in mind. Aim to make them feel understood and supported, rather than overwhelmed or frustrated.
+
+<h3>Accuracy</h3>
+Be factual and precise in your messaging. Misleading or vague language can harm the user’s trust and make your system less reliable.
+
+<h2>Dos and Don'ts</h2>
+<DoAndDont direction="horizontal"  doChildren={<p>Use active voice: "Click the button to save."</p>} 
+        dontChildren={<p>Use passive voice: "The button can be clicked to save."</p>}/>
+
+
+<DoAndDont direction="horizontal"  doChildren={<p>Be specific: "Upload a PNG or JPEG file."</p>} 
+        dontChildren={<p>Be vague: "Upload the file."</p>}/>
+
+
+<DoAndDont direction="horizontal"  doChildren={<p>Use contractions for a friendly tone: "You’ll see a preview."</p>} 
+        dontChildren={<p>Avoid contractions to sound formal: "You will see a preview."</p>}/>
+
+<h3>Capitalization and Punctuation</h3>
+Use sentence case for most UI elements like buttons or headings, unless title case is a specific brand requirement.
+
+<DoAndDont direction="horizontal"  doChildren={<p>Sign in</p>} 
+        dontChildren={<p>SIGN IN</p>}/>
+
+Limit the use of exclamation marks to avoid sounding alarmist.
+
+<DoAndDont direction="horizontal"  doChildren={<p>Your settings have been saved.</p>} 
+        dontChildren={<p>Your settings have been saved!</p>}/>
+
+
+<h3>Writing for Components</h3>
+Make sure that the language used for each UI component is aligned with its function. For example, a button that submits a form should say "Submit" rather than "Go" to be more descriptive.
+Use verbs that clearly indicate the action, such as "Search," "Filter," or "Download."
+
+<h3>Error Messages</h3>
+Write error messages that guide the user toward a solution, rather than focusing on the problem.
+
+<DoAndDont direction="horizontal"  doChildren={<p>Please enter a valid email address.</p>} 
+        dontChildren={<p>Email address is wrong.</p>}/>
+
+<h3>In-App Guidance</h3>
+Tooltips, helper text, and other in-app guidance should be written to assist the user in completing their task, not just to describe the feature.
+
+<DoAndDont direction="horizontal"  doChildren={<p>Enter your first and last name as it appears on your ID.</p>} 
+        dontChildren={<p>Name field.</p>}/>
+
+<h3>Accessibility</h3>
+All text, including in-app messages, tooltips, and error messages, should meet accessibility guidelines like WCAG 2.1 AA, to ensure they are easily readable and understandable.
+
+<h3>Conclusion</h3>
+Your writing style is an integral part of your design system and contributes significantly to the user experience. It requires the same level of thought, testing, and consistency as your visual components. Establishing a robust writing guide can improve both the usability and the overall feel of your applications. Keep iterating and consulting with your user base to make sure your writing style meets their needs effectively.
