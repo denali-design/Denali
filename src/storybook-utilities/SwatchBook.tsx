@@ -33,7 +33,7 @@ const SwatchBook: React.FC = () => {
             <Heading fontWeight="bold" level={2} styleLevel={4}>
               {toTitleCase(category)}
             </Heading>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
               {Object.keys(colors).map((colorKey) => (
                 <Swatch
                   key={colorKey}
