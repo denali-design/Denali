@@ -10,6 +10,7 @@
  * @since  1.0.0
  */
 
+import Icon from '../components/Icon/Icon';
 import '../App.css';
 /**
  * Represents a DoAndDont component.
@@ -36,14 +37,34 @@ const DoAndDont = ({ doChildren, dontChildren, direction = 'vertical' }) => {
   return (
     <div className={`pb-4 ${containerClasses}`}>
       {/* Do Section */}
-      <div className="flex-1 overflow-hidden rounded border-t-4 border-green-600 bg-green-50 p-2">
-        <p className="font-bold uppercase">Do</p>
+      <div className="flex-1 overflow-hidden rounded border-t-4 border-green-600 bg-green-50 p-4">
+        <div className="flex gap-2">
+          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-700">
+            <Icon
+              color="default"
+              name="icon-control-check"
+              size="sm"
+              className="text-white"
+            />
+          </div>
+          <p className="font-bold uppercase">Do</p>
+        </div>
         {doChildren}
       </div>
 
       {/* Don't Section */}
-      <div className="flex-1 overflow-hidden rounded border-t-4 border-red-600 bg-red-50 p-2">
-        <p className="font-bold uppercase">Don't</p>
+      <div className="flex-1 overflow-hidden rounded border-t-4 border-red-600 bg-red-50 p-4">
+        <div className="flex gap-2">
+          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-700">
+            <Icon
+              color="default"
+              name="icon-control-close"
+              size="sm"
+              className="text-white"
+            />
+          </div>
+          <p className="font-bold uppercase">Don't</p>
+        </div>
         {dontChildren}
       </div>
     </div>

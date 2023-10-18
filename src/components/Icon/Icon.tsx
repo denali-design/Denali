@@ -97,3 +97,5 @@ export const Icon: FC<IconProps> = ({
     </div>
   );
 };
+
+export default Icon;
