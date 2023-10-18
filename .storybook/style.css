@@ -19,7 +19,7 @@
   background-color: white;
 }
 .sidebar-subheading button {
-  color:black;
+  color: black;
   letter-spacing: normal;
 }
 div[data-item-id='denali'] {
@@ -45,21 +45,21 @@ div[data-parent-id='denali'] a > svg {
 /* Style Headings */
 #storybook-docs h1 {
   font-size: 2.25rem; /* text-4xl */
-  color:black;
+  color: black;
   font-family: 'Inter';
-  margin-bottom:0px !important;
+  margin-bottom: 0px !important;
 }
 
 .lead {
   font-size: 1.5rem !important;
-  line-height:1.8rem !important;
+  line-height: 1.8rem !important;
   font-weight: normal !important;
-  color:black !important;
+  color: black !important;
 }
 .subheading {
   font-size: 1rem !important;
-  color:#2563EB !important;
-  margin:0px !important;
+  color: #2563eb !important;
+  margin: 0px !important;
   font-weight: bold;
 }
 
@@ -68,5 +68,11 @@ div[data-parent-id='denali'] a > svg {
   padding: 16px;
 }
 #storybook-docs .sbdocs-wrapper {
-  padding:16px
+  padding: 16px;
+}
+
+/* Force Font Sizes */
+.text-sm,
+.text-sm code {
+  font-size: 12px !important;
 }
