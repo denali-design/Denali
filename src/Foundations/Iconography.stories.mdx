@@ -1,15 +1,19 @@
 import { Meta } from '@storybook/blocks';
+import { Unstyled } from '@storybook/blocks';
 import { IconDisplay } from '../storybook-utilities/IconDisplay';
-import Lead from '../storybook-utilities/Lead';
 import Subheading from '../storybook-utilities/Subheading';
+import Lead from '../components/Lead/Lead';
+import Heading from '../components/Heading/Heading';
+import '../App.css';
 
 <Meta title="Foundations/Iconography" />
 
-<Subheading>Foundations</Subheading>
-# Iconography
+<Unstyled>
+    <Subheading>Foundations</Subheading>
+    <Heading level="1">Iconography</Heading>
+    <Lead>Icons speak where words falter: concise symbolism bridging clarity and context in every interaction.</Lead>
 
-<Lead>Icons speak where words falter: concise symbolism bridging clarity and context in every interaction.</Lead>
 
-
-Explore our extensive library of over 1,000 icons. For detailed guidance on using these icons, refer to the [icon component documentation in Storybook](/docs/components-icon--docs).
-<IconDisplay />
+    Explore our extensive library of over 1,000 icons. For detailed guidance on using these icons, refer to the [icon component documentation in Storybook](/docs/components-icon--docs).
+    <IconDisplay />
+</Unstyled>
