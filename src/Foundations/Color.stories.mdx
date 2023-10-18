@@ -1,11 +1,11 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Unstyled} from '@storybook/blocks';
 import SwatchBook from '../storybook-utilities/SwatchBook';
 import Heading from '../components/Heading/Heading';
-import Lead from '../storybook-utilities/Lead';
+import Lead from '../components/Lead/Lead';
 import Subheading from '../storybook-utilities/Subheading';
 
 <Meta title="Foundations/Colors" />
-
+<Unstyled>
 <Subheading>Foundations</Subheading>
 # Color
 <Lead>Harness the power of color to convey meaning, evoke emotions, and elevate design aesthetics.</Lead>
@@ -18,3 +18,4 @@ the success-base color; using text-danger-base and hover:text-danger-focus will 
 the base and focus versions of the danger color when viewed or hovered on.
 
 <SwatchBook />
+</Unstyled>
