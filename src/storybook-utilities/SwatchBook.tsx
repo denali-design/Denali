@@ -46,12 +46,12 @@ const SwatchBook: React.FC = () => {
       <div className="canvas stroke-alt flex flex-col gap-12 rounded border p-6">
         <div className="flex">
           <ToggleButton
-            onChange={handleDarkModeToggle} // Attach the handler function
+            onChange={handleDarkModeToggle}
             toggleTextUnselected={
               <Icon
                 aria-hidden="true"
                 color="vivid"
-                name="icon-technology-sunlight-bright"
+                name="icon-technology-moon-dark"
                 size="md"
               />
             }
@@ -59,7 +59,7 @@ const SwatchBook: React.FC = () => {
               <Icon
                 aria-hidden="true"
                 color="vivid"
-                name="icon-technology-moon-dark"
+                name="icon-technology-sunlight-bright"
                 size="md"
               />
             }
