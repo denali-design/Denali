@@ -25,20 +25,27 @@ interface IconProps {
   size?: keyof typeof sizeClasses;
   className?: string;
   overrideTitle?: string;
-  color?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info';
+  color?:
+    | 'default'
+    | 'primary'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'info'
+    | 'vivid';
 }
 
 /** Mapping of icon variants to their respective tailwind CSS classes. */
 const iconVariants = tv({
-  base: 'text-black',
   variants: {
     color: {
-      default: 'text-black',
-      primary: 'text-brand-primary',
-      success: 'text-success-base',
-      warning: 'text-warning-base',
-      danger: 'text-danger-base',
-      info: 'text-info-base'
+      default: 'type',
+      primary: 'type-primary',
+      success: 'type-success',
+      warning: 'type-warning',
+      danger: 'type-danger',
+      info: 'text-info-base',
+      vivid: 'type-on-vivid'
     }
   },
   defaultVariants: {

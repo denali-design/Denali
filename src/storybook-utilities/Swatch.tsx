@@ -72,15 +72,18 @@ const Swatch: React.FC<SwatchProps> = ({ className, description }) => {
     <div>
       <div
         ref={colorDivRef}
-        className={`canvas-${className} h-16 rounded border p-4 text-center font-bold`}
+        className={`canvas-${className} stroke h-16 rounded border p-4 text-center font-bold`}
       ></div>
-      <p className="text-sm font-bold capitalize" style={{ marginBottom: '0' }}>
+      <p
+        className="type text-sm font-bold capitalize"
+        style={{ marginBottom: '0' }}
+      >
         {toTitleCase(className)}
       </p>
-      <p className="text-sm uppercase" style={{ margin: '0' }}>
+      <p className="type text-sm uppercase" style={{ margin: '0' }}>
         {hexColor && `${hexColor}`}
       </p>
-      <p className="text-sm">
+      <p className="type text-sm">
         <code>{className}</code>
       </p>
       <p className="sr-only">{description}</p>

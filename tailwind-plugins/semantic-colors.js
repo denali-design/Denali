@@ -17,6 +17,7 @@ const semanticColors = plugin(
       [
         Object.entries(values).map(([key, value]) => {
           let defaultClasses = {};
+          let defaultClassesDark = {};
 
           // Determine the default class based on the 'use' key
           if (value.use === 'bg') {
@@ -26,16 +27,32 @@ const semanticColors = plugin(
                 color: `${value.light.txt}`
               }
             };
+            defaultClassesDark = {
+              [`.${e(`${key}`)}`]: {
+                backgroundColor: `${value.dark.bg}`,
+                color: `${value.dark.txt}`
+              }
+            };
           } else if (value.use === 'border') {
             defaultClasses = {
               [`.${e(`${key}`)}`]: {
                 borderColor: `${value.light.bg}`
               }
             };
+            defaultClassesDark = {
+              [`.${e(`${key}`)}`]: {
+                borderColor: `${value.dark.bg}`
+              }
+            };
           } else if (value.use === 'text') {
             defaultClasses = {
               [`.${e(`${key}`)}`]: {
                 color: `${value.light.bg}`
+              }
+            };
+            defaultClassesDark = {
+              [`.${e(`${key}`)}`]: {
+                color: `${value.dark.bg}`
               }
             };
           }
@@ -52,10 +69,7 @@ const semanticColors = plugin(
               borderColor: `${value.light.bg}`
             },
             '.dark': {
-              [`& .${e(`${key}`)}`]: {
-                backgroundColor: `${value.dark.bg}`,
-                color: `${value.dark.txt}`
-              },
+              ...defaultClassesDark,
               [`& .type-${e(`${key}`)}`]: {
                 color: `${value.dark.bg}`
               },
