@@ -1,39 +1,26 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
 import Lead from '../components/Lead/Lead';
+import Heading from '../components/Heading/Heading';
 import Subheading from '../storybook-utilities/Subheading';
 import '../App.css';
 
 <Meta title="Foundations/Responsive" />
 
 <Subheading>Foundations</Subheading>
-<Unstyled>
 
-# Responsive
+<Unstyled>
+<Heading level="1">Responsive</Heading>
 <Lead>Guidelines for creating interfaces that respond gracefully to any screen size.</Lead>
   Denali offers a toolkit for creating responsive, mobile-first designs that look and function beautifully on screens of all sizes.
 
-  <h3>Grid System</h3>
-  Utilize a flexible grid system to ensure content scales and reflows on different screen sizes. In this example we take advantage of TailwindCSS utility classes for 'grid, col-span-1, and grid-cols-3'.
-
-
-  ```html
-  <div class="grid grid-cols-3">
-    <div class="col-span-1">Column 1</div>
-    <div class="col-span-1">Column 2</div>
-    <div class="col-span-1">Column 3</div>
-  </div>
-  ```
-
-
-  <h3>Breakpoints</h3>
+<Heading level="2">Breakpoints</Heading>
   Define breakpoints that cater to common device sizes. With Denali you can use prefixes sm:, md:, lg:, xl:, and 2xl to apply styles at different breakpoints.
     
     ```html
     <div class="bg-blue-500 h-48 w-full md:w-1/2 lg:w-1/3 2xl:w-1/4"></div>
     ```
 
-
-  <h3>Responsive Typography</h3>
+<Heading level="3">Responsive Typography</Heading>
   <p>Employ scalable text to enhance readability on various devices. Denali is built off of Tailwind CSS so you the full range of text utility classes that can be combined with breakpoint prefixes for responsive typography.</p>
   <p>For a paragraph that changes its line-height and font-size based on the device, you can use:</p>
 
@@ -41,14 +28,13 @@ import '../App.css';
     <p class="leading-normal sm:leading-relaxed md:leading-loose text-sm md:text-base lg:text-lg">This is a responsive paragraph.</p>
   ```
 
-  <h3>Media Queries</h3>
+  <Heading level="3">Media Queries</Heading>
   <p>Use media queries to apply different styles based on device characteristics. Tailwind CSS abstracts media queries into responsive modifiers, making it more intuitive to create responsive designs.</p>
   ```html
     <div class="hidden sm:block">This element is hidden on small screens and visible on medium screens and up.</div>
   ```
 
-
-  <h3>Responsive Images</h3>
+  <Heading level="3">Responsive Images</Heading>
   <p>Implement responsive image techniques to serve appropriate image sizes. Tailwind provides utilities for handling image responsiveness.</p>
   <p>To make an image responsive, you can use the max-w- utility:</p>
 
@@ -56,11 +42,7 @@ import '../App.css';
   <img src="image.jpg" alt="Sample" class="max-w-full h-auto">
   ```
 
-  <h3>Performance Optimization</h3>
-  Optimize performance, especially for mobile devices with potentially slower internet speeds, by using techniques like lazy loading and image optimization.
-
-
-  <h3>Testing</h3>
+  <Heading level="3">Testing</Heading>
   <p>Conduct testing on various devices and screen sizes to ensure full coverage. Tools like BrowserStack or manual testing across different devices can help ensure that your design scales appropriately.</p>
 
 </Unstyled>

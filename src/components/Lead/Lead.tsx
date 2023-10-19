@@ -15,7 +15,7 @@ export interface LeadProps extends HTMLProps<HTMLParagraphElement> {
 }
 
 const lead = tv({
-  base: 'text-2xl mb-2',
+  base: 'text-3xl mb-2 font-light',
   variants: {
     variety: {
       default: 'type',

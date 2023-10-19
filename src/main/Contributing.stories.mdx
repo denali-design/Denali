@@ -1,68 +1,53 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
 import Lead from '../components/Lead/Lead';
+import Heading from '../components/Heading/Heading';
 import Subheading from '../storybook-utilities/Subheading';
 
-
 <Meta title="Denali/Contributing" />
+
+<Unstyled>
 <Subheading>Join the Journey</Subheading>
-# Contributing
+<Heading level="1">Contributing</Heading>
 
 <Lead>Thank you for considering contributing to the Denali Component Library. We value your input and efforts to make this a robust and reliable component library.</Lead>
-## Table of Contents
 
-1. [Getting Started](#getting-started)
-2. [Contribution Guidelines](#contribution-guidelines)
-3. [Code Contribution](#code-contribution)
-4. [Figma Documentation](#figma-documentation)
-5. [Pull Requests](#pull-requests)
-6. [Contact](#contact)
-
----
-
-## Getting Started
-
+<Heading level="2">Getting Started</Heading>
 Fork the repository and clone it to your local machine. Ensure that you have Node.js and npm/yarn installed. Follow the README for the initial setup.
 
----
-
-## Contribution Guidelines
-
+<Heading level="2">Contribution Guidelines</Heading>
 Please adhere to the following principles:
+<ul class="list-disc list-inside">
+    <li>Maintain WCAG 2.1 AA and Section 508 accessibility standards.</li>
+    <li>Ensure your components use React hooks.</li>
+    <li>Test all components before committing.</li>
+</ul>
 
-- Maintain WCAG 2.1 AA and Section 508 accessibility standards.
-- Ensure your components use React hooks.
-- Test all components before committing.
+<Heading level="2">Code Contribution</Heading>
+<ul class="list-decimal list-inside">
+    <li>Fork the repo and clone it locally.</li>
+    <li>Create a new branch for your feature or bug fix.</li>
+    <li>Write code following the project's coding standards.</li>
+    <li>Test your code thoroughly.</li>
+    <li>Commit and push your changes to your fork.</li>
+    <li>Open a pull request against the main branch.</li>
+</ul>
 
----
-
-## Code Contribution
-
-1. Fork the repo and clone it locally.
-2. Create a new branch for your feature or bug fix.
-3. Write code following the project's coding standards.
-4. Test your code thoroughly.
-5. Commit and push your changes to your fork.
-6. Open a pull request against the main branch.
-
----
-
-## Figma Documentation
-
+<Heading level="2">Figma Documentation</Heading>
 If your contribution involves design elements, please update the Figma documentation to reflect your changes. Ensure your Figma components match the React components 1:1.
+See more details in figma file under getting started.
 
----
-
-## Pull Requests
-
+<Heading level="2">Pull Requests</Heading>
 Before submitting a pull request, please ensure:
 
-- All tests pass.
-- The code has been reviewed by at least one other person.
-- You have updated the Figma documentation if applicable.
-- Your commits have clear and descriptive messages.
+<ul class="list-disc list-inside">
+    <li>All tests pass.</li>
+    <li>The code has been reviewed by at least one other person.</li>
+    <li>You have updated the Figma documentation if applicable.</li>
+    <li>Your commits have clear and descriptive messages.</li>
+</ul>
 
----
 
-## Contact
+<Heading level="2">Contact</Heading>
+For more information or if you have any questions, feel free to contact us on slack.
 
-For more information or if you have any questions, feel free to contact us.
+</Unstyled>
