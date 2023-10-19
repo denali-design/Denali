@@ -10,11 +10,11 @@ import '../App.css';
 
 <Unstyled>
   <Subheading>Foundations</Subheading>
-  <Heading level="1">Shadows</Heading>
+  <Heading type="article" level="1">Shadows</Heading>
   <Lead>Creating depth and focus in UI elements.</Lead>
   <Paragraph> Shadows play a critical role in adding depth to the interface and distinguishing various UI components. This guide provides foundational knowledge on how to use shadows effectively while keeping the user experience intuitive.</Paragraph>
   
-  <Heading level="2">Usage Principles</Heading>
+  <Heading type="article" level="2">Usage Principles</Heading>
   <Paragraph>Different shadow depths are used to indicate the elevation of elements. Higher elevation often denotes more interactive or important elements.</Paragraph>
 
   <div class="my-4">  
@@ -45,10 +45,10 @@ import '../App.css';
     </div>
   </div>
 
-  <Heading level="2">Implementation</Heading>
+  <Heading type="article" level="2">Implementation</Heading>
   <Paragraph className="mb-4">Many components in our library come with built-in shadow states. Exercise caution when choosing to replace or remove these shadows, as they are an integral part of the component's design. All shadow rules are defined using TailwindCSS and ships with the standard shadow rules.</Paragraph>
 
-  <Heading level="3">Dos and Don'ts</Heading>
+  <Heading type="article" level="3">Dos and Don'ts</Heading>
   <DoAndDont direction="horizontal"  doChildren={<p>Use shadows consistently across similar UI elements.</p>} 
           dontChildren={<p>Mix multiple shadow styles arbitrarily.</p>}/>
 
