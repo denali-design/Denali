@@ -16,17 +16,20 @@ The writing style used in your app is an extension of its brand and a key part o
 
 <Heading type="article" level="2">Principles of Writing Style</Heading>
 
-<Heading type="article" level="3">Simplicity</Heading>
+<div className="grid grid-cols-2 gap-8">
+<Heading type="article" level="3" size="4">Simplicity</Heading>
 Opt for clear and concise language that gets straight to the point. This makes your content accessible to a broader audience, including people who are not native English speakers or who have cognitive impairments.
 
-<Heading type="article" level="3">Consistency</Heading>
+<Heading type="article" level="3" size="4">Consistency</Heading>
 Maintain a consistent tone and vocabulary across all elements of your design system, from UI components to documentation.
 
-<Heading type="article" level="3">Empathy</Heading>
+<Heading type="article" level="3" size="4">Empathy</Heading>
 Write with the user's perspective in mind. Aim to make them feel understood and supported, rather than overwhelmed or frustrated.
 
-<Heading type="article" level="3">Accuracy</Heading>
+<Heading type="article" level="3" size="4">Accuracy</Heading>
 Be factual and precise in your messaging. Misleading or vague language can harm the user’s trust and make your system less reliable.
+</div>
+ <hr className="my-8 "/>
 
 <Heading type="article" level="2">Dos and Don'ts</Heading>
 <DoAndDont direction="horizontal"  doChildren={<p>Use active voice: "Click the button to save."</p>} 
@@ -52,7 +55,7 @@ Limit the use of exclamation marks to avoid sounding alarmist.
         dontChildren={<p>Your settings have been saved!</p>}/>
 
 
-<Heading type="article" level="3">Writing for Components</Heading>
+<Heading type="article" level="2">Writing for Components</Heading>
 Make sure that the language used for each UI component is aligned with its function. For example, a button that submits a form should say "Submit" rather than "Go" to be more descriptive.
 Use verbs that clearly indicate the action, such as "Search," "Filter," or "Download."
 
