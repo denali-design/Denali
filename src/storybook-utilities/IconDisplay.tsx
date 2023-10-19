@@ -62,7 +62,9 @@ export const IconDisplay: React.FC = () => {
 
         return (
           <div key={category} className="pt-2">
-            <Heading level="2">{capitalizeFirstLetter(category)}</Heading>
+            <Heading type="article" level="2">
+              {capitalizeFirstLetter(category)}
+            </Heading>
             <div className="grid grid-cols-6 gap-4">
               {filteredIcons.map((iconName) => (
                 <a

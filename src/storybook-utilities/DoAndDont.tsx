@@ -47,7 +47,7 @@ const DoAndDont: React.FC<DoAndDontProps> = ({
     : 'grid grid-cols-2 gap-6';
 
   return (
-    <div className={`pb-6 ${containerClasses}`}>
+    <div className={`pb-6 pt-3 ${containerClasses}`}>
       {/* Do Section */}
       <div className="canvas-success stroke-success-vivid overflow-hidden rounded border-t-4 p-4">
         <div className="grid grid-cols-12 gap-2">

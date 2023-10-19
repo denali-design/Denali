@@ -12,30 +12,34 @@ import { ElementType, forwardRef, HTMLAttributes, memo } from 'react';
 import { tv } from 'tailwind-variants';
 import '../../App.css';
 
-/**
- * Configuration object for Tailwind Variants, defining the styles for the Heading component.
- */
 export const heading = tv({
   base: '',
   variants: {
-    level: {
-      1: 'text-5xl my-2 font-bold',
-      2: 'text-3xl mt-4 mb-2 font-medium',
-      3: 'text-xl font-semibold',
-      4: 'text-xl',
-      5: 'text-lg',
-      6: 'text-base'
-    },
-    weight: {
-      thin: 'font-thin',
-      extralight: 'font-extralight',
-      light: 'font-light',
-      normal: 'font-normal',
-      medium: 'font-medium',
-      semibold: 'font-semibold',
-      bold: 'font-bold',
-      extrabold: 'font-extrabold',
-      black: 'font-black'
+    type: {
+      article: {
+        1: 'text-6xl my-4 font-bold',
+        2: 'text-3xl mt-6 mb-3 font-medium',
+        3: 'text-2xl my-2 font-medium',
+        4: 'text-xl my-2 font-medium',
+        5: 'text-lg my-1 font-medium',
+        6: 'text-base my-1 font-medium'
+      },
+      app: {
+        1: 'text-4xl font-bold',
+        2: 'text-3xl font-medium',
+        3: 'text-2xl font-medium',
+        4: 'text-xl font-medium',
+        5: 'text-lg font-medium',
+        6: 'text-base font-medium'
+      },
+      display: {
+        1: 'text-9xl font-bold',
+        2: 'text-8xl font-bold',
+        3: 'text-7xl font-bold',
+        4: 'text-6xl font-bold',
+        5: 'text-5xl font-bold',
+        6: 'text-4xl font-bold'
+      }
     }
   }
 });
@@ -45,22 +49,13 @@ export const heading = tv({
  * @extends {HTMLAttributes<HTMLElement>}
  *
  * @property {1|2|3|4|5|6} [level] - The semantic level of the heading.
- * @property {1|2|3|4|5|6} [styleLevel] - The visual style level of the heading.
- * @property {('thin'|'extralight'|'light'|'normal'|'medium'|'semibold'|'bold'|'extrabold'|'black')} [fontWeight] - Specifies the font weight of the heading.
+ * @property {1|2|3|4|5|6} [size] - The visual style level of the heading.
+ * @property {'article'|'app'|'display'} [type] - The type of heading, which defines the style.
  */
 export interface HeadingProps extends HTMLAttributes<HTMLElement> {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
-  styleLevel?: 1 | 2 | 3 | 4 | 5 | 6;
-  fontWeight?:
-    | 'thin'
-    | 'extralight'
-    | 'light'
-    | 'normal'
-    | 'medium'
-    | 'semibold'
-    | 'bold'
-    | 'extrabold'
-    | 'black';
+  size?: 1 | 2 | 3 | 4 | 5 | 6;
+  type?: 'article' | 'app' | 'display';
 }
 
 /**
@@ -80,8 +75,7 @@ const HeadingTagMap: Record<1 | 2 | 3 | 4 | 5 | 6, ElementType> = {
  *
  * @param {HeadingProps} props - The properties of the heading.
  * @property {number} [props.level] - Specifies the semantic level of the heading.
- * @property {number} [props.styleLevel] - Specifies the visual style level of the heading.
- * @property {string} [props.fontWeight] - Specifies the font weight of the heading.
+ * @property {number} [props.size] - Specifies the visual style level of the heading.
  * @property {React.Ref} ref - A reference to the wrapped heading element.
  *
  * @returns {React.Element} The rendered heading element.
@@ -91,8 +85,8 @@ export const Heading = memo(
     const {
       children,
       level = 1,
-      styleLevel = level,
-      fontWeight,
+      size = level,
+      type = 'app',
       className,
       ...domProps
     } = props;
@@ -103,17 +97,9 @@ export const Heading = memo(
     const Element = HeadingTagMap[level];
 
     /**
-     * Determines the applied style level, defaulting to the semantic level.
-     */
-    const appliedStyleLevel = styleLevel || level;
-
-    /**
      * Computes the Tailwind CSS class string based on the given props.
      */
-    const computedClass = heading({
-      level: appliedStyleLevel,
-      weight: fontWeight
-    });
+    const computedClass = heading.variants.type[type]?.[size] || '';
 
     return (
       <Element

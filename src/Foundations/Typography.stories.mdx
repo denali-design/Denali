@@ -14,47 +14,94 @@ import Subheading from '../storybook-utilities/Subheading';
 
 <Unstyled>
   <Subheading>Foundations</Subheading>
-  <Heading level="1">Typography</Heading>
+  <Heading level="1" type="article">Typography</Heading>
   <Lead>Bridging Legibility and Design</Lead>
   Typography serves as a fundamental tool in establishing both information hierarchy and clarity. This guide presents each standard HTML typography element, detailing its specific use-case.
 
   <div class="flex items-center gap-2">
-    <Heading level="2">Heading</Heading>
-    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+    <Heading level="2" type="article" className="">Heading</Heading>
   </div>
 
-  <div class="canvas-alt p-8">
-    <Heading level={1}>Heading Level 1</Heading>
-    <Heading level={2}>Heading Level 2</Heading>
-    <Heading level={3}>Heading Level 3</Heading>
-    <Heading level={4}>Heading Level 4</Heading>
-    <Heading level={5}>Heading Level 5</Heading>
-    <Heading level={6}>Heading Level 6</Heading>
-  </div>
+<div className="canvas-alt p-4 rounded mb-8">
+  <Heading type="app" level={3}>Type: App <span className="text-alt font-light italic">(Default)</span></Heading>
+  <table className="min-w-full mt-8">
+    <thead>
+      <tr>
+        <th className="text-left w-24">Level</th>
+        <th className="text-left">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      {Array.from({ length: 6 }, (_, i) => i + 1).map(level => (
+        <tr key={`app-${level}`}>
+          <td>{level}</td>
+          <td><Heading type="app" level={level} className="">Heading</Heading></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<div className="canvas-alt p-4 rounded mb-8">
+  <Heading type="app" level={3}>Type: Display</Heading>
+  <table className="min-w-full mt-8">
+    <thead>
+      <tr>
+        <th>Level</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      {Array.from({ length: 6 }, (_, i) => i + 1).map(level => (
+        <tr key={`display-${level}`}>
+          <td>{level}</td>
+          <td class="max-w-full"><Heading type="display" level={level} className="">Heading</Heading></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<div className="canvas-alt p-4 rounded mb-8">
+  <Heading type="article" level={3}>Type: Article</Heading>
+  <table className="min-w-full mt-8">
+    <thead>
+      <tr>
+        <th className="text-left w-24">Level</th>
+        <th className="text-left">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      {Array.from({ length: 6 }, (_, i) => i + 1).map(level => (
+        <tr key={`article-${level}`}>
+          <td>{level}</td>
+          <td><Heading type="article" level={level} className="">Heading</Heading></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
   <div class="flex items-center gap-2">
-    <Heading level="2">Lead</Heading>
-    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+    <Heading type="article" level="2">Lead</Heading>
   </div>
     <div class="canvas-alt p-8">
-      <Lead>This is a standard lead.</Lead>
+      <Lead>The Lead text is designed to capture attention and provide a succinct summary of the content that follows. </Lead>
     </div>
 
 
   <div class="flex items-center gap-2">
-    <Heading level="2">Paragraph</Heading>
-    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+    <Heading type="article" level="2">Paragraph</Heading>
   </div>
   <div class="canvas-alt p-8">
-    <Paragraph>This is a standard paragraph.</Paragraph>
+    <Paragraph>Whiskers, the tabby cat, defies nature by hiking Mount Denali. With keen instincts and nimble paws, he reaches the summit, proving he's not just a cat but a true mountaineer.</Paragraph>
   </div>
 
  <div class="flex items-center gap-2">
-    <Heading level="2">List</Heading>
-    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+    <Heading type="article" level="2">List</Heading>
   </div>
   <div class="canvas-alt p-8">
-   <Heading level="3">Unordered List</Heading>
+   <Heading type="article" level="3">Unordered List</Heading>
     <ul class="list-inside list-disc">
       <li>Item 1</li>
       <li>Item 2</li>
@@ -71,16 +118,14 @@ import Subheading from '../storybook-utilities/Subheading';
 
 
 <div class="flex items-center gap-2">
-    <Heading level="2">Link</Heading>
-    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+    <Heading type="article" level="2">Link</Heading>
   </div>
   <div class="canvas-alt p-8">
    <a href="#">This is a hyperlink</a>
   </div>
 
   <div class="flex items-center gap-2">
-    <Heading level="2">Strong & Emphasis</Heading>
-    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+    <Heading type="article" level="2">Strong & Emphasis</Heading>
   </div>
   <div class="canvas-alt p-8">
   <strong>This text is strongly emphasized.</strong>
@@ -89,17 +134,16 @@ import Subheading from '../storybook-utilities/Subheading';
 
 
   <div class="flex items-center gap-2">
-    <Heading level="2">Inline Text Element</Heading>
-    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+    <Heading type="article" level="2">Inline Text Element</Heading>
   </div>
   <div class="canvas-alt p-8">
-    <Heading level="3">Small Text</Heading>
+    <Heading type="article" level="3">Small Text</Heading>
     <small>This is smaller text.</small>
 
-    <Heading level="3">Highlight</Heading>
+    <Heading type="article" level="3">Highlight</Heading>
     <mark>This text is highlighted or marked for emphasis.</mark>
 
-    <Heading level="3">Deleted & Inserted</Heading>
+    <Heading type="article" level="3">Deleted & Inserted</Heading>
     <del>This text is deleted.</del>
      <ins>This text is inserted.</ins>
 
