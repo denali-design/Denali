@@ -25,27 +25,27 @@ export const SpacingSystem = () => {
 
   return (
     <div>
-      <Heading level="2">Spacing Tokens</Heading>
+      <Heading level={2}>Spacing Tokens</Heading>
       <p>
         Spacing tokens are the recommended way to handle spacing in your app.
         They adhere to predefined scales which helps in maintaining consistency.
       </p>
-      <table className="w-full table-auto border-collapse border border-transparent ">
-        <thead>
+      <table className="w-full table-auto border-collapse border border-transparent">
+        <thead className="stroke-alt border-b-2 text-left">
           <tr>
-            <th>Name</th>
-            <th>Size (rem)</th>
-            <th>Pixels</th>
-            <th>Visual</th>
+            <th className="py-4">Name</th>
+            <th className="py-4">Size (rem)</th>
+            <th className="py-4">Pixels</th>
+            <th className="py-4">Visual</th>
           </tr>
         </thead>
         <tbody>
           {spacingClasses.map((spacingClass, index) => (
-            <tr key={index}>
-              <td>{spacingClass.name}</td>
-              <td>{spacingClass.value}rem</td>
-              <td>{spacingClass.pixels}</td>
-              <td>
+            <tr key={index} className="stroke-alt hover:canvas-hover border-b">
+              <td className="py-4">{spacingClass.name}</td>
+              <td className="py-4">{spacingClass.value}rem</td>
+              <td className="py-4">{spacingClass.pixels}</td>
+              <td className="py-4">
                 <div
                   style={{
                     width: spacingClass.pixels,
