@@ -30,9 +30,7 @@ const SwatchBook: React.FC = () => {
       {Object.entries(semanticColorSwatches.semanticColors).map(
         ([category, colors]) => (
           <div key={category} className="flex flex-col gap-4">
-            <Heading fontWeight="bold" level={2} styleLevel={4}>
-              {toTitleCase(category)}
-            </Heading>
+            <Heading level={3}>{toTitleCase(category)}</Heading>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
               {Object.keys(colors).map((colorKey) => (
                 <Swatch

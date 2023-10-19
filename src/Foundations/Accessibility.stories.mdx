@@ -1,55 +1,121 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Unstyled } from '@storybook/blocks';
 import Lead from '../components/Lead/Lead';
+import Image from '../components/Image/Image';
+import Heading from '../components/Heading/Heading';
 import Subheading from '../storybook-utilities/Subheading';
 
 <Meta title="Foundations/Accessibility" />
 
+<Unstyled>
 <Subheading>Foundations</Subheading>
-# Accessibility
+<Heading level="1">Accessibility</Heading>
 <Lead>Inclusivity is not optional; it's a necessity.</Lead>
 Our design system is committed to providing a universally accessible user experience. Our responsibility transcends the boundary of visual design, extending into coding practices, UI/UX design, and even documentation. This guide covers the foundational principles and practical suggestions to make our products fully accessible, adhering to WCAG 2.1 AA and Section 508 guidelines.
 
+<Heading level="2">Structure and Layout</Heading>
 
-<h3>Structure and Layout</h3>
-<h4>Logical Ordering</h4>
-Organize content according to its significance to make it easier for users to find what they need.
+<div class="grid grid-cols-3 gap-4 mb-8">
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Logical Ordering</Heading>
+        Organize content according to its significance to make it easier for users to find what they need.
+    </div>
 
-<h4>Hierarchical Consistency</h4>
-Stick to a logical sequence of headings: H1, H2, H3, and so on. Never skip levels for styling convenience.
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Hierarchical Consistency</Heading>
+        Stick to a logical sequence of headings: H1, H2, H3, and so on. Never skip levels for styling convenience.
+    </div>
 
-<h4>Visibility of Content</h4>
-Resist the urge to hide crucial information within accordions or tabs. Important content should be immediately visible.
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Visibility of Content</Heading>
+        Resist the urge to hide crucial information within accordions or tabs. Important content should be immediately visible.
+    </div>
+</div>
 
-<h3>Textual Considerations</h3>
-<h4>Language Clarity</h4>
-Choose straightforward language. This enables easier navigation for users who depend on screen readers, and benefits those who speak English as an additional language.
 
-<h4>Text Resizing</h4>
-Design UIs to be resilient when text scales or wraps. This is crucial for different languages and magnification levels.
+<Heading level="2">Textual Considerations</Heading>
+<div class="grid grid-cols-3 gap-4 mb-8">
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Language Clarity</Heading>
+        Choose straightforward language. This enables easier navigation for users who depend on screen readers, and benefits those who speak English as an additional language.
+    </div>
+    
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Text Resizing</Heading>
+        Design UIs to be resilient when text scales or wraps. This is crucial for different languages and magnification levels.
+    </div>
 
-<h3>Navigation and Interactivity</h3>
-<h4>Keyboard Usability</h4>
-All features must be usable via keyboard alone. This is essential for users who cannot use a mouse.
+</div>
 
-<h4>Focus Management</h4>
+
+<Heading level="2">Navigation & Interactivity</Heading>
+<div class="grid grid-cols-3 gap-4 mb-8">
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Keyboard Usability</Heading>
+        All features must be usable via keyboard alone. This is essential for users who cannot use a mouse.
+    </div>
+    
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Focus Management</Heading>
 Keep the keyboard focus in a logical order and make the focus indicator obvious.
+    </div>
 
-<h4>Tooltips and Validation</h4>
-Tooltips should be keyboard-activated. Inline validation on forms should be easily accessible to keyboard users.
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Tooltips and Validation</Heading>
+        Tooltips should be keyboard-activated. Inline validation on forms should be easily accessible to keyboard users.
+    </div>
+</div>
 
-<h3>Multimedia</h3>
-<h4>Image Descriptions</h4>
-Images should include succinct but informative alt text. Decorative images should use an empty alt="" attribute.
 
-<h4>Video Accessibility</h4>
-Include captions and audio descriptions. Ensure controls are accessible to keyboard and screen readers.
+<Heading level="2">Multimedia</Heading>
+<div class="grid grid-cols-3 gap-4 mb-8">
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Image Descriptions</Heading>
+        Images should include succinct but informative alt text. Decorative images should use an empty alt="" attribute.
+    </div>
+    
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Video Accessibility</Heading>
+        Include captions and audio descriptions. Ensure controls are accessible to keyboard and screen readers.
+    </div>
 
-<h3>Visual Design</h3>
-<h4>Color Choices</h4>
-Maintain AA standard contrast ratios. Utilize more cues than color alone to convey information.
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Tooltips and Validation</Heading>
+        Tooltips should be keyboard-activated. Inline validation on forms should be easily accessible to keyboard users.
+    </div>
+</div>
 
-<h4>Iconography</h4>
-Use icons in conjunction with text or other indicators to ensure their purpose is universally understood.
 
-<h3>Testing and Compliance</h3>
-While adhering to these guidelines will contribute significantly to accessibility, it is not a substitute for rigorous testing. Include accessibility tests using a variety of assistive technologies, and, whenever possible, conduct tests with real users who have various impairments.
+
+<Heading level="2">Visual Design</Heading>
+<div class="grid grid-cols-3 gap-4 mb-8">
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Color Choices</Heading>
+        Maintain AA standard contrast ratios. Utilize more cues than color alone to convey information.
+    </div>
+    
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Iconography</Heading>
+        Use icons in conjunction with text or other indicators to ensure their purpose is universally understood.
+    </div>
+
+    <div>
+        <Image alt="Example image" src="https://placehold.co/300x200"/>
+        <Heading level="3">Testing and Compliance</Heading>
+        Following these guidelines helps with accessibility but isn't a substitute for thorough testing. Use assistive technologies for testing and, when possible, test with users having different impairments.  
+    </div>
+</div>
+
+</Unstyled>

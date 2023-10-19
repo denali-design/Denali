@@ -1,48 +1,61 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Unstyled } from '@storybook/blocks';
 import Lead from '../components/Lead/Lead';
+import Heading from '../components/Heading/Heading';
 import Subheading from '../storybook-utilities/Subheading';
 import DoAndDont from '../storybook-utilities/DoAndDont';
 
 <Meta title="Content/Language" />
 
-<Subheading>Content</Subheading>
-# Language & Grammar
-<Lead>Mastering Words: Your guide to clear, consistent language and grammar.</Lead>
+<Unstyled>
+        <Subheading>Content</Subheading>
+        <Heading level="1">Language & Grammar</Heading>
+        <Lead>Mastering Words: Your guide to clear, consistent language and grammar.</Lead>
 
-Language and grammar form the backbone of any written communication, including the textual elements in your app. A consistent approach to language and grammar enhances user comprehension, accessibility, and overall experience. This guide outlines the key considerations and best practices for using language and grammar in your app.
+        Language and grammar form the backbone of any written communication, including the textual elements in your app. A consistent approach to language and grammar enhances user comprehension, accessibility, and overall experience. This guide outlines the key considerations and best practices for using language and grammar in your app.
 
-<h2>Language Choice</h2>
+        <Heading level="2">Language Choice</Heading>
+        <Heading level="3">English as the Default Language</Heading>
+        English is often chosen as the default language for global products. However, consider localization options to make your system inclusive for non-English speakers.
 
-<h3>English as the Default Language</h3>
-English is often chosen as the default language for global products. However, consider localization options to make your system inclusive for non-English speakers.
+        <Heading level="3">Terminology</Heading>
+        Use standardized terminology across your app. For instance, if you refer to a user's profile picture as an "Avatar," avoid calling it a "Profile Pic" elsewhere to maintain consistency.
 
-<h3>Terminology</h3>
-Use standardized terminology across your app. For instance, if you refer to a user's profile picture as an "Avatar," avoid calling it a "Profile Pic" elsewhere to maintain consistency.
+        <Heading level="3">Jargon and Technical Language</Heading>
+        Minimize the use of industry jargon or technical language unless your target audience is specialized and familiar with those terms.
 
-<h3>Jargon and Technical Language</h3>
-Minimize the use of industry jargon or technical language unless your target audience is specialized and familiar with those terms.
+        <Heading level="2">Grammar Rules</Heading>
+        <div class="grid grid-cols-3">
+                <div>
+                        <Heading level="3">Subject-Verb Agreement</Heading>
+                        Ensure that subjects and verbs in your sentences agree in number (singular or plural).
+                </div>
 
-<h2>Grammar Rules</h2>
-<h3>Subject-Verb Agreement</h3>
-Ensure that subjects and verbs in your sentences agree in number (singular or plural).
+                <div>
+                        <Heading level="3">Tense Consistency</Heading>
+                        Maintain a consistent tense throughout your UI and documentation. The present tense is generally more engaging and immediate.
+                </div>
 
-<h3>Tense Consistency</h3>
-Maintain a consistent tense throughout your UI and documentation. The present tense is generally more engaging and immediate.
+                <div>
+                        <Heading level="3">Pronoun Usage</Heading>
+                        Make sure to use pronouns carefully to avoid ambiguity. When in doubt, it's better to repeat the noun.
+                </div>
+        </div>
 
-<h3>Pronoun Usage</h3>
-Make sure to use pronouns carefully to avoid ambiguity. When in doubt, it's better to repeat the noun.
+        <Heading level="3" className="mt-4">Punctuation</Heading>
+        <ul class="list-inside list-disc">
+                <li>Use the Oxford comma for clarity in lists.</li>
+                <li>Use exclamation marks sparingly to avoid diluting their impact.</li>
+                <li>Use colons and semicolons appropriately to improve readability and flow.</li>
+        </ul>
 
-<h3>Punctuation</h3>
-- Use the Oxford comma for clarity in lists.
-- Use exclamation marks sparingly to avoid diluting their impact.
-- Use colons and semicolons appropriately to improve readability and flow.
+        <Heading level="3" className="mt-4">Abbreviations and Acronyms</Heading>
+        Always spell out an abbreviation or acronym the first time it appears. Subsequent mentions can use the shortened form.
 
-<h3>Abbreviations and Acronyms</h3>
-Always spell out an abbreviation or acronym the first time it appears. Subsequent mentions can use the shortened form.
-
-<DoAndDont direction="horizontal"  doChildren={<p>User Experience (UX)</p>} 
-        dontChildren={<p>UX (without prior explanation)</p>}/>
+        <DoAndDont direction="horizontal"  doChildren={<p>User Experience (UX)</p>} 
+                dontChildren={<p>UX (without prior explanation)</p>}/>
 
 
-<h2>Conclusion</h2>
-A standardized approach to language and grammar in your app is as important as the visual components. It ensures that the user understands the system's functionalities and navigates effortlessly, thereby improving overall accessibility and user experience. Regular audits and user testing can help maintain the quality and effectiveness of language and grammar in your system.
+        <Heading level="2">Conclusion</Heading>
+        A standardized approach to language and grammar in your app is as important as the visual components. It ensures that the user understands the system's functionalities and navigates effortlessly, thereby improving overall accessibility and user experience. Regular audits and user testing can help maintain the quality and effectiveness of language and grammar in your system.
+
+</Unstyled>

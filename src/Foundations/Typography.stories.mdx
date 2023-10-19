@@ -1,5 +1,6 @@
-import { Meta,Unstyled } from '@storybook/addon-docs/blocks';
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
 import { Heading } from '../components/Heading/Heading';
+import { Icon } from '../components/Icon/Icon';
 import { Paragraph } from '../components/Paragraph/Paragraph';
 import {
   DescriptionItem,
@@ -12,120 +13,167 @@ import Subheading from '../storybook-utilities/Subheading';
 <Meta title="Foundations/Typography" />
 
 <Unstyled>
-<Subheading>Foundations</Subheading>
-# Typography
-<Lead>Bridging Legibility and Design</Lead>
-Typography serves as a fundamental tool in establishing both information hierarchy and clarity. This guide presents each standard HTML typography element, detailing its specific use-case.
+  <Subheading>Foundations</Subheading>
+  <Heading level="1">Typography</Heading>
+  <Lead>Bridging Legibility and Design</Lead>
+  Typography serves as a fundamental tool in establishing both information hierarchy and clarity. This guide presents each standard HTML typography element, detailing its specific use-case.
 
-## Headings <a name="headings"></a>
+  <div class="flex items-center gap-2">
+    <Heading level="2">Heading</Heading>
+    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+  </div>
 
-<Heading level={1}>Heading Level 1</Heading>
-<Heading level={2}>Heading Level 2</Heading>
-<Heading level={3}>Heading Level 3</Heading>
-<Heading level={4}>Heading Level 4</Heading>
-<Heading level={5}>Heading Level 5</Heading>
-<Heading level={6}>Heading Level 6</Heading>
+  <div class="canvas-alt p-8">
+    <Heading level={1}>Heading Level 1</Heading>
+    <Heading level={2}>Heading Level 2</Heading>
+    <Heading level={3}>Heading Level 3</Heading>
+    <Heading level={4}>Heading Level 4</Heading>
+    <Heading level={5}>Heading Level 5</Heading>
+    <Heading level={6}>Heading Level 6</Heading>
+  </div>
 
-## Paragraph <a name="paragraph"></a>
-<Paragraph>This is a standard paragraph.</Paragraph>
-
-## Lists <a name="lists"></a>
-### Unordered List <a name="unordered-list"></a>
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-</ul>
-
-### Ordered List <a name="ordered-list"></a>
-<ol>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-</ol>
-
-## Links <a name="links"></a>
-<a href="#">This is a hyperlink</a>
-
-## Strong & Emphasis <a name="strong--emphasis"></a>
-<strong>This text is strongly emphasized.</strong>
-<em>This text is emphasized.</em>
-
-## Inline Text Elements <a name="inline-text-elements"></a>
-### Small Text
-<small>This is smaller text.</small>
-
-### Highlight
-<mark>This text is highlighted or marked for emphasis.</mark>
-
-### Deleted & Inserted
-<del>This text is deleted.</del>
-<ins>This text is inserted.</ins>
-
-### Keyboard Input
-<kbd>Ctrl + S</kbd>
-
-### Variable
-<var>v</var>
-
-### Sample Output
-<samp>Output sample</samp>
-
-### Time
-<time dateTime="2022-10-09">October 9, 2022</time>
-
-### Citation
-<cite>Author Name</cite>
-
-## Block Elements <a name="block-elements"></a>
-### Blockquote
-<blockquote>
-  This is a blockquote.
-</blockquote>
-
-### Code
-For inline code: <code>`code`</code>
-<pre>
-  This is preformatted text for blocks of code.
-</pre>
-
-### Address
-<address>
-  Denali Mountain<br />
-  123 Elm Street<br />
-  Denali Park, AK 99755
-</address>
-
-### Description List
-<DescriptionList>
-  <DescriptionItem term="Term 1" description="Description for Term 1" />
-  <DescriptionItem term="Term 2" description="Description for Term 2" />
-</DescriptionList>
+  <div class="flex items-center gap-2">
+    <Heading level="2">Lead</Heading>
+    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+  </div>
+    <div class="canvas-alt p-8">
+      <Lead>This is a standard lead.</Lead>
+    </div>
 
 
-## Special Text Elements <a name="special-text-elements"></a>
-### Abbreviation
-<abbr title="Hypertext Markup Language">HTML</abbr>
+  <div class="flex items-center gap-2">
+    <Heading level="2">Paragraph</Heading>
+    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+  </div>
+  <div class="canvas-alt p-8">
+    <Paragraph>This is a standard paragraph.</Paragraph>
+  </div>
 
-### Bold Text
-<b>Bolded text</b>
+ <div class="flex items-center gap-2">
+    <Heading level="2">List</Heading>
+    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+  </div>
+  <div class="canvas-alt p-8">
+   <Heading level="3">Unordered List</Heading>
+    <ul class="list-inside list-disc">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
 
-### Italicized Text
-<i>Italicized text</i>
+    <Heading level="3" className="mt-4">Ordered List</Heading>
+    <ol class="list-inside list-decimal">
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+  </div>
 
-### Defining Term
-<dfn>Term</dfn>
 
-### Inline Quotation
-<q>Inline quote</q>
+<div class="flex items-center gap-2">
+    <Heading level="2">Link</Heading>
+    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+  </div>
+  <div class="canvas-alt p-8">
+   <a href="#">This is a hyperlink</a>
+  </div>
 
-### Subscript and Superscript
-H<sub>2</sub>O and E = mc<sup>2</sup>
+  <div class="flex items-center gap-2">
+    <Heading level="2">Strong & Emphasis</Heading>
+    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+  </div>
+  <div class="canvas-alt p-8">
+  <strong>This text is strongly emphasized.</strong>
+  <em>This text is emphasized.</em>
+  </div>
 
-### Bidirectional Override
-<bdo dir="rtl">This text will go right-to-left.</bdo>
 
-### Line Break
-Line 1<br/>Line 2
+  <div class="flex items-center gap-2">
+    <Heading level="2">Inline Text Element</Heading>
+    <Icon className="mt-2" name="icon-action-arrowhead-right-circle"/>
+  </div>
+  <div class="canvas-alt p-8">
+    <Heading level="3">Small Text</Heading>
+    <small>This is smaller text.</small>
+
+    <Heading level="3">Highlight</Heading>
+    <mark>This text is highlighted or marked for emphasis.</mark>
+
+    <Heading level="3">Deleted & Inserted</Heading>
+    <del>This text is deleted.</del>
+     <ins>This text is inserted.</ins>
+
+
+  </div>
+ 
+
+  ### 
+
+
+  ### Keyboard Input
+  <kbd>Ctrl + S</kbd>
+
+  ### Variable
+  <var>v</var>
+
+  ### Sample Output
+  <samp>Output sample</samp>
+
+  ### Time
+  <time dateTime="2022-10-09">October 9, 2022</time>
+
+  ### Citation
+  <cite>Author Name</cite>
+
+  ## Block Elements <a name="block-elements"></a>
+  ### Blockquote
+  <blockquote>
+    This is a blockquote.
+  </blockquote>
+
+  ### Code
+  For inline code: <code>`code`</code>
+  <pre>
+    This is preformatted text for blocks of code.
+  </pre>
+
+  ### Address
+  <address>
+    Denali Mountain<br />
+    123 Elm Street<br />
+    Denali Park, AK 99755
+  </address>
+
+  ### Description List
+  <DescriptionList>
+    <DescriptionItem term="Term 1" description="Description for Term 1" />
+    <DescriptionItem term="Term 2" description="Description for Term 2" />
+  </DescriptionList>
+
+
+  ## Special Text Elements <a name="special-text-elements"></a>
+  ### Abbreviation
+  <abbr title="Hypertext Markup Language">HTML</abbr>
+
+  ### Bold Text
+  <b>Bolded text</b>
+
+  ### Italicized Text
+  <i>Italicized text</i>
+
+  ### Defining Term
+  <dfn>Term</dfn>
+
+  ### Inline Quotation
+  <q>Inline quote</q>
+
+  ### Subscript and Superscript
+  H<sub>2</sub>O and E = mc<sup>2</sup>
+
+  ### Bidirectional Override
+  <bdo dir="rtl">This text will go right-to-left.</bdo>
+
+  ### Line Break
+  Line 1<br/>Line 2
 
 </Unstyled>

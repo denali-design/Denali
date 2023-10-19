@@ -9,6 +9,7 @@
  */
 
 import '../App.css';
+import Heading from '../components/Heading/Heading';
 
 export const SpacingSystem = () => {
   const spacingClasses = [
@@ -24,7 +25,7 @@ export const SpacingSystem = () => {
 
   return (
     <div>
-      <h3>Spacing Tokens</h3>
+      <Heading level="2">Spacing Tokens</Heading>
       <p>
         Spacing tokens are the recommended way to handle spacing in your app.
         They adhere to predefined scales which helps in maintaining consistency.

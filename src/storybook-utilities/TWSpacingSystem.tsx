@@ -8,6 +8,8 @@
  * @since  1.0.0
  */
 
+import Heading from '../components/Heading/Heading';
+
 export const TWSpacingSystem = () => {
   const spacingClasses = [
     { name: '0', value: 0, pixels: '0px' },
@@ -49,7 +51,7 @@ export const TWSpacingSystem = () => {
 
   return (
     <div>
-      <h3>Spacing Primatives</h3>
+      <Heading level="2">Spacing Primatives</Heading>
       <p>
         Spacing primitives give you more control but should be used cautiously
         to ensure design consistency.

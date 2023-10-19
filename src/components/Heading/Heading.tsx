@@ -16,12 +16,12 @@ import '../../App.css';
  * Configuration object for Tailwind Variants, defining the styles for the Heading component.
  */
 export const heading = tv({
-  base: 'font-bold',
+  base: '',
   variants: {
     level: {
-      1: 'text-4xl',
-      2: 'text-3xl',
-      3: 'text-2xl',
+      1: 'text-5xl my-2 font-bold',
+      2: 'text-3xl mt-4 mb-2 font-medium',
+      3: 'text-xl font-semibold',
       4: 'text-xl',
       5: 'text-lg',
       6: 'text-base'
@@ -92,7 +92,7 @@ export const Heading = memo(
       children,
       level = 1,
       styleLevel = level,
-      fontWeight = 'bold',
+      fontWeight,
       className,
       ...domProps
     } = props;

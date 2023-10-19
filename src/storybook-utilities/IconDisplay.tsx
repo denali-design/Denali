@@ -9,6 +9,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Icon } from '../components/Icon/Icon';
+import Heading from '../components/Heading/Heading';
 
 // Dynamic import of SVGs
 const iconModules = import.meta.glob('/public/assets/icons/*.svg');
@@ -51,7 +52,7 @@ export const IconDisplay: React.FC = () => {
         placeholder="Search for an icon..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="mb-4 w-full rounded border p-2"
+        className="w-full rounded border p-2"
       />
 
       {Object.entries(icons).map(([category, iconsInCategory]) => {
@@ -60,10 +61,8 @@ export const IconDisplay: React.FC = () => {
         );
 
         return (
-          <div key={category}>
-            <h2 className="mb-4 text-xl font-bold">
-              {capitalizeFirstLetter(category)}
-            </h2>
+          <div key={category} className="pt-2">
+            <Heading level="2">{capitalizeFirstLetter(category)}</Heading>
             <div className="grid grid-cols-6 gap-4">
               {filteredIcons.map((iconName) => (
                 <a
@@ -74,8 +73,8 @@ export const IconDisplay: React.FC = () => {
                   <div className="flex h-24 w-full items-center justify-center rounded-lg border border-gray-200">
                     <Icon name={iconName} />
                   </div>
-                  <div className="mt-12 block">
-                    <p className="text-gray-500">
+                  <div className=" block">
+                    <p className="type-alt mt-1 text-xs">
                       {iconName.split('-').slice(2).join('-')}
                     </p>
                   </div>
