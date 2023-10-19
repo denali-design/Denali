@@ -18,8 +18,8 @@ import '../../App.css';
 export interface ToggleButtonProps extends AriaToggleButtonProps {
   toggleType: 'switch' | 'button';
   label: string;
-  toggleTextSelected?: string;
-  toggleTextUnselected?: string;
+  toggleTextSelected?: any;
+  toggleTextUnselected?: any;
 }
 
 /**
@@ -39,10 +39,10 @@ const toggleButton = tv({
         }
       },
       button: {
-        base: 'rounded px-4 py-2 text-white',
+        base: 'rounded px-4 py-2 type-on-vivid',
         toggleStates: {
-          selected: 'bg-green-600',
-          unselected: 'bg-black'
+          selected: 'canvas-secondary',
+          unselected: 'canvas-secondary'
         }
       }
     }
@@ -60,9 +60,24 @@ function ToggleButton({
   toggleTextSelected,
   toggleTextUnselected,
   label,
+  onChange, // Extract onChange from props
   ...ariaProps
 }: ToggleButtonProps) {
   let [isSelected, setSelected] = useState(false);
+
+  /**
+   * Handles the toggle state change.
+   *
+   * @param {boolean} newIsSelected - The new selected state of the toggle button.
+   */
+  const handleToggleChange = (newIsSelected: boolean) => {
+    setSelected(newIsSelected); // Update local state
+
+    // Call external onChange handler if provided
+    if (onChange) {
+      onChange(newIsSelected);
+    }
+  };
 
   let circlePosition = isSelected ? 'translate-x-6' : 'translate-x-0';
 
@@ -76,7 +91,7 @@ function ToggleButton({
       isSelected={isSelected}
       {...ariaProps}
       {...{ label }}
-      onChange={setSelected}
+      onChange={handleToggleChange}
       className={`${toggleButton.base} ${baseStyle} ${toggleStateVariant}`}
       aria-label={label}
     >
