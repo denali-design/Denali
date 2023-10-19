@@ -10,8 +10,10 @@
  * @since  1.0.0
  */
 
+import React, { ReactNode } from 'react'; // Importing ReactNode type
 import Icon from '../components/Icon/Icon';
 import '../App.css';
+
 /**
  * Represents a DoAndDont component.
  *
@@ -28,44 +30,62 @@ import '../App.css';
  *   />
  * )
  */
-const DoAndDont = ({ doChildren, dontChildren, direction = 'vertical' }) => {
+interface DoAndDontProps {
+  doChildren: ReactNode;
+  dontChildren: ReactNode;
+  direction?: 'vertical' | 'horizontal';
+}
+
+const DoAndDont: React.FC<DoAndDontProps> = ({
+  doChildren,
+  dontChildren,
+  direction = 'vertical'
+}) => {
   const isVertical = direction === 'vertical';
   const containerClasses = isVertical
-    ? 'flex flex-col space-y-4'
-    : 'flex flex-row space-x-4';
+    ? 'grid grid-cols-1 gap-6'
+    : 'grid grid-cols-2 gap-6';
 
   return (
-    <div className={`pb-4 ${containerClasses}`}>
+    <div className={`pb-6 ${containerClasses}`}>
       {/* Do Section */}
-      <div className="flex-1 overflow-hidden rounded border-t-4 border-green-600 bg-green-50 p-4">
-        <div className="flex gap-2">
-          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-700">
-            <Icon
-              color="default"
-              name="icon-control-check"
-              size="sm"
-              className="text-white"
-            />
+      <div className="canvas-success stroke-success-vivid overflow-hidden rounded border-t-4 p-4">
+        <div className="grid grid-cols-12 gap-2">
+          <div className="col-start-1 col-end-1">
+            <div className="canvas-success-vivid flex h-6 w-6 items-center justify-center rounded-full">
+              <Icon
+                color="default"
+                name="icon-control-check"
+                size="sm"
+                className="text-white"
+              />
+            </div>
           </div>
-          <p className="font-bold uppercase">Do</p>
+          <div className="col-start-2 col-end-12">
+            <p className="font-bold uppercase">Do</p>
+            {doChildren}
+          </div>
         </div>
-        {doChildren}
       </div>
 
       {/* Don't Section */}
-      <div className="flex-1 overflow-hidden rounded border-t-4 border-red-600 bg-red-50 p-4">
-        <div className="flex gap-2">
-          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-700">
-            <Icon
-              color="default"
-              name="icon-control-close"
-              size="sm"
-              className="text-white"
-            />
+      <div className="canvas-danger stroke-danger-vivid overflow-hidden rounded border-t-4 p-4">
+        <div className="grid grid-cols-12 gap-2">
+          <div className="col-start-1 col-end-1">
+            <div className="canvas-danger-vivid flex h-6 w-6 items-center justify-center rounded-full">
+              <Icon
+                color="default"
+                name="icon-control-check"
+                size="sm"
+                className="text-white"
+              />
+            </div>
           </div>
-          <p className="font-bold uppercase">Don't</p>
+          <div className="col-start-2 col-end-12">
+            <p className="font-bold uppercase">Do</p>
+            {dontChildren}
+          </div>
         </div>
-        {dontChildren}
       </div>
     </div>
   );
