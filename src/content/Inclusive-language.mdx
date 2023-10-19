@@ -12,11 +12,13 @@ import Heading from '../components/Heading/Heading';
   <Heading level="1">Inclusive language</Heading>
   <Lead>Guidelines for fostering respectful and equitable communication in every interaction.</Lead>
 
-  Inclusive language aims to remove barriers in communication, ensuring that all users can understand and interact with the product effectively, irrespective of their background, gender, culture, or abilities. It's not just a best practice—it's a necessity in our increasingly diverse society.
+Inclusive language aims to remove barriers in communication, ensuring that all users can understand and interact with the product effectively, irrespective of their background, gender, culture, or abilities. It's not just a best practice—it's a necessity in our increasingly diverse society.
 
-  Building an accessible and equitable digital experience extends beyond coding practices and visual design. The words we use in the UI significantly affect the experience for all users, including those who use assistive technologies.
+Building an accessible and equitable digital experience extends beyond coding practices and visual design. The words we use in the UI significantly affect the experience for all users, including those who use assistive technologies.
 
-  <Heading level="2">Principles of Inclusive Language</Heading>
+{' '}
+
+<Heading level="2">Principles of Inclusive Language</Heading>
 
   <div class="grid grid-cols-2 gap-8">
   <div>
@@ -25,16 +27,21 @@ import Heading from '../components/Heading/Heading';
     Opt for simple, straightforward words and phrases. Language should be easy to understand to make the application accessible to users who speak English as an additional language, or who have cognitive disabilities.
   </div>
 
-  <div>
-    <Image alt="Example image" src="https://placehold.co/500x250"/>
-    <Heading level="3">Consistency</Heading>
-    Use terminology consistently across your app. This consistency aids in learning and removes confusion, especially for screen reader users.
-  </div>
+{' '}
 
 <div>
-    <Image alt="Example image" src="https://placehold.co/500x250"/>
+  <Image alt="Example image" src="https://placehold.co/500x250" />
+  <Heading level="3">Consistency</Heading>
+  Use terminology consistently across your app. This consistency aids in
+  learning and removes confusion, especially for screen reader users.
+</div>
+
+<div>
+  <Image alt="Example image" src="https://placehold.co/500x250" />
   <Heading level="3">Sensitivity</Heading>
-  Avoid terms that can marginalize or stigmatize groups of people based on aspects like gender, race, or ability. This also includes avoiding idioms that may not translate well.
+  Avoid terms that can marginalize or stigmatize groups of people based on
+  aspects like gender, race, or ability. This also includes avoiding idioms that
+  may not translate well.
 </div>
 
 <div>
@@ -44,101 +51,261 @@ import Heading from '../components/Heading/Heading';
 </div>
   </div>
 
-  <Heading level="2">Dos and Don'ts</Heading>
+{' '}
 
-  <DoAndDont direction="horizontal"  doChildren={<p>Use "Save" for a button that commits changes.</p>} 
-          dontChildren={<p>Use "Execute" for the same purpose, as it may have a violent connotation.</p>}/>
+<Heading level="2">Dos and Don'ts</Heading>
 
-  <DoAndDont direction="horizontal"  doChildren={<p>Use gender-neutral language like "they/them" when the gender of the person is not known or relevant.</p>} 
-          dontChildren={<p>Default to using "he/him" as a generic pronoun.</p>}/>
+{' '}
 
-  <DoAndDont direction="horizontal"  doChildren={<p>Label a button "Submit Feedback."</p>} 
-          dontChildren={<p>Label it "Whistleblow," as it might have a negative or confusing implication.</p>}/>
+<DoAndDont
+  direction="horizontal"
+  doChildren={<p>Use "Save" for a button that commits changes.</p>}
+  dontChildren={
+    <p>
+      Use "Execute" for the same purpose, as it may have a violent connotation.
+    </p>
+  }
+/>
 
+{' '}
 
-  <Heading level="2">Writing Alt Text</Heading>
-  Describe the function or content of an image without stating the obvious. Alt text should provide equal access to the image's information or function. Limit the use of phrases like "image of" or "graphic of" unless necessary for understanding the image.
-  <DoAndDont direction="horizontal"  doChildren={<p>Company logo"</p>} 
-          dontChildren={<p>Image of a company logo</p>}/>
+<DoAndDont
+  direction="horizontal"
+  doChildren={
+    <p>
+      Use gender-neutral language like "they/them" when the gender of the person
+      is not known or relevant.
+    </p>
+  }
+  dontChildren={<p>Default to using "he/him" as a generic pronoun.</p>}
+/>
 
-  <Heading level="2">Complex Content</Heading>
-  For diagrams, infographics, or complex images, provide a textual alternative nearby or a link to a detailed description.
+{' '}
 
-  <Heading level="3">Videos and Multimedia</Heading>
-  Offer subtitles and a transcript for audio or video content.
-  Use descriptive captions for any text displayed within the video.
+<DoAndDont
+  direction="horizontal"
+  doChildren={<p>Label a button "Submit Feedback."</p>}
+  dontChildren={
+    <p>
+      Label it "Whistleblow," as it might have a negative or confusing
+      implication.
+    </p>
+  }
+/>
 
-  <Heading level="3">Validation Messages</Heading>
-  Use language that provides constructive feedback without blaming the user.
-  <DoAndDont direction="horizontal"  doChildren={<p>Please enter a valid email address.</p>} 
-          dontChildren={<p>Invalid input! You failed to enter a correct email.</p>}/>
+{' '}
 
-  <Heading level="3">Testing Language Accessibility</Heading>
-  Involve diverse focus groups in your testing, including non-native speakers and people with disabilities. Use tools like text analyzers to check readability levels.
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Tool Name</th>
-        <th>Description</th>
-        <th>Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Hemingway Editor</td>
-        <td>Highlights complex sentences, adverbs, and passive voice. Provides a readability grade level.</td>
-        <td><a href="http://www.hemingwayapp.com/" target="_blank">Hemingway Editor</a></td>
-      </tr>
-      <tr>
-        <td>Readable</td>
-        <td>Offers various readability formulas like Flesch-Kincaid, Gunning Fog, and SMOG.</td>
-        <td><a href="https://readable.com/" target="_blank">Readable</a></td>
-      </tr>
-      <tr>
-        <td>Grammarly</td>
-        <td>Known for grammar checking but also provides readability scores.</td>
-        <td><a href="https://www.grammarly.com/" target="_blank">Grammarly</a></td>
-      </tr>
-      <tr>
-        <td>Yoast SEO</td>
-        <td>Primarily a WordPress plugin for SEO, also includes Flesch Reading Ease score.</td>
-        <td><a href="https://yoast.com/wordpress/plugins/seo/" target="_blank">Yoast SEO</a></td>
-      </tr>
-      <tr>
-        <td>ProWritingAid</td>
-        <td>Provides detailed readability statistics and suggestions for improvement.</td>
-        <td><a href="https://prowritingaid.com/" target="_blank">ProWritingAid</a></td>
-      </tr>
-      <tr>
-        <td>TextRazor</td>
-        <td>Advanced text analysis tool that also provides readability scores.</td>
-        <td><a href="https://www.textrazor.com/" target="_blank">TextRazor</a></td>
-      </tr>
-      <tr>
-        <td>Readability Formulas</td>
-        <td>Calculates readability scores based on various formulas.</td>
-        <td><a href="http://www.readabilityformulas.com/" target="_blank">Readability Formulas</a></td>
-      </tr>
-      <tr>
-        <td>Slick Write</td>
-        <td>Checks for grammar and style issues, along with readability.</td>
-        <td><a href="https://www.slickwrite.com/" target="_blank">Slick Write</a></td>
-      </tr>
-      <tr>
-        <td>Gunning Fog Index Calculator</td>
-        <td>Specifically calculates the Gunning Fog Index of a given text.</td>
-        <td><a href="https://gunning-fog-index.com/" target="_blank">Gunning Fog Index Calculator</a></td>
-      </tr>
-      <tr>
-        <td>Online Utility - Readability Calculator</td>
-        <td>Simple tool that uses multiple formulas to assess readability.</td>
-        <td><a href="https://www.online-utility.org/english/readability_test_and_improve.jsp" target="_blank">Online Utility - Readability Calculator</a></td>
-      </tr>
-    </tbody>
-  </table>
+<Heading level="2">Writing Alt Text</Heading>
+Describe the function or content of an image without stating the obvious. Alt text
+should provide equal access to the image's information or function. Limit the use
+of phrases like "image of" or "graphic of" unless necessary for understanding the
+image.
+<DoAndDont
+  direction="horizontal"
+  doChildren={<p>Company logo"</p>}
+  dontChildren={<p>Image of a company logo</p>}
+/>
 
+{' '}
 
-  <Heading level="2">Conclusion</Heading>
-  Inclusive language in a app is not a one-time task but an ongoing commitment. It's crucial to keep updating and reviewing the language to ensure it remains as inclusive as possible. This requires not just initial implementation but also regular testing and revisions. Always refer to established guidelines such as WCAG 2.1 for the most current best practices.
+<Heading level="2">Complex Content</Heading>
+For diagrams, infographics, or complex images, provide a textual alternative nearby
+or a link to a detailed description.
+
+{' '}
+
+<Heading level="3">Videos and Multimedia</Heading>
+Offer subtitles and a transcript for audio or video content. Use descriptive captions
+for any text displayed within the video.
+
+{' '}
+
+<Heading level="3">Validation Messages</Heading>
+Use language that provides constructive feedback without blaming the user.
+<DoAndDont
+  direction="horizontal"
+  doChildren={<p>Please enter a valid email address.</p>}
+  dontChildren={<p>Invalid input! You failed to enter a correct email.</p>}
+/>
+
+{' '}
+
+<Heading level="3">Testing Language Accessibility</Heading>
+Involve diverse focus groups in your testing, including non-native speakers and people
+with disabilities. Use tools like text analyzers to check readability levels.
+<table class="w-full table-auto border-collapse border border-transparent">
+  <thead class="stroke-alt border-b-2 text-left">
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <th class="py-4">Tool Name</th>
+      <th class="py-4">Description</th>
+      <th class="py-4">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Hemingway Editor</td>
+      <td class="py-4 align-top">
+        Highlights complex sentences, adverbs, and passive voice. Provides a
+        readability grade level.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="http://www.hemingwayapp.com/"
+          target="_blank"
+        >
+          Hemingway Editor
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Readable</td>
+      <td class="py-4 align-top">
+        Offers various readability formulas like Flesch-Kincaid, Gunning Fog,
+        and SMOG.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://readable.com/"
+          target="_blank"
+        >
+          Readable
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Grammarly</td>
+      <td class="py-4 align-top">
+        Known for grammar checking but also provides readability scores.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://www.grammarly.com/"
+          target="_blank"
+        >
+          Grammarly
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Yoast SEO</td>
+      <td class="py-4 align-top">
+        Primarily a WordPress plugin for SEO, also includes Flesch Reading Ease
+        score.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://yoast.com/wordpress/plugins/seo/"
+          target="_blank"
+        >
+          Yoast SEO
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">ProWritingAid</td>
+      <td class="py-4 align-top">
+        Provides detailed readability statistics and suggestions for
+        improvement.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://prowritingaid.com/"
+          target="_blank"
+        >
+          ProWritingAid
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">TextRazor</td>
+      <td class="py-4 align-top">
+        Advanced text analysis tool that also provides readability scores.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://www.textrazor.com/"
+          target="_blank"
+        >
+          TextRazor
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Readability Formulas</td>
+      <td class="py-4 align-top">
+        Calculates readability scores based on various formulas.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="http://www.readabilityformulas.com/"
+          target="_blank"
+        >
+          Readability Formulas
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Slick Write</td>
+      <td class="py-4 align-top">
+        Checks for grammar and style issues, along with readability.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://www.slickwrite.com/"
+          target="_blank"
+        >
+          Slick Write
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Gunning Fog Index Calculator</td>
+      <td class="py-4 align-top">
+        Specifically calculates the Gunning Fog Index of a given text.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://gunning-fog-index.com/"
+          target="_blank"
+        >
+          Gunning Fog Index Calculator
+        </a>
+      </td>
+    </tr>
+    <tr class="stroke-alt hover:canvas-hover border-b">
+      <td class="py-4 align-top">Online Utility - Readability Calculator</td>
+      <td class="py-4 align-top">
+        Simple tool that uses multiple formulas to assess readability.
+      </td>
+      <td class="py-4 align-top">
+        <a
+          class="type-primary hover:type-primary-hover action:type-primary-pressed underline"
+          href="https://www.online-utility.org/english/readability_test_and_improve.jsp"
+          target="_blank"
+        >
+          Online Utility - Readability Calculator
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{' '}
+
+<Heading level="2">Conclusion</Heading>
+Inclusive language in a app is not a one-time task but an ongoing commitment. It's
+crucial to keep updating and reviewing the language to ensure it remains as inclusive
+as possible. This requires not just initial implementation but also regular testing
+and revisions. Always refer to established guidelines such as WCAG 2.1 for the most
+current best practices.
 
 </Unstyled>
