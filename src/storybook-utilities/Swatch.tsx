@@ -21,9 +21,14 @@ interface SwatchProps {
    * A brief description of when to use the color.
    */
   description: string;
+
+  /**
+   * Boolean indicating if the component is in dark mode.
+   */
+  isDark: boolean;
 }
 
-const Swatch: React.FC<SwatchProps> = ({ className, description }) => {
+const Swatch: React.FC<SwatchProps> = ({ className, description, isDark }) => {
   /**
    * Handles converting string to title case.
    *
@@ -66,7 +71,7 @@ const Swatch: React.FC<SwatchProps> = ({ className, description }) => {
     }, 100); // 100ms delay to allow for styles to be applied
 
     return () => clearTimeout(timeout); // Cleanup
-  }, [className]);
+  }, [className, isDark]);
 
   return (
     <div>

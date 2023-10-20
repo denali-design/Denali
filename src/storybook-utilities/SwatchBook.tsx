@@ -79,6 +79,7 @@ const SwatchBook: React.FC = () => {
                     key={colorKey}
                     className={colorKey}
                     description={colors[colorKey]?.desc || ''}
+                    isDark={isDark}
                   />
                 ))}
               </div>
