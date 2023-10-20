@@ -50,7 +50,7 @@ const SwatchBook: React.FC = () => {
             toggleTextUnselected={
               <Icon
                 aria-hidden="true"
-                color="vivid"
+                color="on-vivid"
                 name="icon-technology-moon-dark"
                 size="md"
               />
@@ -58,7 +58,7 @@ const SwatchBook: React.FC = () => {
             toggleTextSelected={
               <Icon
                 aria-hidden="true"
-                color="vivid"
+                color="on-vivid"
                 name="icon-technology-sunlight-bright"
                 size="md"
               />
