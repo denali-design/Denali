@@ -32,7 +32,7 @@ interface IconProps {
     | 'warning'
     | 'danger'
     | 'info'
-    | 'vivid';
+    | 'on-vivid';
 }
 
 /** Mapping of icon variants to their respective tailwind CSS classes. */
@@ -45,7 +45,7 @@ const iconVariants = tv({
       warning: 'type-warning',
       danger: 'type-danger',
       info: 'text-info-base',
-      vivid: 'type-on-vivid'
+      'on-vivid': 'type-on-vivid'
     }
   },
   defaultVariants: {

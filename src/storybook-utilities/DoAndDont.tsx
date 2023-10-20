@@ -54,7 +54,7 @@ const DoAndDont: React.FC<DoAndDontProps> = ({
           <div className="col-start-1 col-end-1">
             <div className="canvas-success-vivid flex h-6 w-6 items-center justify-center rounded-full">
               <Icon
-                color="default"
+                color="on-vivid"
                 name="icon-control-check"
                 size="sm"
                 className="text-white"
@@ -74,7 +74,7 @@ const DoAndDont: React.FC<DoAndDontProps> = ({
           <div className="col-start-1 col-end-1">
             <div className="canvas-danger-vivid flex h-6 w-6 items-center justify-center rounded-full">
               <Icon
-                color="default"
+                color="on-vivid"
                 name="icon-control-check"
                 size="sm"
                 className="text-white"
