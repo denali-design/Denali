@@ -14,6 +14,7 @@ import {
   Label,
   Input
 } from 'react-aria-components';
+import { Icon } from '../Icon/Icon';
 import '../../App.css';
 
 /**
@@ -41,42 +42,23 @@ export type TextFieldProps = {
  * Renders a text field with optional icon based on input mode.
  *
  * @param {TextFieldProps} props - Properties for the text field.
- * @property {string} [props.label] - Specifies the label for the text field.
- * @property {string} [props.placeholder] - Specifies the placeholder for the text field.
- * @property {string} [props.inputMode] - Specifies the input mode for the text field.
+ * @returns {JSX.Element} The rendered TextField component.
  */
 function TextField({
   label = 'Default Label',
   placeholder = 'Type here...',
   inputMode = 'text'
 }: TextFieldProps) {
-  /**
-   * Determines the icon source and alt text based on the input mode.
-   */
-  let iconSrc: string | null = null;
-  let iconAlt: string | null = null;
+  let iconName: string | null = null;
 
   if (inputMode === 'search') {
-    iconSrc = 'icons/search.svg';
-    iconAlt = 'A magnifying glass';
+    iconName = 'icon-control-search';
   }
 
-  /**
-   * A reference to the input element for programmatically focusing on it.
-   */
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    /**
-     * Handles the keydown event to focus the input when 'cmd+k' or 'alt+k' is pressed.
-     *
-     * @param {KeyboardEvent} event - The keydown event.
-     */
     function handleKeyDown(event: KeyboardEvent) {
-      if (inputMode !== 'search') {
-        return;
-      }
-
       if (
         (event.metaKey && event.key === 'k') ||
         (event.altKey && event.key === 'k')
@@ -95,14 +77,14 @@ function TextField({
   }, [inputMode]);
 
   return (
-    <AriaTextField className="border-primary relative flex w-full items-center rounded-lg border bg-white px-2 py-1.75 text-black focus-within:outline focus-within:outline-offset-2 focus-within:outline-brand-primary">
-      {iconSrc && iconAlt && (
-        <img
-          src={iconSrc}
-          alt={iconAlt}
-          className="fill-black"
-          width={16}
-          height={16}
+    <AriaTextField className="border-primary focus-within:outline-brand-primary relative flex w-full items-center rounded-lg border bg-white px-2 py-1.75 text-black focus-within:outline focus-within:outline-offset-2">
+      {iconName && (
+        <Icon
+          aria-hidden="true"
+          className="no-pointer-events"
+          color="default"
+          name={iconName}
+          size="md"
         />
       )}
       <Label className="sr-only">{label}</Label>
