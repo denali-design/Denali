@@ -61,6 +61,7 @@ function Checkbox({ children, ...props }: CheckboxProps) {
               {icon && (
                 <Icon
                   aria-hidden="true"
+                  className="no-pointer-events" // Add the new class here
                   color="default"
                   name={icon}
                   size="sm"
