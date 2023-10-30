@@ -23,7 +23,14 @@ export default {
       },
       semanticColors: getTailwindCompatibleSemanticColors(),
       spacing: {
-        1.75: ' 7px'
+        'space-none': '0px',
+        'space-1': '0.125rem',
+        'space-2': '0.25rem',
+        'space-3': '0.5rem',
+        'space-4': '1rem',
+        'space-5': '1.5rem',
+        'space-6': '2rem',
+        'space-7': '2.5rem'
       }
     }
   },
