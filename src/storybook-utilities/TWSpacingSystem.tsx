@@ -57,7 +57,7 @@ export const TWSpacingSystem = () => {
         to ensure design consistency.
       </p>
       <table className="w-full table-auto border-collapse border border-transparent">
-        <thead className="stroke-alt border-b-2 text-left">
+        <thead className="border-b-2 text-left stroke-alt">
           <tr>
             <th className="py-4">Name</th>
             <th className="py-4">Size (rem)</th>
@@ -67,16 +67,15 @@ export const TWSpacingSystem = () => {
         </thead>
         <tbody>
           {spacingClasses.map((spacingClass, index) => (
-            <tr key={index} className="stroke-alt hover:canvas-hover border-b">
+            <tr key={index} className="border-b stroke-alt hover:canvas-hover">
               <td className="py-4">{spacingClass.name}</td>
               <td className="py-4">{spacingClass.value}rem</td>
               <td className="py-4">{spacingClass.pixels}</td>
               <td className="py-4">
                 <div
+                  className="h-4 canvas-info-vivid"
                   style={{
-                    width: spacingClass.pixels,
-                    height: '10px',
-                    backgroundColor: 'blue'
+                    width: spacingClass.pixels
                   }}
                 ></div>
               </td>
