@@ -59,7 +59,17 @@ type Story = StoryObj<FlexProps>;
 
 export const Default: Story = {
   args: {
-    children: ['Flex Item'],
+    children: [
+      <div key="1" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 1
+      </div>,
+      <div key="2" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 2
+      </div>,
+      <div key="3" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 3
+      </div>
+    ],
     align: 'start', // Optional prop with default value
     justify: 'center', // Optional prop with default value
     direction: 'row', // Optional prop with default value
@@ -69,7 +79,17 @@ export const Default: Story = {
 
 export const CenterAlign: Story = {
   args: {
-    children: ['Flex Item'],
+    children: [
+      <div key="1" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 1
+      </div>,
+      <div key="2" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 2
+      </div>,
+      <div key="3" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 3
+      </div>
+    ],
     align: 'center',
     justify: 'center',
     direction: 'row',
@@ -79,7 +99,17 @@ export const CenterAlign: Story = {
 
 export const SpaceBetween: Story = {
   args: {
-    children: ['Flex Item'],
+    children: [
+      <div key="1" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 1
+      </div>,
+      <div key="2" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 2
+      </div>,
+      <div key="3" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 3
+      </div>
+    ],
     align: 'start',
     justify: 'between',
     direction: 'row',
@@ -87,11 +117,21 @@ export const SpaceBetween: Story = {
   }
 };
 
-export const SpaceAround: Story = {
+export const JustifyEnd: Story = {
   args: {
-    children: ['Flex Item'],
+    children: [
+      <div key="1" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 1
+      </div>,
+      <div key="2" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 2
+      </div>,
+      <div key="3" className="rounded p-2 canvas-secondary type-on-vivid">
+        Grid Item 3
+      </div>
+    ],
     align: 'start',
-    justify: 'around',
+    justify: 'end',
     direction: 'row',
     gap: 'space-1'
   }
