@@ -103,7 +103,7 @@ const Flex: React.FC<FlexProps> = ({
         justify,
         direction,
         gap
-      })}`}
+      })} w-[32rem]`}
     >
       {children}
     </div>
