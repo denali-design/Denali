@@ -36,7 +36,7 @@ const checkbox = tv({
  * @param {CheckboxProps} props - Properties passed to the component.
  * @returns {JSX.Element} The rendered Checkbox component.
  */
-function Checkbox({ children, ...props }: CheckboxProps) {
+function Checkbox({ ...props }: CheckboxProps) {
   return (
     <AriaCheckbox {...props} className="flex gap-2">
       {({ isIndeterminate, isSelected, isDisabled, isInvalid }) => {

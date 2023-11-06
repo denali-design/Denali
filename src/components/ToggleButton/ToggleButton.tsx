@@ -18,8 +18,8 @@ import '../../App.css';
 export interface ToggleButtonProps extends AriaToggleButtonProps {
   toggleType: 'switch' | 'button';
   label: string;
-  toggleTextSelected?: any;
-  toggleTextUnselected?: any;
+  toggleTextSelected?: React.ReactNode;
+  toggleTextUnselected?: React.ReactNode;
 }
 
 /**
@@ -63,7 +63,7 @@ function ToggleButton({
   onChange, // Extract onChange from props
   ...ariaProps
 }: ToggleButtonProps) {
-  let [isSelected, setSelected] = useState(false);
+  const [isSelected, setSelected] = useState(false);
 
   /**
    * Handles the toggle state change.
@@ -79,8 +79,7 @@ function ToggleButton({
     }
   };
 
-  let circlePosition = isSelected ? 'translate-x-6' : 'translate-x-0';
-
+  const circlePosition = isSelected ? 'translate-x-6' : 'translate-x-0';
   const baseStyle = toggleButton.variants.toggleType[toggleType].base;
   const toggleStateVariant = isSelected
     ? toggleButton.variants.toggleType[toggleType].toggleStates.selected
