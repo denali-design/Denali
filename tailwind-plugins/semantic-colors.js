@@ -68,6 +68,9 @@ const semanticColors = plugin(
             [`.stroke-${e(`${key}`)}`]: {
               borderColor: `${value.light.bg}`
             },
+            [`.focus-${e(`${key}`)}`]: {
+              outlineColor: `${value.light.bg}`
+            },
             '.dark': {
               ...defaultClassesDark,
               [`& .type-${e(`${key}`)}`]: {
@@ -78,6 +81,9 @@ const semanticColors = plugin(
               },
               [`& .stroke-${e(`${key}`)}`]: {
                 borderColor: `${value.dark.bg}`
+              },
+              [`& .focus-${e(`${key}`)}`]: {
+                outlineColor: `${value.dark.bg}`
               }
             }
           };

@@ -362,7 +362,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for alerts and warnings',
         light: {
           bg: colors.slate[500],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[500],
@@ -512,7 +512,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for canvas backgrounds',
         light: {
           bg: colors.green[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.green[600],
@@ -524,7 +524,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Alternate canvas backgrounds',
         light: {
           bg: colors.green[600],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.green[800],
@@ -536,7 +536,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates successful validation or state',
         light: {
           bg: colors.green[500],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.green[800],
@@ -548,7 +548,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for alerts and warnings',
         light: {
           bg: colors.green[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.green[600],
@@ -636,7 +636,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for canvas backgrounds',
         light: {
           bg: colors.blue[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[400],
@@ -648,7 +648,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Alternate canvas backgrounds',
         light: {
           bg: colors.blue[600],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[500],
@@ -660,7 +660,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates infoful validation or state',
         light: {
           bg: colors.blue[500],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[600],
@@ -672,7 +672,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for alerts and infos',
         light: {
           bg: colors.blue[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[400],
@@ -684,7 +684,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates info or errors',
         light: {
           bg: colors.slate[400],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[600],
@@ -760,7 +760,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for canvas backgrounds',
         light: {
           bg: colors.yellow[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.yellow[600],
@@ -772,7 +772,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Alternate canvas backgrounds',
         light: {
           bg: colors.yellow[600],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.yellow[800],
@@ -784,7 +784,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates warningful validation or state',
         light: {
           bg: colors.yellow[500],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.yellow[950],
@@ -796,7 +796,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for alerts and warnings',
         light: {
           bg: colors.yellow[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.yellow[600],
@@ -808,7 +808,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates danger or errors',
         light: {
           bg: colors.slate[400],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[600],
@@ -884,7 +884,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for canvas backgrounds',
         light: {
           bg: colors.red[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.red[400],
@@ -896,7 +896,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Alternate canvas backgrounds',
         light: {
           bg: colors.red[600],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.red[600],
@@ -908,7 +908,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates dangerful validation or state',
         light: {
           bg: colors.red[500],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.red[700],
@@ -920,7 +920,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for alerts and dangers',
         light: {
           bg: colors.red[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.red[400],
@@ -932,7 +932,7 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates danger or errors',
         light: {
           bg: colors.slate[400],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[600],
@@ -946,11 +946,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for canvas backgrounds',
         light: {
           bg: colors.blue[600],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[500],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-primary-hover': {
@@ -958,11 +958,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Alternate canvas backgrounds',
         light: {
           bg: colors.blue[800],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[400],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-primary-pressed': {
@@ -970,11 +970,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates primaryful validation or state',
         light: {
           bg: colors.blue[950],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[200],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-primary-focus': {
@@ -982,11 +982,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for alerts and primarys',
         light: {
           bg: colors.blue[600],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.blue[500],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-primary-disabled': {
@@ -994,11 +994,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates info or errors',
         light: {
           bg: colors.slate[400],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[600],
-          txt: colors.white
+          txt: colors.black
         }
       }
     },
@@ -1008,11 +1008,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for canvas backgrounds',
         light: {
           bg: colors.slate[950],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[50],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-secondary-hover': {
@@ -1020,11 +1020,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Alternate canvas backgrounds',
         light: {
           bg: colors.slate[600],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[400],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-secondary-pressed': {
@@ -1032,11 +1032,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates secondaryful validation or state',
         light: {
           bg: colors.slate[500],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[500],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-secondary-focus': {
@@ -1044,11 +1044,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Used for alerts and secondarys',
         light: {
           bg: colors.slate[950],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[50],
-          txt: colors.white
+          txt: colors.black
         }
       },
       'canvas-secondary-disabled': {
@@ -1056,11 +1056,11 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         desc: 'Indicates info or errors',
         light: {
           bg: colors.slate[400],
-          txt: colors.black
+          txt: colors.white
         },
         dark: {
           bg: colors.slate[600],
-          txt: colors.white
+          txt: colors.black
         }
       }
     },

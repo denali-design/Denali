@@ -19,17 +19,69 @@ export const Default: Story = {
   }
 };
 
-export const Large: Story = {
+export const IconLeft: Story = {
   args: {
-    label: 'Large Button',
-    size: 'large'
+    label: 'Icon Left',
+    iconColor: 'on-vivid',
+    iconLeft: 'icon-control-heart-like'
   }
 };
 
-export const Small: Story = {
+export const IconRight: Story = {
   args: {
-    label: 'Small Button',
-    size: 'small'
+    label: 'Icon Right',
+    iconColor: 'on-vivid',
+    iconRight: 'icon-control-heart-like',
+    variety: 'black'
+  }
+};
+
+export const IconOnly: Story = {
+  args: {
+    label: 'Icon Only',
+    iconColor: 'on-vivid',
+    iconRight: 'icon-control-heart-like',
+    variety: 'black',
+    iconOnly: true
+  }
+};
+
+export const Black: Story = {
+  args: {
+    label: 'Black',
+    size: undefined,
+    variety: 'black'
+  }
+};
+
+export const Outline: Story = {
+  args: {
+    label: 'Outline',
+    size: undefined,
+    variety: 'outline'
+  }
+};
+
+export const OutlineGray: Story = {
+  args: {
+    label: 'Outline Gray',
+    size: undefined,
+    variety: 'outline-gray'
+  }
+};
+
+export const Plain: Story = {
+  args: {
+    label: 'Plain',
+    size: undefined,
+    variety: 'plain'
+  }
+};
+
+export const Jumbo: Story = {
+  args: {
+    label: 'Jumbo Button',
+    size: 'jumbo'
   }
 };
 
