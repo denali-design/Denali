@@ -1,9 +1,4 @@
 /**
- * Heading Component
- *
- * Provides a styled and customizable heading component.
- * Allows flexibility to maintain semantic HTML structure while applying optional styles.
- *
  * @file   This file defines the Heading component.
  * @since  1.0.0
  */
@@ -11,38 +6,6 @@
 import { ElementType, forwardRef, HTMLAttributes, memo } from 'react';
 import { tv } from 'tailwind-variants';
 import '../../App.css';
-
-export const heading = tv({
-  base: '',
-  variants: {
-    type: {
-      article: {
-        1: 'text-6xl my-4 font-bold',
-        2: 'text-3xl mt-6 mb-3 font-medium',
-        3: 'text-2xl my-2 font-medium',
-        4: 'text-xl my-2 font-medium',
-        5: 'text-lg my-1 font-medium',
-        6: 'text-base my-1 font-medium'
-      },
-      app: {
-        1: 'text-4xl font-bold',
-        2: 'text-3xl font-medium',
-        3: 'text-2xl font-medium',
-        4: 'text-xl font-medium',
-        5: 'text-lg font-medium',
-        6: 'text-base font-medium'
-      },
-      display: {
-        1: 'text-9xl font-bold',
-        2: 'text-8xl font-bold',
-        3: 'text-7xl font-bold',
-        4: 'text-6xl font-bold',
-        5: 'text-5xl font-bold',
-        6: 'text-4xl font-bold'
-      }
-    }
-  }
-});
 
 /**
  * @typedef {Object} HeadingProps
@@ -91,15 +54,49 @@ export const Heading = memo(
       ...domProps
     } = props;
 
+    // Configuration object for Tailwind Variants, defined internally.
+    const headingStyles = tv({
+      base: '',
+      variants: {
+        type: {
+          article: {
+            1: 'text-6xl my-4 font-bold',
+            2: 'text-3xl mt-6 mb-3 font-medium',
+            3: 'text-2xl my-2 font-medium',
+            4: 'text-xl my-2 font-medium',
+            5: 'text-lg my-1 font-medium',
+            6: 'text-base my-1 font-medium'
+          },
+          app: {
+            1: 'text-4xl font-bold',
+            2: 'text-3xl font-medium',
+            3: 'text-2xl font-medium',
+            4: 'text-xl font-medium',
+            5: 'text-lg font-medium',
+            6: 'text-base font-medium'
+          },
+          display: {
+            1: 'text-9xl font-bold',
+            2: 'text-8xl font-bold',
+            3: 'text-7xl font-bold',
+            4: 'text-6xl font-bold',
+            5: 'text-5xl font-bold',
+            6: 'text-4xl font-bold'
+          }
+        }
+      }
+    });
+
     /**
      * Determines the appropriate HTML tag for the heading level.
      */
     const Element = HeadingTagMap[level];
 
     /**
-     * Computes the Tailwind CSS class string based on the given props.
+     * Computes the Tailwind CSS class string based on the given props using the headingStyles object.
      */
-    const computedClass = heading.variants.type[type]?.[size] || '';
+    const computedClass =
+      headingStyles.variants.type[type]?.[size] || headingStyles.base;
 
     return (
       <Element

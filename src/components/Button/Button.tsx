@@ -38,8 +38,8 @@ const button = tv({
 });
 
 function Button(props: ButtonProps) {
-  let ref = useRef(null);
-  let colorVariant: keyof typeof button.variants.color =
+  const ref = useRef(null);
+  const colorVariant: keyof typeof button.variants.color =
     props.variety || 'default';
 
   return (

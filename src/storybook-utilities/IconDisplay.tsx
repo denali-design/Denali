@@ -23,7 +23,7 @@ export const IconDisplay: React.FC = () => {
       const loadedIcons: Record<string, string[]> = {};
 
       for (const path in iconModules) {
-        const matched = path.match(/\/icon-([^\/]+?)-([^\/]+)\.svg$/);
+        const matched = path.match(/\/icon-([^/]+?)-([^/]+)\.svg$/);
         if (matched) {
           const category = matched[1];
           const iconName = matched[2];
@@ -62,7 +62,7 @@ export const IconDisplay: React.FC = () => {
 
         return (
           <div key={category} className="pt-2">
-            <Heading type="article" level="2">
+            <Heading type="article" level={2}>
               {capitalizeFirstLetter(category)}
             </Heading>
             <div className="grid grid-cols-6 gap-4">
@@ -76,7 +76,7 @@ export const IconDisplay: React.FC = () => {
                     <Icon name={iconName} />
                   </div>
                   <div className=" block">
-                    <p className="type-alt mt-1 text-xs">
+                    <p className="mt-1 text-xs type-alt">
                       {iconName.split('-').slice(2).join('-')}
                     </p>
                   </div>

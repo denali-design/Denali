@@ -6,6 +6,7 @@
  */
 
 import { Meta } from '@storybook/react';
+import { ComponentProps } from 'react'; // Import ComponentProps
 import { DescriptionItem, DescriptionList } from './DescriptionList';
 
 export default {
@@ -31,7 +32,8 @@ export const UsingArray = {
   }
 };
 
-export const UsingChildren = (args: any) => (
+// Use ComponentProps to infer the props type for DescriptionList
+export const UsingChildren = (args: ComponentProps<typeof DescriptionList>) => (
   <DescriptionList {...args}>
     <DescriptionItem
       term="Serif"

@@ -17,11 +17,11 @@ import { semanticColorSwatches } from '../get-tailwind-colors'; // Adjust the im
  * @returns {string[]} An array of class names to be whitelisted.
  */
 const generateSafelist = (): string[] => {
-  const { semanticColors } = semanticColorSwatches; // Removed the parentheses
+  const { semanticColors } = semanticColorSwatches;
   const safelist: string[] = [];
 
   // Iterate through each category in semanticColors
-  for (const [categoryKey, category] of Object.entries(semanticColors)) {
+  for (const [, category] of Object.entries(semanticColors)) {
     // Iterate through each colorKey (e.g., 'canvas', 'canvas-alt', etc.) in the category
     for (const colorKey of Object.keys(category)) {
       // The main class based on 'use'
