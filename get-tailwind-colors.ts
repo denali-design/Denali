@@ -1131,8 +1131,8 @@ const getTailwindSemanticColors = (): { semanticColors: SemanticColors } => ({
         use: 'border',
         desc: 'Used for stroke backgrounds',
         light: {
-          bg: colors.slate[200],
-          txt: colors.slate[200]
+          bg: colors.slate[300],
+          txt: colors.slate[300]
         },
         dark: {
           bg: colors.slate[800],
