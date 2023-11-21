@@ -1,0 +1,13 @@
+/**
+ * Table Styles
+ *
+ * @since 1.0.0
+ */
+
+.react-aria-Row:focus {
+  @apply outline-none ring ring-blue-600 ring-offset-2;
+}
+
+.react-aria-Row[data-selected='true'] {
+  @apply canvas-secondary;
+}
