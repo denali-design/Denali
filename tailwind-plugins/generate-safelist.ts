@@ -32,7 +32,7 @@ const generateSafelist = (): string[] => {
       safelist.push(`type-${colorKey}`);
       safelist.push(`stroke-${colorKey}`);
 
-      // Adding dark mode variants
+      // Add dark mode variants
       safelist.push(`dark:${colorKey}`);
       safelist.push(`dark:canvas-${colorKey}`);
       safelist.push(`dark:type-${colorKey}`);

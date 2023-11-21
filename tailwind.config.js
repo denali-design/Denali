@@ -14,7 +14,7 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/stories/**/*.{js,ts,jsx,tsx,mdx}'
   ],
-  safelist: [...generateSafelist()],
+  safelist: [...generateSafelist(), 'disabled:'],
   theme: {
     extend: {
       colors: {
@@ -32,6 +32,12 @@ export default {
         'space-6': '2rem',
         'space-7': '2.5rem'
       }
+    }
+  },
+  variants: {
+    extend: {
+      cursor: ['disabled'],
+      textColor: ['disabled']
     }
   },
   plugins: [
