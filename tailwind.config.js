@@ -34,5 +34,8 @@ export default {
       }
     }
   },
-  plugins: [require('./tailwind-plugins/semantic-colors')]
+  plugins: [
+    require('./tailwind-plugins/semantic-colors'),
+    require('@tailwindcss/typography')
+  ]
 };
