@@ -15,11 +15,10 @@ export interface CheckboxProps extends AriaCheckboxProps {
 }
 
 const checkbox = tv({
-  base: 'flex h-6 w-6 items-center justify-center rounded',
+  base: 'flex h-6 w-6 items-center justify-center rounded border-2 stroke focus:tab-focus',
   variants: {
     state: {
-      selected:
-        'bg-brand-primary border border-brand-primary fill-current text-white',
+      selected: 'canvas-secondary border-2 stroke-secondary type-on-vivid',
       disabled: 'border-black border opacity-50 fill-current text-black',
       invalid: 'bg-white border border-danger-base fill-current text-danger',
       default: 'bg-white border border-black fill-current text-black'
@@ -62,7 +61,7 @@ function Checkbox({ ...props }: CheckboxProps) {
                 <Icon
                   aria-hidden="true"
                   className="no-pointer-events" // Add the new class here
-                  color="default"
+                  color="on-vivid"
                   name={icon}
                   size="sm"
                 />
