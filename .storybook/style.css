@@ -64,3 +64,8 @@ div[data-parent-id='denali'] a > svg {
 .text-sm code {
   font-size: 12px !important;
 }
+
+.sbdocs-a {
+  text-decoration: underline !important;
+  color: #2563eb !important;
+}

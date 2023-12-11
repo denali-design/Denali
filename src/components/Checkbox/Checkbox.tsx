@@ -4,76 +4,48 @@
  */
 
 import { Checkbox as AriaCheckbox } from 'react-aria-components';
-import { Icon } from '../Icon/Icon';
 import type { CheckboxProps as AriaCheckboxProps } from 'react-aria-components';
-import { tv } from 'tailwind-variants';
+import { Icon } from '../Icon/Icon';
 import '../../App.css';
+import './Checkbox.css';
 
-export interface CheckboxProps extends AriaCheckboxProps {
-  label: string;
-  checkColor?: string;
+// Extend the CheckboxProps from 'react-aria-components' to include a description prop
+interface CheckboxProps extends AriaCheckboxProps {
+  description?: string;
 }
 
-const checkbox = tv({
-  base: 'flex h-6 w-6 items-center justify-center rounded border-2 stroke focus:tab-focus',
-  variants: {
-    state: {
-      selected: 'canvas-secondary border-2 stroke-secondary type-on-vivid',
-      disabled: 'border-black border opacity-50 fill-current text-black',
-      invalid: 'bg-white border border-danger-base fill-current text-danger',
-      default: 'bg-white border border-black fill-current text-black'
-    }
-  },
-  defaultVariants: {
-    state: 'default'
-  }
-});
-
-/**
- * Handles rendering a checkbox with dynamic styles based on its state.
- *
- * @param {CheckboxProps} props - Properties passed to the component.
- * @returns {JSX.Element} The rendered Checkbox component.
- */
-function Checkbox({ ...props }: CheckboxProps) {
+function Checkbox({ children, description, ...props }: CheckboxProps) {
   return (
-    <AriaCheckbox {...props} className="flex gap-2">
-      {({ isIndeterminate, isSelected, isDisabled, isInvalid }) => {
-        let state: 'default' | 'selected' | 'disabled' | 'invalid' = 'default';
-        let icon: string | null = null;
-
-        if (isSelected) {
-          state = 'selected';
-          icon = 'icon-control-check';
-        } else if (isDisabled) {
-          state = 'disabled';
-          icon = 'icon-action-decline';
-        } else if (isInvalid) {
-          state = 'invalid';
-        } else if (isIndeterminate) {
-          icon = 'icon-control-remove';
-        }
-
-        return (
+    <div>
+      <AriaCheckbox {...props}>
+        {({ isIndeterminate }) => (
           <>
-            <div className={checkbox({ state })}>
-              {icon && (
+            <div className="checkbox">
+              {isIndeterminate ? (
                 <Icon
                   aria-hidden="true"
-                  className="no-pointer-events" // Add the new class here
+                  className="no-pointer-events"
                   color="on-vivid"
-                  name={icon}
+                  name="icon-control-remove"
+                  size="sm"
+                />
+              ) : (
+                <Icon
+                  aria-hidden="true"
+                  className="no-pointer-events"
+                  color="on-vivid"
+                  name="icon-control-check"
                   size="sm"
                 />
               )}
             </div>
-            {props.label}
+            {children}
           </>
-        );
-      }}
-    </AriaCheckbox>
+        )}
+      </AriaCheckbox>
+      {description && <p className="checkbox-description">{description}</p>}
+    </div>
   );
 }
 
 export default Checkbox;
-export { Checkbox };

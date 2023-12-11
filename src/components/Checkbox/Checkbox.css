@@ -1,0 +1,58 @@
+/**
+ * Checkbox Styles
+ */
+
+.react-aria-Checkbox {
+  @apply flex gap-2;
+}
+
+.react-aria-Checkbox > .checkbox {
+  @apply flex h-6 w-6 items-center justify-center rounded border-2 stroke;
+}
+
+.react-aria-Checkbox > .checkbox > svg {
+  pointer-events: none;
+}
+
+.react-aria-Checkbox[data-selected] > .checkbox,
+.react-aria-Checkbox[data-indeterminate] > .checkbox,
+.react-aria-Checkbox[data-pressed] > .checkbox {
+  @apply canvas-secondary stroke-secondary;
+}
+
+.react-aria-Checkbox[data-focus-visible] .checkbox {
+  @apply border-2 ring ring-2 ring-blue-600 ring-offset-2 stroke-primary;
+}
+
+.react-aria-Checkbox[data-disabled] {
+  @apply type-secondary-hover;
+}
+
+.react-aria-Checkbox[data-disabled] .checkbox {
+  @apply canvas-disabled stroke-disabled type-on-vivid-disabled;
+}
+
+.react-aria-Checkbox[data-invalid] .checkbox {
+  @apply canvas-danger-vivid stroke-danger type-danger;
+}
+
+.react-aria-Checkbox[data-readonly] .checkbox {
+  @apply canvas-secondary-pressed stroke-secondary-pressed type-secondary-pressed;
+}
+
+.react-aria-Checkbox svg {
+  stroke-dashoffset: 44;
+}
+
+.checkbox[data-indeterminate] > svg {
+  stroke: none;
+  fill: var(--checkmark-color);
+}
+
+.checkbox-description {
+  @apply ml-8 text-sm type-alt;
+}
+
+.react-aria-Checkbox[data-invalid] + .checkbox-description {
+  @apply type-danger;
+}

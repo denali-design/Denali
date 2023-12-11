@@ -8,7 +8,7 @@ import {
   CheckboxGroupProps as AriaCheckboxGroupProps
 } from 'react-aria-components';
 import { Text } from 'react-aria-components';
-import { Checkbox } from '../Checkbox/Checkbox';
+import Checkbox from '../Checkbox/Checkbox';
 import '../../App.css';
 
 interface CheckboxProps {
@@ -49,10 +49,9 @@ function CheckboxGroup({
           <Checkbox
             key={checkbox.id}
             id={checkbox.id}
-            label={checkbox.label}
             value={checkbox.value || checkbox.id} // Use value if provided, otherwise fallback to id
           >
-            {checkbox.description}
+            {checkbox.label}
           </Checkbox>
         ))}
       {/* If checkboxes are provided as children */}
