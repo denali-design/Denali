@@ -1,32 +1,17 @@
-/**
- * TextField Component
- *
- * Provides a styled and customizable text field component.
- * Supports different input modes and optional icon display.
- *
- * @file   This file defines the TextField component.
- * @since  1.0.0
- */
-
-import { useEffect, useRef } from 'react';
+import { useRef, useState } from 'react';
 import {
   TextField as AriaTextField,
+  FieldError,
   Label,
   Input
 } from 'react-aria-components';
+import useFocusType from '../../hooks/useFocusTypes.ts';
 import { Icon } from '../Icon/Icon';
 import '../../App.css';
+import './TextField.css';
 
-/**
- * @typedef {Object} TextFieldProps
- *
- * @property {string} label - Label for the text field.
- * @property {string} [placeholder] - Placeholder text for the text field.
- * @property {('none'|'text'|'tel'|'url'|'email'|'numeric'|'decimal'|'search')} [inputMode] - The input mode of the text field.
- */
 export type TextFieldProps = {
   label: string;
-  placeholder?: string;
   inputMode?:
     | 'none'
     | 'text'
@@ -36,65 +21,70 @@ export type TextFieldProps = {
     | 'numeric'
     | 'decimal'
     | 'search';
+  type?: 'text' | 'search' | 'url' | 'tel' | 'email' | 'password';
 };
 
-/**
- * Renders a text field with optional icon based on input mode.
- *
- * @param {TextFieldProps} props - Properties for the text field.
- * @returns {JSX.Element} The rendered TextField component.
- */
 function TextField({
   label = 'Default Label',
-  placeholder = 'Type here...',
-  inputMode = 'text'
+  inputMode = 'text',
+  type = 'text'
 }: TextFieldProps) {
-  let iconName: string | null = null;
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [inputValue, setInputValue] = useState('');
+  const [hasValue, setHasValue] = useState(false);
+  const { isTabFocused, isClickFocused, handleFocus, handleBlur } =
+    useFocusType();
 
-  if (inputMode === 'search') {
-    iconName = 'icon-control-search';
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setInputValue(value);
+    setHasValue(value.length > 0);
+  };
+
+  const clearInput = () => {
+    setInputValue('');
+    setHasValue(false);
+  };
+
+  let formGroupClass = 'form-group';
+  if (hasValue && !isTabFocused && !isClickFocused) {
+    formGroupClass += ' form-group--has-value';
+  }
+  if (isTabFocused) {
+    formGroupClass += ' form-group--is-tab-focused';
+  }
+  if (isClickFocused) {
+    formGroupClass += ' form-group--is-click-focused';
   }
 
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent) {
-      if (
-        (event.metaKey && event.key === 'k') ||
-        (event.altKey && event.key === 'k')
-      ) {
-        inputRef.current?.focus();
-      }
-    }
-
-    if (inputMode === 'search') {
-      window.addEventListener('keydown', handleKeyDown);
-    }
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [inputMode]);
-
   return (
-    <AriaTextField className="border-primary focus-within:outline-brand-primary relative flex w-full items-center rounded-lg border bg-white px-2 py-1.75 text-black focus-within:outline focus-within:outline-offset-2">
-      {iconName && (
-        <Icon
-          aria-hidden="true"
-          className="no-pointer-events"
-          color="default"
-          name={iconName}
-          size="md"
+    <AriaTextField className="w-full">
+      <div className={formGroupClass}>
+        <Input
+          ref={inputRef}
+          className="form-group__input"
+          placeholder=" "
+          type={type}
+          inputMode={inputMode}
+          value={inputValue}
+          onChange={handleInputChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
         />
-      )}
-      <Label className="sr-only">{label}</Label>
-      <Input
-        className="ml-2 block w-full placeholder-black focus:outline-none"
-        ref={inputRef}
-        placeholder={placeholder}
-        inputMode={inputMode}
-      />
-      {inputMode === 'search' && <p> &#8984;K </p>}
+        <Label className="form-group__label">{label}</Label>
+        {hasValue && (
+          <button onClick={clearInput} className="form-group__shortcut">
+            <Icon
+              aria-hidden="true"
+              className="no-pointer-events"
+              color="default"
+              name="icon-control-close-circle"
+              size="sm"
+            />
+          </button>
+        )}
+      </div>
+      <FieldError />
     </AriaTextField>
   );
 }

@@ -1,0 +1,64 @@
+/**
+ * TextField CSS
+ */
+
+.form-group {
+  @apply relative flex min-h-[52px] w-full w-full min-w-[300px] items-center rounded-lg border-2 bg-white px-3 pt-3 text-black shadow;
+}
+
+.form-group--has-value {
+  @apply border stroke-secondary;
+}
+
+.form-group--has-value > .form-group__label {
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+.form-group--has-value > .form-group__input {
+  margin-left: 1px;
+}
+
+.form-group--is-click-focused {
+  @apply stroke-primary;
+}
+
+.form-group--is-tab-focused {
+  @apply border-2 ring ring-2 ring-blue-600 ring-offset-2 stroke-primary;
+}
+
+.form-group__input {
+  @apply order-2 block w-full pb-1 pt-2 placeholder-black focus:outline-none;
+}
+
+.form-group__input:focus ~ .form-group__label,
+.form-group__input:not(:placeholder-shown) ~ .form-group__label {
+  @apply absolute top-[.25rem] text-sm;
+}
+
+.form-group__label {
+  @apply order-1 pb-3  type-alt;
+  transform-origin: top left;
+}
+
+.react-aria-FieldError {
+  @apply text-sm type-danger;
+}
+
+/* Shortcuts & Icons */
+.form-group__shortcut {
+  @apply order-3;
+}
+
+.form-group--has-value > .form-group__shortcut {
+  margin-right: 1px;
+}
+
+/* Error States */
+[data-invalid='true'] > .form-group {
+  @apply canvas-danger stroke-danger-vivid;
+}
+
+[data-invalid='true'] .form-group > .form-group__input {
+  @apply canvas-danger;
+}
