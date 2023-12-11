@@ -8,7 +8,7 @@
 import { Meta } from '@storybook/react';
 import { ComponentProps } from 'react'; // Import ComponentProps
 import { CheckboxGroup } from './CheckboxGroup';
-import { Checkbox } from '../Checkbox/Checkbox';
+import Checkbox from '../Checkbox/Checkbox';
 
 export default {
   component: CheckboxGroup,
@@ -36,7 +36,11 @@ export const UsingArray = {
 // Use ComponentProps to infer the props type for CheckboxGroup
 export const UsingChildren = (args: ComponentProps<typeof CheckboxGroup>) => (
   <CheckboxGroup {...args}>
-    <Checkbox id="ham" label="Ham" value="ham" />
-    <Checkbox id="pineapple" label="Pineapple" value="pineapple" />
+    <Checkbox id="ham" value="ham">
+      Ham
+    </Checkbox>
+    <Checkbox id="pineapple" value="pineapple">
+      Pineapple
+    </Checkbox>
   </CheckboxGroup>
 );
