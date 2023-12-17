@@ -8,3 +8,16 @@
 html * {
   font-family: 'Inter', system !important;
 }
+
+/**
+ * Light & Dark Mode
+ *
+ * Set light and dark mode colors for component previews.
+ */
+.dark .sb-anchor .sbdocs {
+  background: #000 !important;
+}
+
+.light .sb-anchor .sbdocs {
+  background: #fff;
+}

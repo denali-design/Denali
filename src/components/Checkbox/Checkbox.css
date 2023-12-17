@@ -3,11 +3,11 @@
  */
 
 .react-aria-Checkbox {
-  @apply flex gap-2;
+  @apply flex gap-2 type;
 }
 
 .react-aria-Checkbox > .checkbox {
-  @apply flex h-6 w-6 items-center justify-center rounded border-2 stroke;
+  @apply flex h-6 w-6 items-center justify-center rounded border-2 stroke-secondary;
 }
 
 .react-aria-Checkbox > .checkbox > svg {
