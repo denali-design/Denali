@@ -3,7 +3,7 @@
  */
 
 .form-group {
-  @apply relative flex min-h-[52px] w-full w-full min-w-[300px] items-center rounded-lg border-2 bg-white px-3 pt-3 text-black shadow;
+  @apply relative flex min-h-[52px] w-full w-full min-w-[300px] items-center rounded-lg border-2 bg-white px-3 pt-3 text-black shadow canvas;
 }
 
 .form-group--has-value {
@@ -28,7 +28,7 @@
 }
 
 .form-group__input {
-  @apply order-2 block w-full pb-1 pt-2 placeholder-black focus:outline-none;
+  @apply order-2 block w-full pb-1 pt-2 placeholder-black canvas focus:outline-none;
 }
 
 .form-group__input:focus ~ .form-group__label,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withThemeByClassName } from '@storybook/addon-themes';
 import './style.css';
 
 // Global parameters for Storybook
@@ -36,17 +37,12 @@ export const decorators = [
     <div style={{ all: 'unset' }}>
       <Story />
     </div>
-  )
+  ),
+  withThemeByClassName({
+    themes: {
+      light: 'light',
+      dark: 'dark'
+    },
+    defaultTheme: 'light'
+  })
 ];
-// Global types
-export const globalTypes = {
-  theme: {
-    name: 'Theme',
-    description: 'Global theme for components',
-    defaultValue: 'dark',
-    toolbar: {
-      icon: 'circlehollow',
-      items: ['light', 'dark']
-    }
-  }
-};

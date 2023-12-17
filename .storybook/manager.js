@@ -4,5 +4,5 @@ import DenaliTheme from './DenaliTheme';
 import './style.css';
 
 addons.setConfig({
-  theme: DenaliTheme,
+  theme: DenaliTheme
 });
