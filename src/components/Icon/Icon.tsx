@@ -44,7 +44,7 @@ const iconVariants = tv({
       success: 'type-success',
       warning: 'type-warning',
       danger: 'type-danger',
-      info: 'text-info-base',
+      info: 'type-info',
       'on-vivid': 'type-on-vivid'
     }
   },

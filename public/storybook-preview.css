@@ -3,10 +3,16 @@
 /**
  * Font Family
  *
- * Set root to Inter
+ * Set root to Inter but exclude prismjs code previews.
  */
+html,
 html * {
-  font-family: 'Inter', system !important;
+  font-family: 'Inter', sans-serif;
+}
+
+.prismjs,
+.prismjs * {
+  font-family: monospace !important;
 }
 
 /**
