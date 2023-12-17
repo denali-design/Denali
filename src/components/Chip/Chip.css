@@ -1,0 +1,35 @@
+/**
+ * Alert Styles
+ */
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded border-2 p-1 text-sm canvas type;
+}
+
+.chip--reversed {
+  @apply flex-row-reverse;
+}
+
+.chip--default {
+  @apply canvas-alt stroke-alt;
+}
+
+.chip--info {
+  @apply canvas-info stroke-info type-info;
+}
+
+.chip--success {
+  @apply canvas-success stroke-success type-success;
+}
+
+.chip--warning {
+  @apply canvas-warning stroke-warning type-warning;
+}
+
+.chip--danger {
+  @apply canvas-danger stroke-danger type-danger;
+}
+
+.chip__message {
+  @apply type;
+}
