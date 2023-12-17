@@ -1,62 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* Sidebar */
-.sidebar-container {
-  /* background-color: #f8fafc; */
+/**
+ * Font Family
+ *
+ * Set root to Inter
+ */
+html * {
+  font-family: 'Inter', system !important;
 }
 
-.sidebar-container .sidebar-item {
-  /* font-size: 1rem; */
-}
-
-.sidebar-subheading {
-  margin-top: 16px !important;
-}
-
-/* Style the Search Input field in Sidebar */
+/**
+ * Storybook Searchbar
+ *
+ * Style the storybook sidebar searchbar.
+ */
 #storybook-explorer-searchfield {
-  border-radius: 0px !important;
   background-color: white;
+  border-radius: 0px !important;
 }
-.sidebar-subheading button {
-  color: black;
-  letter-spacing: normal;
-}
+
+/**
+ * Update Document Intro
+ *
+ * Update the Storybook intro section by changing font weights, removing icons,
+ *  andremoving subheadings.
+ */
 div[data-item-id='denali'] {
-  position: absolute;
-  width: 1px;
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  padding: 0;
+  position: absolute;
   white-space: nowrap;
-  border-width: 0;
+  width: 1px;
 }
+
 div[data-item-id='denali'] * {
   background-color: red !important;
   font-weight: bold !important;
 }
 
-div[data-parent-id='denali'] a > svg {
-  display: none;
+div[data-parent-id='denali'] * {
+  font-weight: bold !important;
 }
 
-/* Style Headings */
+div[data-parent-id='denali'] a > div > svg {
+  display: none !important;
+}
 
+/**
+ * Storybook Sidebar & Documentation Headings
+ *
+ * Update font color, size, thickness, etc.
+ */
 .subheading {
-  font-size: 1rem !important;
   color: #2563eb !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
   margin: 0px !important;
-  font-weight: bold;
 }
 
-/* Document wrapper */
-#storybook-docs {
-  padding: 16px;
+.sbdocs-a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
 }
+
+/* Sidebar Subheadings */
+.sidebar-subheading {
+  margin-top: 1rem !important;
+}
+
+.sidebar-subheading button {
+  color: #000 !important;
+  letter-spacing: normal !important;
+}
+
+/**
+ * Document Wrappers
+ *
+ * Set wrapping padding and other details for documentation/preview pages.
+ */
+#storybook-docs,
 #storybook-docs .sbdocs-wrapper {
-  padding: 16px;
+  padding: 1rem;
 }
 
 /* Force Font Sizes */
@@ -65,7 +93,19 @@ div[data-parent-id='denali'] a > svg {
   font-size: 12px !important;
 }
 
-.sbdocs-a {
-  text-decoration: underline !important;
+/**
+ * Update SVG Colors
+ */
+#storybook-explorer-tree svg {
+  color: #000 !important;
+  fill: #000 !important;
+}
+
+/**
+ * Table of Contents
+ *
+ * Style the TOC links in Storybook markdown file pages.
+ */
+.toc-list-item.is-active-li > a {
   color: #2563eb !important;
 }

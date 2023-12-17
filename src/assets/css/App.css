@@ -1,0 +1,9 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'focus.css';
+
+.no-pointer-events {
+  pointer-events: none;
+}

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Icon from '../Icon/Icon';
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 export type DividerColor =
   | 'default'

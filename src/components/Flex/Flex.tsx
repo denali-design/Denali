@@ -9,7 +9,7 @@
  */
 import React, { ReactNode } from 'react';
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 /**
  * Type definition for FlexProps

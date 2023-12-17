@@ -1,36 +1,18 @@
-import './App.css';
-import { Button } from './components/Button/Button';
+import './assets/css/App.css';
 import { Heading } from './components/Heading/Heading';
-import { Icon } from './components/Icon/Icon';
-import {
-  DescriptionItem,
-  DescriptionList
-} from './components/DescriptionList/DescriptionList';
+import denaliLogo from './assets/denali-logo.svg';
 
 function App() {
   return (
-    <>
-      <Heading level={1}>Denali</Heading>
-      <Button
-        label="Well"
-        onPress={() => alert("What's the latest?")}
-        aria-pressed
-      />
-      <Icon name="icon-action-arrowhead-down" />
+    <div className="flex min-h-screen flex-col items-center justify-center p-12">
+      <div className="flex h-24 items-center justify-center">
+        <img className="block h-24 w-auto" src={denaliLogo} alt="Denali" />
+      </div>
 
-      <Icon
-        name="icon-action-merge"
-        size="md"
-        color="primary"
-        overrideTitle="Merge me"
-      />
-      <DescriptionList>
-        <DescriptionItem
-          term="Serif"
-          description="A font style characterized by small decorative lines (serifs) attached to the end of a letter or symbol. Common in print design for its traditional and readable appearance."
-        />
-      </DescriptionList>
-    </>
+      <Heading className="sr-only" level={1}>
+        Denali
+      </Heading>
+    </div>
   );
 }
 

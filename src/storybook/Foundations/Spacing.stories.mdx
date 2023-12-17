@@ -1,0 +1,25 @@
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+import Lead from '../../components/Lead/Lead';
+import Heading from '../../components/Heading/Heading';
+import Subheading from '../storybook-utilities/Subheading';
+import { TWSpacingSystem } from '../storybook-utilities/TWSpacingSystem';
+import { SpacingSystem } from '../storybook-utilities/SpacingSystem';
+import '../assets/css/App.css';
+
+<Meta title="Foundations/Spacing" />
+
+<Unstyled>
+  <Subheading>Foundations</Subheading>
+  <Heading type="article" level="1">Spacing</Heading>
+  <Lead>Consistent spacing ensures clarity and cohesion, streamlining user experiences across interfaces.</Lead>
+  Use these spacing utilities to uniformly control dimensions such as width, margin, height, and padding across your UI components. These utilities adhere to TailwindCSS conventions. For dynamic layouts, flex and grid utility classes are also available.
+
+```html
+<div class="mt-space-2">This element has a margin-top of 1rem.</div>
+```
+
+  <div className="grid grid-cols-1 gap-12">
+      <SpacingSystem />
+      <TWSpacingSystem />
+  </div>
+</Unstyled>

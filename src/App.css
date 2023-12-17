@@ -1,7 +1,0 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-@import 'components/table/table.css';
-@import 'css/general.css';
-@import 'css/focus.css';

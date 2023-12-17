@@ -9,7 +9,7 @@ import {
 } from 'react-aria-components';
 import { Text } from 'react-aria-components';
 import Checkbox from '../Checkbox/Checkbox';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 interface CheckboxProps {
   id: string;

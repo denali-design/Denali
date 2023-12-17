@@ -8,7 +8,8 @@ import {
   Cell
 } from 'react-aria-components';
 import type { TableProps as AriaTableProps } from 'react-aria-components';
-import '../../App.css';
+import '../../assets/css/App.css';
+import './Table.css';
 
 export interface TableColumn {
   name: string;
@@ -18,7 +19,7 @@ export interface TableColumn {
 
 export interface TableRow {
   id: string | number;
-  [key: string]: any;
+  [key: string]: string | number;
 }
 
 export interface TableProps extends AriaTableProps {
