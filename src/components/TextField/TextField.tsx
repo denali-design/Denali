@@ -7,7 +7,7 @@ import {
 } from 'react-aria-components';
 import useFocusType from '../../hooks/useFocusTypes.ts';
 import { Icon } from '../Icon/Icon';
-import '../../App.css';
+import '../../assets/css/App.css';
 import './TextField.css';
 
 export type TextFieldProps = {

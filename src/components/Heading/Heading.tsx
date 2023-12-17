@@ -5,7 +5,7 @@
 
 import { ElementType, forwardRef, HTMLAttributes, memo } from 'react';
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 /**
  * @typedef {Object} HeadingProps

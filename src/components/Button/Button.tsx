@@ -8,7 +8,7 @@ import { Button as AriaButton } from 'react-aria-components';
 import { ButtonProps as AriaButtonProps } from 'react-aria-components';
 import Icon from '../Icon/Icon';
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 export interface ButtonProps extends AriaButtonProps {
   label: string;

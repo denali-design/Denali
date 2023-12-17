@@ -10,7 +10,7 @@
 import { FC } from 'react';
 import { ReactSVG } from 'react-svg';
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 /** Map of size options to their respective CSS classes. */
 const sizeClasses = {

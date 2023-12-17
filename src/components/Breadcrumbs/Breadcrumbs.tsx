@@ -6,7 +6,7 @@ import {
 import { BreadcrumbsProps as AriaBreadcrumbsProps } from 'react-aria-components';
 import { Icon } from '../Icon/Icon'; // Ensure this path is correct
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 import './breadcrumbs.css';
 
 export interface BreadcrumbItem {

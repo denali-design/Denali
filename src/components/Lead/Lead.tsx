@@ -7,7 +7,7 @@
 
 import React, { ReactNode, HTMLProps } from 'react';
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 export interface LeadProps extends HTMLProps<HTMLParagraphElement> {
   children: ReactNode;

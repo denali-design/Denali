@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 import React, { ReactNode } from 'react';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 /**
  * Describes the props for the Grid component with responsive design options.

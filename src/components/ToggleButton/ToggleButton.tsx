@@ -8,7 +8,7 @@ import {
   ToggleButtonProps as AriaToggleButtonProps
 } from 'react-aria-components';
 import { tv } from 'tailwind-variants';
-import '../../App.css';
+import '../../assets/css/App.css';
 
 /**
  * Defines the properties for the ToggleButton component.

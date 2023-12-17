@@ -6,7 +6,7 @@
 import { Checkbox as AriaCheckbox } from 'react-aria-components';
 import type { CheckboxProps as AriaCheckboxProps } from 'react-aria-components';
 import { Icon } from '../Icon/Icon';
-import '../../App.css';
+import '../../assets/css/App.css';
 import './Checkbox.css';
 
 // Extend the CheckboxProps from 'react-aria-components' to include a description prop
