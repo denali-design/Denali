@@ -1,8 +1,5 @@
-// Calendar.stories.ts
-
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { Calendar } from './Calendar';
+import Calendar from './Calendar';
 
 const meta: Meta<typeof Calendar> = {
   component: Calendar,
@@ -15,6 +12,13 @@ type Story = StoryObj<typeof Calendar>;
 
 export const Default: Story = {
   args: {
-    children: 'Calendar'
+    'aria-label': 'Select a Date'
+  }
+};
+
+export const Disabled: Story = {
+  args: {
+    'aria-label': 'Calendar Disabled',
+    isDisabled: true
   }
 };
