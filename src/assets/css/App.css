@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import 'common-styles/forms/inputs.css';
 @import 'focus.css';
 
 .no-pointer-events {
