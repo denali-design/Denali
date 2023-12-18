@@ -1,0 +1,55 @@
+/**
+ * Progress Bar Styles
+ */
+
+.tabs {
+  @apply w-full canvas;
+}
+
+.tabs--vertical {
+  @apply grid grid-cols-5 gap-2;
+}
+
+.tabs__tab-list[aria-orientation='horizontal'] {
+  @apply flex gap-4;
+}
+
+.tabs__tab-list[aria-orientation='vertical'] {
+  @apply col-span-1;
+}
+
+.tabs__tab {
+  @apply cursor-pointer px-4 py-2 text-lg;
+}
+
+.tabs__tab[aria-disabled='true'] {
+  @apply cursor-auto type-secondary-disabled;
+}
+
+.tabs__tab--line {
+  @apply border-b-4 border-transparent;
+}
+
+.tabs__tab--line[aria-selected='true'] {
+  @apply stroke-secondary;
+}
+
+.tabs__tab[aria-disabled='true'].tabs__tab--line[aria-selected='true'] {
+  @apply stroke-primary-disabled;
+}
+
+.tabs__tab--pill[aria-selected='true'] {
+  @apply rounded canvas-secondary type-on-vivid;
+}
+
+.tabs__tab[aria-disabled='true'].tabs__tab--pill[aria-selected='true'] {
+  @apply canvas-secondary-disabled;
+}
+
+.tabs__tab-panel {
+  @apply p-4;
+}
+
+.tabs__panel-container--vertical {
+  @apply col-span-4;
+}

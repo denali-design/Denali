@@ -41,6 +41,7 @@ export default {
     }
   },
   plugins: [
+    require('@tailwindcss/container-queries'),
     require('./tailwind-plugins/semantic-colors'),
     require('@tailwindcss/typography')
   ]
