@@ -6,31 +6,62 @@
   @apply relative flex min-h-[52px] w-full w-full min-w-[300px] items-center rounded-lg border-2 bg-white px-3 pt-3 text-black shadow canvas;
 }
 
-.form-group--has-value {
+.form-group:has(input:not(:placeholder-shown)) {
   @apply border stroke-secondary;
 }
 
-.form-group--has-value > .form-group__label {
+.form-group:has(input:not(:placeholder-shown)) > label,
+.form-group:has(input:not(:placeholder-shown)) > .form-group__label-static {
   margin-left: 1px;
   margin-top: 1px;
 }
 
-.form-group--has-value > .form-group__input {
+.form-group:has(input:not(:placeholder-shown)) > input,
+.form-group:has(input:not(:placeholder-shown)) > .input-group,
+.form-group:has(input:not(:placeholder-shown)) .date-input {
   margin-left: 1px;
 }
 
-.form-group--is-click-focused {
-  @apply stroke-primary;
+.form-group:has(input:not(:placeholder-shown)) > .form-group__shortcut {
+  margin-right: 1px;
 }
 
-.form-group--is-tab-focused {
+.form-group:has(div[data-focus-within]),
+.form-group:has(input[data-focused]) {
+  @apply border-2 stroke-primary;
+}
+
+.form-group:has(div[data-focus-visible]),
+.form-group:has(input[data-focus-visible]) {
   @apply border-2 ring ring-2 ring-blue-600 ring-offset-2 stroke-primary;
 }
 
-.form-group__input {
-  @apply order-2 block w-full pb-1 pt-2 placeholder-black canvas focus:outline-none;
+.form-group:has(div[data-focus-within]) > label,
+.form-group:has(div[data-focus-visible]) > label,
+.form-group:has(div[data-focus-within]) > .form-group__label-static,
+.form-group:has(div[data-focus-visible]) > .form-group__label-static,
+
+.form-group:has(div[data-focus-within]) > input,
+.form-group:has(div[data-focus-visible]) > input,
+.form-group:has(div[data-focus-within]) > .input-group,
+.form-group:has(div[data-focus-visible]) > .input-group,
+.form-group:has(div[data-focus-within]) .date-input,
+.form-group:has(div[data-focus-visible]) .date-input,
+/* For TextField */
+.form-group:has(input[data-focused]) > label,
+.form-group:has(input[data-focus-visible]) > label,
+.form-group:has(input[data-focused]) > input,
+.form-group:has(input[data-focus-visible]) > input,
+.form-group:has(input[data-focused]) > .form-group__shortcut,
+.form-group:has(input[data-focus-visible]) > .form-group__shortcut {
+  @apply m-0;
 }
 
+.form-group__input {
+  @apply block w-full pb-1 pt-2 placeholder-black canvas focus:outline-none;
+}
+
+.form-group__label-static,
 .form-group__input:focus ~ .form-group__label,
 .form-group__input:not(:placeholder-shown) ~ .form-group__label {
   @apply absolute top-[.25rem] text-xs;
@@ -45,20 +76,36 @@
   @apply text-sm type-danger;
 }
 
+/* Input Groups */
+.input-group {
+  @apply flex w-full items-center justify-between;
+}
+
+/* Input Description */
+.input-description,
+.input-error {
+  @apply ml-[4px] text-sm type-alt;
+}
+
+.input-error {
+  @apply type-danger;
+}
+
 /* Shortcuts & Icons */
 .form-group__shortcut {
   @apply order-3;
 }
 
-.form-group--has-value > .form-group__shortcut {
-  margin-right: 1px;
-}
-
-/* Error States */
-[data-invalid='true'] > .form-group {
+/* Error & Disabled States */
+[data-invalid='true'] .form-group {
   @apply canvas-danger stroke-danger-vivid;
 }
 
-[data-invalid='true'] .form-group > .form-group__input {
+[data-invalid='true'] .form-group .form-group__input {
   @apply canvas-danger;
+}
+
+[data-disabled='true'] .form-group,
+[data-disabled='true'] .form-group .form-group__input {
+  @apply canvas-disabled;
 }

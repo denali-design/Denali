@@ -35,7 +35,7 @@ function DateField<T extends DateValue>({
   return (
     <AriaDateField {...props}>
       <div className="form-group">
-        <Label className="date-field__label">{label}</Label>
+        <Label className="form-group__label-static">{label}</Label>
         <DateInput className="date-input">
           {(segment) => (
             <DateSegment className="date-field__segment" segment={segment} />

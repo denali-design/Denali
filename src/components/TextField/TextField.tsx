@@ -5,10 +5,9 @@ import {
   Label,
   Input
 } from 'react-aria-components';
-import useFocusType from '../../hooks/useFocusTypes.ts';
 import { Icon } from '../Icon/Icon';
 import '../../assets/css/App.css';
-import './TextField.css';
+import '../../assets/css/common-styles/forms/inputs.css';
 
 export type TextFieldProps = {
   label: string;
@@ -32,8 +31,6 @@ function TextField({
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputValue, setInputValue] = useState('');
   const [hasValue, setHasValue] = useState(false);
-  const { isTabFocused, isClickFocused, handleFocus, handleBlur } =
-    useFocusType();
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -46,30 +43,17 @@ function TextField({
     setHasValue(false);
   };
 
-  let formGroupClass = 'form-group';
-  if (hasValue && !isTabFocused && !isClickFocused) {
-    formGroupClass += ' form-group--has-value';
-  }
-  if (isTabFocused) {
-    formGroupClass += ' form-group--is-tab-focused';
-  }
-  if (isClickFocused) {
-    formGroupClass += ' form-group--is-click-focused';
-  }
-
   return (
     <AriaTextField className="w-full">
-      <div className={formGroupClass}>
+      <div className="form-group">
         <Input
           ref={inputRef}
-          className="form-group__input"
+          className="form-group__input order-2"
           placeholder=" "
           type={type}
           inputMode={inputMode}
           value={inputValue}
           onChange={handleInputChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
         />
         <Label className="form-group__label">{label}</Label>
         {hasValue && (

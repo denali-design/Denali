@@ -54,7 +54,7 @@
     "prettier-plugin-tailwindcss": "^0.5.4",
     "storybook": "^7.6.5",
     "tailwind-variants": "^0.1.14",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
