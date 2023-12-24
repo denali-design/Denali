@@ -9,12 +9,6 @@
   @apply type-secondary-disabled;
 }
 
-.date-field__label {
-  @apply absolute top-[.25rem] text-xs type-alt;
-
-  margin-top: 1px;
-}
-
 .date-field__segment[data-focused] {
   @apply outline-none stroke-primary;
   box-shadow: 0 2px 0 0 #2563eb;
