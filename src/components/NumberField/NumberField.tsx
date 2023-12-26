@@ -20,7 +20,6 @@ import { FieldError, Text } from 'react-aria-components';
 import Icon from '../Icon/Icon';
 import '../../assets/css/App.css';
 import '../../assets/css/common-styles/forms/inputs.css';
-import './NumberField.css';
 
 interface NumberFieldProps extends AriaNumberFieldProps {
   label?: string;
@@ -37,8 +36,10 @@ function NumberField({
   return (
     <AriaNumberField className="number-field" {...props}>
       <div className="form-group">
-        <Label className="form-group__label-static">{label}</Label>
-        <Group className="input-group">
+        <Label className="form-group__label form-group__label--static">
+          {label}
+        </Label>
+        <Group className="input-group has-value-stroke">
           <Button className="number-field__button" slot="decrement">
             <Icon color="default" name="icon-control-remove" size="sm" />
           </Button>

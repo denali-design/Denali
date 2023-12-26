@@ -18,7 +18,6 @@ import type {
 import { FieldError, Text } from 'react-aria-components';
 import '../../assets/css/App.css';
 import '../../assets/css/common-styles/forms/inputs.css';
-import './DateField.css';
 
 interface DateFieldProps<T extends DateValue> extends AriaDateFieldProps<T> {
   label?: string;
@@ -35,15 +34,17 @@ function DateField<T extends DateValue>({
   return (
     <AriaDateField {...props}>
       <div className="form-group">
-        <Label className="form-group__label-static">{label}</Label>
-        <DateInput className="date-input">
+        <Label className="form-group__label form-group__label--static">
+          {label}
+        </Label>
+        <DateInput className="has-value-stroke flex">
           {(segment) => (
-            <DateSegment className="date-field__segment" segment={segment} />
+            <DateSegment className="num-field__segment" segment={segment} />
           )}
         </DateInput>
         {description && <Text slot="description">{description}</Text>}
       </div>
-      <FieldError>{errorMessage}</FieldError>
+      <FieldError className="input-error">{errorMessage}</FieldError>
     </AriaDateField>
   );
 }

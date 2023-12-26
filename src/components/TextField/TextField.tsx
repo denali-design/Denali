@@ -48,16 +48,21 @@ function TextField({
       <div className="form-group">
         <Input
           ref={inputRef}
-          className="form-group__input order-2"
+          className="form-group__input has-value-stroke order-2"
           placeholder=" "
           type={type}
           inputMode={inputMode}
           value={inputValue}
           onChange={handleInputChange}
         />
-        <Label className="form-group__label">{label}</Label>
+        <Label className="form-group__label form-group__label--dynamic">
+          {label}
+        </Label>
         {hasValue && (
-          <button onClick={clearInput} className="form-group__shortcut">
+          <button
+            onClick={clearInput}
+            className="form-group__shortcut has-value-stroke order-3"
+          >
             <Icon
               aria-hidden="true"
               className="no-pointer-events"
