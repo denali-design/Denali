@@ -54,7 +54,9 @@ function NumberField({
           {description}
         </Text>
       )}
-      <FieldError className="input-error">{errorMessage}</FieldError>
+      <FieldError className="input-description input-description--invalid">
+        {errorMessage}
+      </FieldError>
     </AriaNumberField>
   );
 }

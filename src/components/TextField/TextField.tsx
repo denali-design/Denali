@@ -1,7 +1,12 @@
 import { useRef, useState } from 'react';
+import type {
+  TextFieldProps as AriaTextFieldProps,
+  ValidationResult
+} from 'react-aria-components';
 import {
   TextField as AriaTextField,
   FieldError,
+  Text,
   Label,
   Input
 } from 'react-aria-components';
@@ -9,24 +14,17 @@ import { Icon } from '../Icon/Icon';
 import '../../assets/css/App.css';
 import '../../assets/css/common-styles/forms/inputs.css';
 
-export type TextFieldProps = {
-  label: string;
-  inputMode?:
-    | 'none'
-    | 'text'
-    | 'tel'
-    | 'url'
-    | 'email'
-    | 'numeric'
-    | 'decimal'
-    | 'search';
-  type?: 'text' | 'search' | 'url' | 'tel' | 'email' | 'password';
-};
+interface TextFieldProps extends AriaTextFieldProps {
+  label?: string;
+  description?: string;
+  errorMessage?: string | ((validation: ValidationResult) => string);
+}
 
 function TextField({
-  label = 'Default Label',
-  inputMode = 'text',
-  type = 'text'
+  label,
+  description,
+  errorMessage,
+  ...props
 }: TextFieldProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputValue, setInputValue] = useState('');
@@ -44,14 +42,12 @@ function TextField({
   };
 
   return (
-    <AriaTextField className="w-full">
+    <AriaTextField className="w-full" {...props}>
       <div className="form-group">
         <Input
           ref={inputRef}
           className="form-group__input has-value-stroke order-2"
-          placeholder=" "
-          type={type}
-          inputMode={inputMode}
+          placeholder=""
           value={inputValue}
           onChange={handleInputChange}
         />
@@ -59,10 +55,7 @@ function TextField({
           {label}
         </Label>
         {hasValue && (
-          <button
-            onClick={clearInput}
-            className="form-group__shortcut has-value-stroke order-3"
-          >
+          <button onClick={clearInput} className="form-group__shortcut order-3">
             <Icon
               aria-hidden="true"
               className="no-pointer-events"
@@ -73,10 +66,16 @@ function TextField({
           </button>
         )}
       </div>
-      <FieldError />
+      {description && (
+        <Text className="input-description" slot="description">
+          {description}
+        </Text>
+      )}
+      <FieldError className="input-description input-description--invalid">
+        {errorMessage}
+      </FieldError>
     </AriaTextField>
   );
 }
 
 export default TextField;
-export { TextField };

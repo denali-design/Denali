@@ -42,9 +42,15 @@ function DateField<T extends DateValue>({
             <DateSegment className="num-field__segment" segment={segment} />
           )}
         </DateInput>
-        {description && <Text slot="description">{description}</Text>}
       </div>
-      <FieldError className="input-error">{errorMessage}</FieldError>
+      {description && (
+        <Text className="input-description" slot="description">
+          {description}
+        </Text>
+      )}
+      <FieldError className="input-description input-description--invalid">
+        {errorMessage}
+      </FieldError>
     </AriaDateField>
   );
 }
