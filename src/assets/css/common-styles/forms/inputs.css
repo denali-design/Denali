@@ -3,7 +3,11 @@
  */
 
 .form-group {
-  @apply min-w-80 relative flex min-h-[52px] w-full w-full items-center rounded-lg border-2 bg-white px-3 pt-3 text-black shadow canvas;
+  @apply min-w-80 relative flex min-h-[52px] w-full items-center overflow-hidden rounded-lg border-2 px-3 pt-3 shadow canvas type;
+}
+
+.form-group--text-area {
+  @apply h-32 flex-col items-start justify-start p-3;
 }
 
 /**
@@ -30,6 +34,10 @@
 .form-group:has(.num-field__segment:not([data-placeholder], [aria-hidden])) {
   .form-group__label {
     @apply ml-px mt-px;
+  }
+
+  .form-group__input--text-area {
+    @apply mt-px;
   }
 }
 
@@ -94,16 +102,22 @@
  * whenever the input has a value; static labels are always on the top left.
  */
 .form-group__label {
-  @apply type-alt;
+  @apply canvas type-alt;
 }
 
 .form-group__label--dynamic {
   @apply w-1/2 pb-3;
 }
 
+.form-group__label--text-area {
+  @apply w-full pb-0 text-base;
+}
+
 .form-group__label--static,
 .form-group__input:focus ~ .form-group__label--dynamic,
-.form-group__input:not(:placeholder-shown) ~ .form-group__label--dynamic {
+.form-group__input:not(:placeholder-shown) ~ .form-group__label--dynamic,
+.form-group__input:focus ~ .form-group__label--text-area,
+.form-group__input:not(:placeholder-shown) ~ .form-group__label--text-area {
   @apply absolute top-[.25rem] pb-0 text-xs;
 }
 
@@ -112,6 +126,10 @@
  */
 .form-group__input {
   @apply block w-full pb-1 pt-2 placeholder-black canvas focus:outline-none;
+}
+
+.form-group__input--text-area {
+  @apply h-52;
 }
 
 /* Input Groups */
@@ -137,10 +155,18 @@
   .form-group__input {
     @apply canvas-danger stroke-danger-vivid;
   }
+
+  .form-group__label {
+    @apply canvas-danger;
+  }
 }
 
 .form-group:has([data-disabled='true']) {
   @apply canvas-disabled type-secondary-disabled;
+
+  .form-group__label {
+    @apply canvas-disabled type-secondary-disabled;
+  }
 
   .form-group__input {
     @apply canvas-disabled type-secondary-disabled;
