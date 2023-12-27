@@ -18,7 +18,7 @@ import type {
 import { Text } from 'react-aria-components';
 import Icon from '../Icon/Icon';
 import '../../assets/css/App.css';
-import './Calendar.css';
+import '../../assets/css/common-styles/forms/dates-and-times.css';
 
 interface CalendarProps<T extends DateValue> extends AriaCalendarProps<T> {
   errorMessage?: string;

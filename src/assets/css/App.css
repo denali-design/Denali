@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @import 'common-styles/forms/inputs.css';
+@import 'common-styles/forms/dates-and-times.css';
 @import 'focus.css';
 
 .no-pointer-events {

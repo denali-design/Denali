@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { DatePicker } from './DatePicker';
+import DatePicker from './DatePicker';
 
 const meta: Meta<typeof DatePicker> = {
   component: DatePicker,
@@ -13,6 +13,36 @@ type Story = StoryObj<typeof DatePicker>;
 
 export const Default: Story = {
   args: {
-    children: 'DatePicker'
+    label: 'Select a Date'
+  }
+};
+
+export const DateAndTime: Story = {
+  args: {
+    label: 'Appointment',
+    granularity: 'minute'
+  }
+};
+
+export const TwentyFourHourClock: Story = {
+  args: {
+    label: 'Appointment',
+    granularity: 'minute',
+    hourCycle: 24
+  }
+};
+
+export const Invalid: Story = {
+  args: {
+    label: 'Birth Date',
+    isInvalid: true,
+    errorMessage: 'Enter a valid date.'
+  }
+};
+
+export const Disabled: Story = {
+  args: {
+    label: 'Birth Date',
+    isDisabled: true
   }
 };
