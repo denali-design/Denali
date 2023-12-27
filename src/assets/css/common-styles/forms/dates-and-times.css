@@ -15,15 +15,31 @@
 }
 
 .calendar__grid {
-  @apply w-full;
+  @apply w-full border-collapse;
+}
+
+.calendar__grid td {
+  @apply px-0 py-1;
 }
 
 .calendar__cell {
-  @apply px-2 py-1 text-center type;
+  @apply m-0 px-2 py-1 text-center;
 }
 
 .calendar__cell[data-selected='true'] {
-  @apply rounded canvas-secondary type-on-vivid;
+  @apply rounded-lg canvas-secondary type-on-vivid;
+}
+
+.calendar__cell--range[data-selected='true'] {
+  @apply rounded-none;
+}
+
+.calendar__cell--range[data-selection-start='true'] {
+  @apply rounded-l-lg;
+}
+
+.calendar__cell--range[data-selection-end='true'] {
+  @apply rounded-r-lg;
 }
 
 .calendar__cell[data-invalid] {
