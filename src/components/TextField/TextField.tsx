@@ -14,7 +14,7 @@ import { Icon } from '../Icon/Icon';
 import '../../assets/css/App.css';
 import '../../assets/css/common-styles/forms/inputs.css';
 
-interface TextFieldProps extends AriaTextFieldProps {
+export interface TextFieldProps extends AriaTextFieldProps {
   label?: string;
   description?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
