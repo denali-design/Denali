@@ -1,35 +1,12 @@
 // TextField.stories.ts
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { TextField } from './TextField';
+import TextField from './TextField';
 
 const meta: Meta<typeof TextField> = {
   component: TextField,
   title: 'Components/Data Entry/TextField',
   tags: ['autodocs'],
-  argTypes: {
-    inputMode: {
-      control: {
-        type: 'select',
-        options: [
-          'none',
-          'text',
-          'tel',
-          'url',
-          'email',
-          'numeric',
-          'decimal',
-          'search'
-        ]
-      }
-    },
-    type: {
-      control: {
-        type: 'select',
-        options: ['text', 'search', 'url', 'tel', 'email', 'password']
-      }
-    }
-  },
   parameters: {
     layout: 'fullscreen'
   }
@@ -41,8 +18,39 @@ type Story = StoryObj<typeof TextField>;
 export const Basic: Story = {
   args: {
     label: 'Label',
-    inputMode: 'text',
-    type: 'text'
+    description: 'Input description.'
+  },
+  parameters: {
+    layout: 'padded'
+  }
+};
+
+export const Email: Story = {
+  args: {
+    label: 'Email Address',
+    inputMode: 'email',
+    type: 'email'
+  },
+  parameters: {
+    layout: 'padded'
+  }
+};
+
+export const Invalid: Story = {
+  args: {
+    label: 'City',
+    isInvalid: true,
+    errorMessage: 'Enter a city name.'
+  },
+  parameters: {
+    layout: 'padded'
+  }
+};
+
+export const Disabled: Story = {
+  args: {
+    label: 'Label',
+    isDisabled: true
   },
   parameters: {
     layout: 'padded'

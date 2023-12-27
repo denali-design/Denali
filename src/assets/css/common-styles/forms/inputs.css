@@ -3,7 +3,7 @@
  */
 
 .form-group {
-  @apply relative flex min-h-[52px] w-full w-full min-w-[300px] items-center rounded-lg border-2 bg-white px-3 pt-3 text-black shadow canvas;
+  @apply min-w-80 relative flex min-h-[52px] w-full w-full items-center rounded-lg border-2 bg-white px-3 pt-3 text-black shadow canvas;
 }
 
 /**
@@ -40,10 +40,9 @@
   }
 }
 
-.form-group:has(.form-group__input:not(:placeholder-shown, [aria-invalid])),
-.form-group:has(.num-field__segment:not([data-placeholder], [aria-hidden])) {
+.form-group:has(.form-group__input:not(:placeholder-shown, [aria-invalid])) {
   .form-group__shortcut {
-    @aply mr-px;
+    @apply mr-px;
   }
 }
 
@@ -66,7 +65,8 @@
 
   /* Reset margin shift. */
   .form-group__label,
-  .has-value-stroke {
+  .has-value-stroke,
+  .form-group__shortcut {
     @apply m-0;
   }
 }
@@ -98,13 +98,13 @@
 }
 
 .form-group__label--dynamic {
-  @apply pb-3;
+  @apply w-1/2 pb-3;
 }
 
 .form-group__label--static,
 .form-group__input:focus ~ .form-group__label--dynamic,
 .form-group__input:not(:placeholder-shown) ~ .form-group__label--dynamic {
-  @apply absolute top-[.25rem] text-xs;
+  @apply absolute top-[.25rem] pb-0 text-xs;
 }
 
 /**
@@ -120,17 +120,17 @@
 }
 
 /* Input Descriptions */
-.input-description,
-.input-error {
+.input-description {
   @apply px-3 text-sm type-alt;
+}
+
+.input-description--invalid {
+  @apply type-danger;
 }
 
 /**
  * Error & Disabled States
  */
-.input-error {
-  @apply text-sm type-danger;
-}
 
 [data-invalid='true'] {
   .form-group,
