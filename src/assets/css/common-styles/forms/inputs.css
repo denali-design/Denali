@@ -139,7 +139,7 @@
 
 /* Input Descriptions */
 .input-description {
-  @apply px-3 text-sm type-alt;
+  @apply block px-3 text-sm type-alt;
 }
 
 .input-description--invalid {
