@@ -9,10 +9,10 @@ const meta: Meta<typeof TimeField> = {
 };
 export default meta;
 
-let defaultValue = new Time(8, 30);
-let minValue = new Time(11, 30);
-let maxValue = new Time(15, 30);
-let defaultValueTimezone = parseZonedDateTime(
+const defaultValue = new Time(8, 30);
+const minValue = new Time(11, 30);
+const maxValue = new Time(15, 30);
+const defaultValueTimezone = parseZonedDateTime(
   '2024-04-20T16:20[America/Los_Angeles]'
 );
 
