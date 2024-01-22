@@ -1,0 +1,37 @@
+/**
+ * DropZone Styles
+ */
+
+.dropzone {
+  @apply flex w-full grow flex-col items-center justify-center rounded-lg border-dashed p-8 stroke-secondary;
+  border-width: 3px;
+}
+
+.dropzone[data-focused] {
+  @apply stroke-primary;
+  border-width: 3px;
+}
+
+.dropzone[data-focus-visible] {
+  @apply ring ring-2 ring-blue-600 ring-offset-2 stroke-primary;
+}
+
+.dropzone__description {
+  @apply mb-4 flex flex-col items-center justify-center type-secondary;
+}
+
+.dropzone__requirements {
+  @apply text-xs;
+}
+
+.dropzone__files {
+  @apply mb-4 grid w-full grid-cols-2 gap-4 rounded p-2 text-center text-sm canvas-alt type-secondary;
+}
+
+.dropzone__filename {
+  @apply overflow-hidden text-ellipsis text-left type-secondary;
+}
+
+.dropzone__error {
+  @apply mt-4 flex items-center gap-2 text-sm type-danger;
+}
