@@ -6,7 +6,7 @@
  */
 
 import { Meta } from '@storybook/react';
-import { ComponentProps } from 'react'; // Import ComponentProps
+import { ComponentProps } from 'react';
 import { CheckboxGroup } from './CheckboxGroup';
 import Checkbox from '../Checkbox/Checkbox';
 
@@ -33,7 +33,6 @@ export const UsingArray = {
   }
 };
 
-// Use ComponentProps to infer the props type for CheckboxGroup
 export const UsingChildren = (args: ComponentProps<typeof CheckboxGroup>) => (
   <CheckboxGroup {...args}>
     <Checkbox id="ham" value="ham">
