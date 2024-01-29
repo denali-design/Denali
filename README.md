@@ -1,27 +1,25 @@
-# React + TypeScript + Vite
+# Denali
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An accessible, scalable React component library.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repo
+2. Run `npm install`
+3. Run `npm run storybook` to preview components
 
-## Expanding the ESLint configuration
+### Storybook
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Components are previewed and documented using Storybook. Running `npm run storybook` will create a local web server and display the component docs in your browser.
 
-- Configure the top-level `parserOptions` property like this:
+### Linting
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Run `npm run lint` to check components during development.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Building for Production
+
+Run `npm run build` to build a Vite site using these components.
+
+## Adobe Reactg Aria
+
+This project uses [Adobe React ARIA](https://react-spectrum.adobe.com/react-aria/) as a basis for many of its interactive React components. Refer to the Adobe React ARIA docs for additional props or other information that may not be available in Storybook docs.
