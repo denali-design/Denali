@@ -16,7 +16,8 @@ import '../../assets/css/App.css';
 const sizeClasses = {
   sm: 'w-4 h-4',
   md: 'w-6 h-6',
-  lg: 'w-9 h-9'
+  lg: 'w-9 h-9',
+  xl: 'w-12 h-12'
 };
 
 /** Props interface for the Icon component. */
