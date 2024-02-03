@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/react';
 import { ComponentProps } from 'react';
-import { Radio, Label } from 'react-aria-components';
+import { Radio } from 'react-aria-components';
 import RadioGroup from './RadioGroup';
 
 export default {

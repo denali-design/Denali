@@ -54,7 +54,7 @@ function TagGroup<T extends object>({
 }
 
 function Tag({ children, ...props }: TagProps) {
-  let textValue = typeof children === 'string' ? children : undefined;
+  const textValue = typeof children === 'string' ? children : undefined;
   return (
     <AriaTag className="tag-group__tag" textValue={textValue} {...props}>
       {({ allowsRemoving }) => (
