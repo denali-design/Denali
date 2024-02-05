@@ -1,0 +1,7 @@
+/**
+ * Popover Styles
+ */
+
+.popover {
+    @apply min-w-80 relative flex w-full items-center overflow-hidden rounded-lg border-2 p-3 shadow canvas type max-w-80;
+}
