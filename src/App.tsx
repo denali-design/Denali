@@ -1,17 +1,18 @@
-import './App.css';
-import { Button } from './components/atoms/Button';
-import { Heading } from './components/atoms/Heading';
+import './assets/css/App.css';
+import { Heading } from './components/Heading/Heading';
+import denaliLogo from './assets/denali-logo.svg';
 
 function App() {
   return (
-    <>
-      <Heading level={1}>Denali</Heading>
-      <Button
-        label="Well"
-        onPress={() => alert("What's the latest?")}
-        aria-pressed
-      />
-    </>
+    <div className="flex min-h-screen flex-col items-center justify-center p-12">
+      <div className="flex h-24 items-center justify-center">
+        <img className="block h-24 w-auto" src={denaliLogo} alt="Denali" />
+      </div>
+
+      <Heading className="sr-only" level={1}>
+        Denali
+      </Heading>
+    </div>
   );
 }
 

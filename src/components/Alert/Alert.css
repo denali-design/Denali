@@ -1,0 +1,43 @@
+/**
+ * Alert Styles
+ */
+
+.alert {
+  @apply w-full gap-3.5 rounded border-l-4 p-3.5 canvas type;
+}
+
+.alert--default {
+  @apply canvas-alt stroke-alt;
+}
+
+.alert--info {
+  @apply canvas-info stroke-info;
+}
+
+.alert--success {
+  @apply canvas-success stroke-success;
+}
+
+.alert--warning {
+  @apply canvas-warning stroke-warning;
+}
+
+.alert--danger {
+  @apply canvas-danger stroke-danger;
+}
+
+.alert__heading {
+  @apply flex items-center gap-3.5;
+}
+
+.alert__icon {
+  @apply self-start;
+}
+
+.alert__title {
+  @apply font-bold;
+}
+
+.alert__content {
+  @apply pl-[2.375rem];
+}

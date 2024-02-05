@@ -1,0 +1,41 @@
+/**
+ * Progress Bar Styles
+ */
+
+.progress-bar {
+  @apply type;
+}
+
+.progress-bar__header {
+  @apply mb-1 flex justify-between type-alt;
+}
+
+.progress-bar__bar {
+  @apply h-4 w-full overflow-hidden rounded-full canvas-info;
+}
+
+.progress-bar__color {
+  @apply h-4 rounded-full canvas-primary;
+}
+
+/* Indeterminate */
+.progress-bar {
+  &:not([aria-valuenow]) {
+    .progress-bar__color {
+      width: 50%;
+      border-radius: inherit;
+      animation: indeterminate 3s infinite ease-in-out;
+      will-change: transform;
+    }
+  }
+}
+
+@keyframes indeterminate {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(200%);
+  }
+}

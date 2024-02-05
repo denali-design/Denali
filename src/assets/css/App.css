@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'common-styles/forms/inputs.css';
+@import 'common-styles/forms/dates-and-times.css';
+@import 'focus.css';
+
+.no-pointer-events {
+  pointer-events: none;
+}
+
+@layer utilities {
+  /**
+  * Tab Focus Styles
+  *
+  * Features a double ring design for tab-focused elements.
+  */
+  .tab-focus {
+    @apply border-2 ring ring-2 ring-blue-600 ring-offset-2 stroke-primary;
+  }
+
+  /**
+ * Click Focus
+ *
+ * Features a single blue ring for click focused elements.
+ */
+  .click-focus {
+    @apply border-2 stroke-primary;
+  }
+}

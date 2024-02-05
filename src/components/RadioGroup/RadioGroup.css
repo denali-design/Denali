@@ -1,0 +1,47 @@
+/**
+ * Radio Group Styles
+ */
+.react-aria-RadioGroup {
+  @apply flex flex-col flex-wrap;
+}
+
+.react-aria-RadioGroup[data-orientation='horizontal'] {
+  @apply flex-row items-center gap-2;
+}
+
+.radio-group__label {
+  @apply block w-full text-sm font-bold;
+}
+
+.radio-group__radio-description {
+  @apply mb-2 ml-6 w-full text-xs type-alt;
+}
+
+.react-aria-Radio {
+  @apply flex flex-wrap items-center type;
+  forced-color-adjust: none;
+
+  &:before {
+    @apply mr-2 box-border block h-4 w-4 rounded-full border-2 border-solid canvas stroke-alt;
+    content: '';
+    transition: all 200ms;
+  }
+
+  &[data-pressed]:before {
+    @apply border-8 stroke-alt-pressed;
+  }
+
+  &[data-selected] {
+    &:before {
+      @apply border-8 stroke-alt-pressed;
+    }
+
+    &[data-pressed]:before {
+      @apply stroke-alt-pressed;
+    }
+  }
+
+  &[data-focus-visible]:before {
+    @apply border-blue-600 ring ring-2 ring-blue-600 ring-offset-2;
+  }
+}

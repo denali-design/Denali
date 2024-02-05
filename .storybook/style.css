@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/**
+ * Font Family
+ *
+ * Set root to Inter
+ */
+html * {
+  font-family: 'Inter', system !important;
+}
+
+/**
+ * Storybook Searchbar
+ *
+ * Style the storybook sidebar searchbar.
+ */
+#storybook-explorer-searchfield {
+  background-color: white;
+  border-radius: 0px !important;
+}
+
+/**
+ * Update Document Intro
+ *
+ * Update the Storybook intro section by changing font weights, removing icons,
+ *  andremoving subheadings.
+ */
+div[data-item-id='denali'] {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+div[data-item-id='denali'] * {
+  background-color: red !important;
+  font-weight: bold !important;
+}
+
+div[data-parent-id='denali'] * {
+  font-weight: bold !important;
+}
+
+div[data-parent-id='denali'] a > div > svg {
+  display: none !important;
+}
+
+/**
+ * Storybook Sidebar & Documentation Headings
+ *
+ * Update font color, size, thickness, etc.
+ */
+.subheading {
+  color: #2563eb !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  margin: 0px !important;
+}
+
+.sbdocs-a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+}
+
+/* Sidebar Subheadings */
+.sidebar-subheading {
+  margin-top: 1rem !important;
+}
+
+.sidebar-subheading button {
+  color: #000 !important;
+  letter-spacing: normal !important;
+}
+
+/**
+ * Document Wrappers
+ *
+ * Set wrapping padding and other details for documentation/preview pages.
+ */
+#storybook-docs,
+#storybook-docs .sbdocs-wrapper {
+  padding: 1rem;
+}
+
+/* Force Font Sizes */
+.text-sm,
+.text-sm code {
+  font-size: 12px !important;
+}
+
+/**
+ * Update SVG Colors
+ */
+#storybook-explorer-tree svg {
+  color: #000 !important;
+  fill: #000 !important;
+}
+
+/**
+ * Table of Contents
+ *
+ * Style the TOC links in Storybook markdown file pages.
+ */
+.toc-list-item.is-active-li > a {
+  color: #2563eb !important;
+}

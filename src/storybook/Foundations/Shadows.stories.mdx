@@ -1,0 +1,116 @@
+import { Meta, Unstyled } from '@storybook/blocks';
+import Lead from '../../components/Lead/Lead';
+import Heading from '../../components/Heading/Heading';
+import { Paragraph } from '../../components/Paragraph/Paragraph';
+import Subheading from '../storybook-utilities/Subheading';
+import DoAndDont from '../storybook-utilities/DoAndDont';
+import '../../assets/css/App.css';
+
+<Meta title="Foundations/Shadows" />
+
+<Unstyled>
+  <Subheading>Foundations</Subheading>
+  <Heading type="article" level="1">Shadows</Heading>
+  <Lead>Creating depth and focus in UI elements.</Lead>
+  <Paragraph> Shadows play a critical role in adding depth to the interface and distinguishing various UI components. This guide provides foundational knowledge on how to use shadows effectively while keeping the user experience intuitive.</Paragraph>
+  
+  <Heading type="article" level="2">Usage Principles</Heading>
+  <Paragraph>Different shadow depths are used to indicate the elevation of elements. Higher elevation often denotes more interactive or important elements.</Paragraph>
+
+  <div class="my-4">  
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-8 canvas-alt rounded-xl p-8">
+        <div class="h-16 bg-white flex items-center justify-center shadow-none">
+          <p class="text-center">shadow-none</p>
+        </div>
+    
+        <div class="h-16 bg-white flex items-center justify-center shadow">
+          <p class="text-center">shadow</p>
+        </div>
+    
+        <div class="h-16 bg-white flex items-center justify-center shadow-md">
+          <p class="text-center">shadow-md</p>
+        </div>
+        
+        <div class="h-16 bg-white flex items-center justify-center shadow-lg">
+          <p class="text-center">shadow-lg</p>
+        </div>
+        
+        <div class="h-16 bg-white flex items-center justify-center shadow-xl">
+          <p class="text-center">shadow-xl</p>
+        </div>
+
+        <div class="h-16 bg-white flex items-center justify-center shadow-2xl">
+          <p class="text-center">shadow-2xl</p>
+        </div>
+    </div>
+
+  </div>
+
+{' '}
+
+<Heading type="article" level="2">
+  Implementation
+</Heading>
+<Paragraph className="mb-4">
+  Many components in our library come with built-in shadow states. Exercise
+  caution when choosing to replace or remove these shadows, as they are an
+  integral part of the component's design. All shadow rules are defined using
+  TailwindCSS and ships with the standard shadow rules.
+</Paragraph>
+
+{' '}
+
+<Heading type="article" level="3">
+  Dos and Don'ts
+</Heading>
+<DoAndDont
+  direction="horizontal"
+  doChildren={<p>Use shadows consistently across similar UI elements.</p>}
+  dontChildren={<p>Mix multiple shadow styles arbitrarily.</p>}
+/>
+
+{' '}
+
+<DoAndDont
+  direction="horizontal"
+  doChildren={
+    <p>
+      Apply subtle transitions to shadow properties for hover or active states.
+    </p>
+  }
+  dontChildren={
+    <p>Use abrupt changes in shadows that can be jarring to the user.</p>
+  }
+/>
+
+{' '}
+
+<DoAndDont
+  direction="horizontal"
+  doChildren={
+    <p>Use shadows to enhance, but not replace, other visual cues.</p>
+  }
+  dontChildren={
+    <p>Rely solely on shadows to convey the meaning or status of elements.</p>
+  }
+/>
+
+{' '}
+
+<DoAndDont
+  direction="horizontal"
+  doChildren={
+    <p>
+      Keep performance in mind and opt for simpler shadow effects where
+      possible.
+    </p>
+  }
+  dontChildren={
+    <p>
+      Use overly complex shadows that could slow down rendering or look
+      unnatural.
+    </p>
+  }
+/>
+
+</Unstyled>

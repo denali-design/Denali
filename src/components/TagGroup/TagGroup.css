@@ -1,0 +1,27 @@
+/**
+ * TagGroup Styles
+ */
+
+.tag-group__label {
+  @apply font-bold type;
+}
+
+.tag-group__list {
+  @apply flex items-center gap-2;
+}
+
+.tag-group__tag {
+  @apply rounded border-2 px-2 py-1 text-sm canvas-alt stroke-alt;
+}
+
+.tag-group__tag[aria-selected='true'] {
+  @apply canvas-alt-pressed;
+}
+
+.tag-group__tag[data-focused='true'] {
+  @apply border-2 stroke-primary;
+}
+
+.tag-group__tag[data-focus-visible='true'] {
+  @apply border-2 ring ring-2 ring-blue-600 ring-offset-2 stroke-primary;
+}

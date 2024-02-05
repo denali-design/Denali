@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/**
+ * Font Family
+ *
+ * Set root to Inter but exclude prismjs code previews.
+ */
+html,
+html * {
+  font-family: 'Inter', sans-serif;
+}
+
+.prismjs,
+.prismjs * {
+  font-family: monospace !important;
+}
+
+/**
+ * Light & Dark Mode
+ *
+ * Set light and dark mode colors for component previews.
+ */
+.dark .sb-anchor .sbdocs {
+  background: #000 !important;
+}
+
+.light .sb-anchor .sbdocs {
+  background: #fff;
+}

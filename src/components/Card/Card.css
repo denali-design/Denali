@@ -1,0 +1,7 @@
+/**
+ * Card Styles
+ */
+
+.card {
+  @apply rounded-lg border-2 p-6 stroke;
+}

@@ -1,0 +1,39 @@
+/**
+ * Calendar Styles
+ */
+
+.calendar {
+  @apply min-w-[298px] rounded-lg p-4 shadow-lg canvas;
+}
+
+.calendar__header {
+  @apply mb-6 flex w-full items-center justify-between type;
+}
+
+.calendar__heading {
+  @apply font-bold;
+}
+
+.calendar__grid {
+  @apply w-full;
+}
+
+.calendar__cell {
+  @apply px-2 py-1 text-center type;
+}
+
+.calendar__cell[data-selected='true'] {
+  @apply rounded canvas-secondary type-on-vivid;
+}
+
+.calendar__cell[data-invalid] {
+  @apply canvas-danger-vivid type-on-vivid;
+}
+
+.calendar__cell[aria-disabled='true'] {
+  @apply type-secondary-disabled;
+}
+
+.calendar__error-message {
+  @apply mt-2 block w-full border-t-2 px-2 py-1 text-sm stroke-danger-vivid type-danger;
+}

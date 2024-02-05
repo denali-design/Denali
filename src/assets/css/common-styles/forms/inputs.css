@@ -1,0 +1,223 @@
+/**
+ * TextField CSS
+ */
+
+.form-group {
+  @apply relative flex min-h-[52px] w-full min-w-80 items-center overflow-hidden rounded-lg border-2 px-3 pt-3 shadow canvas type;
+}
+
+/* Used for select button wrapper */
+.form-group--select {
+  @apply px-0;
+}
+
+.form-group--select[data-open='true'] {
+  @apply click-focus;
+}
+
+/* Used for text area */
+.form-group--text-area {
+  @apply h-32 flex-col items-start justify-start p-3;
+}
+
+/**
+ * Add a black outline when input has a value. 
+ * 
+ * This is determined by the lack of placeholder text. 
+ * Inputs must have a placeholder attribut in order for this to work.
+ */
+.form-group:has(.form-group__input:not(:placeholder-shown, [aria-invalid])),
+.form-group:has(.num-field__segment:not([data-placeholder], [aria-hidden])) {
+  @apply border stroke-secondary;
+}
+
+/**
+ * Shift margins for thinner black outlines.
+ *
+ * By default, form groups have a 2px transparent stroke that turns blue on focus; however, it
+ * turns into a 1px black stroke when the input has a value. We compensate for this by shifting
+ * the elements within the form group by 1px when the input has a value (determined by the lack
+ * of plcaeholder text). This pixel shifting then has to be reset when there is both a value,
+ * and the input has focus.
+ */
+.form-group:has(.form-group__input:not(:placeholder-shown, [aria-invalid])),
+.form-group:has(.num-field__segment:not([data-placeholder], [aria-hidden])) {
+  .form-group__label {
+    @apply ml-px mt-px;
+  }
+
+  .form-group__input--text-area {
+    @apply mt-px;
+  }
+}
+
+.form-group:has(.form-group__input:not(:placeholder-shown, [aria-invalid])),
+.form-group:has(.num-field__segment:not([data-placeholder], [aria-hidden])) {
+  .has-value-stroke {
+    @apply ml-px;
+  }
+}
+
+.form-group:has(.form-group__input:not(:placeholder-shown, [aria-invalid])) {
+  .form-group__shortcut {
+    @apply mr-px;
+  }
+}
+
+/**
+ * Add blue outline when click-focused.
+ *
+ * This checks for the `data-focus-within` or `data-focused` attributes set by
+ * the Adobe React ARIA input components. The presence of these attributes are
+ * required for this to work.
+ *
+ * We also reset the 1px margin shift, as the border is now 2px.
+ */
+.form-group:has(.has-value-stroke[data-focus-within]),
+.form-group:has(.form-group__input[data-focused]),
+.form-group:has(
+    .has-value-stroke[data-focus-within]
+      > .num-field__segment:not([data-placeholder], [aria-hidden])
+  ) {
+  @apply border-2 stroke-primary;
+
+  /* Reset margin shift. */
+  .form-group__label,
+  .has-value-stroke,
+  .form-group__shortcut {
+    @apply m-0;
+  }
+}
+
+.no-inner-stroke[data-focused='true'],
+.no-inner-stroke[data-focus-visible='true'] {
+  @apply border-none outline-none !important;
+}
+
+/**
+ * Add blue outline when hover-focused.
+ *
+ * This checks for the `data-focus-visible` attributes set by the Adobe React ARIA
+ * input components. The presence of these attributes are required for this to work.
+ */
+.form-group:has(.has-value-stroke[data-focus-visible]) {
+  @apply border-2 ring ring-2 ring-blue-600 ring-offset-2 stroke-primary;
+
+  /* Reset margin shift. */
+  .form-group__label,
+  .has-value-stroke {
+    @apply m-0;
+  }
+}
+
+/**
+ * Labels
+ *
+ * Dynamic labels shift from the input field to the top left during focus and
+ * whenever the input has a value; static labels are always on the top left.
+ */
+.form-group__label {
+  @apply canvas type-alt;
+}
+
+.form-group__label--dynamic {
+  @apply w-1/2 pb-3;
+}
+
+.form-group__label--text-area {
+  @apply w-full pb-0 text-base;
+}
+
+.form-group__label--static,
+.form-group__input:focus ~ .form-group__label--dynamic,
+.form-group__input:not(:placeholder-shown) ~ .form-group__label--dynamic,
+.form-group__input:focus ~ .form-group__label--text-area,
+.form-group__input:not(:placeholder-shown) ~ .form-group__label--text-area {
+  @apply absolute top-[.25rem] pb-0 text-xs;
+}
+
+/**
+ * Input Syles
+ */
+.form-group__input {
+  @apply block w-full pb-1 pt-2 placeholder-black canvas focus:outline-none;
+}
+
+.form-group__input--text-area {
+  @apply h-52;
+}
+
+/* Input Groups */
+.input-group {
+  @apply flex w-full items-center justify-between;
+}
+
+/* Input Descriptions */
+.input-description {
+  @apply block px-3 text-sm type-alt;
+}
+
+.input-description--invalid {
+  @apply type-danger;
+}
+
+/**
+ * Error & Disabled States
+ */
+
+[data-invalid='true'] {
+  .form-group,
+  .form-group__input {
+    @apply canvas-danger stroke-danger-vivid;
+  }
+
+  .form-group__label {
+    @apply canvas-danger;
+  }
+}
+
+.form-group:has([data-disabled='true']) {
+  @apply canvas-disabled type-secondary-disabled;
+
+  .form-group__label {
+    @apply canvas-disabled type-secondary-disabled;
+  }
+
+  .form-group__input {
+    @apply canvas-disabled type-secondary-disabled;
+  }
+}
+
+/**
+ * Num Field Segment Styles
+ *
+ * Num fields are groups of numerical fields nested within a field group.
+ * The date/time inputs are examples of this.
+ *
+ * This applies an underline to numerical fields upon focus. The field
+ * group may contain a single or double (ring) outline depending on
+ * how it was focused in addition to the field underline.
+ */
+.num-field__segment {
+  @apply px-0.5 text-end tabular-nums;
+
+  &[data-type='literal'] {
+    @apply p-0;
+  }
+
+  &:first-child {
+    @apply pl-0;
+  }
+}
+.num-field__segment[data-focused] {
+  @apply outline-none stroke-primary;
+  box-shadow: 0 2px 0 0 #2563eb;
+}
+
+/**
+ * Select Fields
+ */
+
+.select-item[data-hovered='true'] {
+  @apply rounded outline-none canvas-secondary type-on-vivid;
+}
