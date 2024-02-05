@@ -49,7 +49,7 @@ function SelectField<T extends object>({
         <Label className="form-group__label form-group__label--static px-3">
           {label}
         </Label>
-        <Button className="has-value-stroke flex w-full items-center justify-between outline-none px-3">
+        <Button className="has-value-stroke flex w-full items-center justify-between px-3 outline-none">
           <SelectValue className="no-inner-stroke" />
           <span aria-hidden="true">
             <Icon color="default" name="icon-action-arrowhead-down" size="md" />
@@ -57,10 +57,16 @@ function SelectField<T extends object>({
         </Button>
         <FieldError>{errorMessage}</FieldError>
         <Popover className="popover">
-          <ListBox className="w-full outline-none" items={items}>{children}</ListBox>
+          <ListBox className="w-full outline-none" items={items}>
+            {children}
+          </ListBox>
         </Popover>
       </Select>
-      {description && <Text className="input-description" slot="description">{description}</Text>}
+      {description && (
+        <Text className="input-description" slot="description">
+          {description}
+        </Text>
+      )}
     </>
   );
 }
@@ -76,7 +82,9 @@ function SelectItem(props: ListBoxItemProps) {
     <ListBoxItem
       {...props}
       className={({ isFocused, isSelected }) =>
-        `w-full select-item ${isFocused ? 'focused' : ''} ${isSelected ? 'selected' : ''}`
+        `select-item w-full ${isFocused ? 'focused' : ''} ${
+          isSelected ? 'selected' : ''
+        }`
       }
     />
   );

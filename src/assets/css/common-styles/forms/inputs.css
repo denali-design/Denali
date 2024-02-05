@@ -3,7 +3,7 @@
  */
 
 .form-group {
-  @apply min-w-80 relative flex min-h-[52px] w-full items-center overflow-hidden rounded-lg border-2 px-3 pt-3 shadow canvas type;
+  @apply relative flex min-h-[52px] w-full min-w-80 items-center overflow-hidden rounded-lg border-2 px-3 pt-3 shadow canvas type;
 }
 
 /* Used for select button wrapper */
@@ -11,7 +11,7 @@
   @apply px-0;
 }
 
-.form-group--select[data-open="true"] {
+.form-group--select[data-open='true'] {
   @apply click-focus;
 }
 
@@ -89,8 +89,8 @@
   }
 }
 
-.no-inner-stroke[data-focused="true"],
-.no-inner-stroke[data-focus-visible="true"] {
+.no-inner-stroke[data-focused='true'],
+.no-inner-stroke[data-focus-visible='true'] {
   @apply border-none outline-none !important;
 }
 
@@ -218,6 +218,6 @@
  * Select Fields
  */
 
-.select-item[data-hovered="true"] {
-  @apply canvas-secondary type-on-vivid rounded outline-none;
+.select-item[data-hovered='true'] {
+  @apply rounded outline-none canvas-secondary type-on-vivid;
 }

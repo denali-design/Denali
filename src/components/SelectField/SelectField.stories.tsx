@@ -25,7 +25,7 @@ export const Default: Story = {
 export const Description: Story = {
   args: {
     label: 'Ice cream flavor',
-    description: "What is your favorite ice cream flavor?",
+    description: 'What is your favorite ice cream flavor?',
     children: [
       <SelectItem key="chocolate">Chocolate</SelectItem>,
       <SelectItem key="mint">Mint</SelectItem>,

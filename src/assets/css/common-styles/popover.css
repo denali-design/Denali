@@ -3,5 +3,5 @@
  */
 
 .popover {
-    @apply min-w-80 relative flex w-full items-center overflow-hidden rounded-lg border-2 p-3 shadow canvas type max-w-80;
+  @apply relative flex w-full min-w-80 max-w-80 items-center overflow-hidden rounded-lg border-2 p-3 shadow canvas type;
 }
