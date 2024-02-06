@@ -1,17 +1,18 @@
 import './assets/css/App.css';
-import { Heading } from './components/Heading/Heading';
-import denaliLogo from './assets/denali-logo.svg';
+import Navbar from './example-app/Navbar';
+import MainContent from './example-app/MainContent';
+import ActivitySidebar from './example-app/ActivitySidebar';
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-12">
-      <div className="flex h-24 items-center justify-center">
-        <img className="block h-24 w-auto" src={denaliLogo} alt="Denali" />
+    <div className="">
+      <div className="canvas type">
+        <Navbar />
+        <div className="flex">
+          <MainContent />
+          <ActivitySidebar />
+        </div>
       </div>
-
-      <Heading className="sr-only" level={1}>
-        Denali
-      </Heading>
     </div>
   );
 }
