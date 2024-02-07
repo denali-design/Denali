@@ -9,6 +9,7 @@ import { ButtonProps as AriaButtonProps } from 'react-aria-components';
 import Icon from '../Icon/Icon';
 import { tv } from 'tailwind-variants';
 import '../../assets/css/App.css';
+import './Button.css';
 
 export interface ButtonProps extends AriaButtonProps {
   label: string;
@@ -37,7 +38,7 @@ export interface ButtonProps extends AriaButtonProps {
 }
 
 const button = tv({
-  base: 'rounded focus:outline focus:focus-stroke-info-vivid focus:outline-2 focus:outline-offset-2',
+  base: 'rounded',
   variants: {
     color: {
       default:
@@ -48,7 +49,8 @@ const button = tv({
         'canvas border stroke-secondary hover:canvas-hover active:canvas-pressed focus:canvas',
       'outline-gray':
         'canvas border stroke hover:canvas-hover active:canvas-pressed focus:canvas',
-      plain: 'canvas hover:canvas-hover active:canvas-pressed focus:canvas',
+      plain:
+        'bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent',
       success:
         'canvas-success-vivid hover:canvas-success-vivid-hover active:canvas-success-vivid-pressed focus:canvas-success-vivid-focus disabled:canvas-success-vivid-disabled',
       warning:
@@ -94,7 +96,7 @@ function Button({
       ref={ref}
       {...props}
       aria-label={iconOnly ? label : undefined}
-      className={`${button({
+      className={`button ${button({
         size: props.size || 'default',
         color: colorVariant
       })} flex items-center gap-2`}

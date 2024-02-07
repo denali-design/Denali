@@ -23,6 +23,18 @@ type Story = StoryObj<typeof Alert>;
 export const Default: Story = {
   args: {
     title: 'An Alert Title',
+    dismissible: true,
+    message: 'You should probably read this alert message.'
+  },
+  parameters: {
+    layout: 'padded'
+  }
+};
+
+export const NotDismissable: Story = {
+  args: {
+    title: 'An Alert Title',
+    dismissible: false,
     message: 'You should probably read this alert message.'
   },
   parameters: {
@@ -32,6 +44,7 @@ export const Default: Story = {
 
 export const Info: Story = {
   args: {
+    dismissible: true,
     type: 'info',
     title: 'An Alert Title',
     message: 'You should probably read this alert message.'
@@ -43,6 +56,7 @@ export const Info: Story = {
 
 export const Success: Story = {
   args: {
+    dismissible: true,
     type: 'success',
     title: 'An Alert Title',
     message: 'You should probably read this alert message.'
@@ -54,6 +68,7 @@ export const Success: Story = {
 
 export const Warning: Story = {
   args: {
+    dismissible: true,
     type: 'warning',
     title: 'An Alert Title',
     message: 'You should probably read this alert message.'
@@ -65,6 +80,7 @@ export const Warning: Story = {
 
 export const Danger: Story = {
   args: {
+    dismissible: true,
     type: 'danger',
     title: 'An Alert Title',
     message: 'You should probably read this alert message.'
@@ -76,6 +92,7 @@ export const Danger: Story = {
 
 export const NoMessage: Story = {
   args: {
+    dismissible: true,
     title: 'An Alert Title'
   },
   parameters: {
