@@ -1,0 +1,15 @@
+/**
+ * Button Styles
+ */
+
+.button {
+  @apply border-2 border-transparent outline-none;
+}
+
+.button[data-focus-visible] {
+  @apply tab-focus;
+}
+
+.button[data-focused] {
+  @apply click-focus;
+}
