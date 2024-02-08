@@ -82,7 +82,7 @@ const DoAndDont: React.FC<DoAndDontProps> = ({
             </div>
           </div>
           <div className="col-start-2 col-end-12">
-            <p className="font-bold uppercase">Do</p>
+            <p className="font-bold uppercase">Don&rsquo;t</p>
             {dontChildren}
           </div>
         </div>

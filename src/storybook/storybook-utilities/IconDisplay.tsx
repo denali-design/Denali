@@ -68,7 +68,7 @@ export const IconDisplay: React.FC = () => {
             <div className="grid grid-cols-6 gap-4">
               {filteredIcons.map((iconName) => (
                 <a
-                  href={`/?path=/docs/components-icon--docs&args=name:${iconName}`}
+                  href={`/?path=/docs/components-data-display-icon--docs&args=name:${iconName}`}
                   className="flex cursor-pointer flex-col items-center justify-center "
                   key={iconName}
                 >
