@@ -79,9 +79,13 @@ const Alert = ({
       <div className="w-full">
         <div className="alert__heading">
           <Icon color={iconColor} name={iconName} size="md" />
-          <Heading className="alert__title" level={2} size={'h5'} type="app">
-            {title}
-          </Heading>
+          <Heading
+            className="alert__title"
+            name={title}
+            level="h2"
+            style="h5"
+            type="app"
+          />
         </div>
         {message && (
           <div className="alert__content">

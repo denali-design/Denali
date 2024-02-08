@@ -9,9 +9,7 @@ import Heading from '../../components/Heading/Heading';
 <Unstyled>
 <Subheading>Content</Subheading>
 
-<Heading type="article" level="1">
-  Writing style
-</Heading>
+<Heading name="Writing style" level="h1" style="h1" type="article" />
 <Lead>
   Our writing guidelines ensure clarity, consistency, and inclusivity across all
   communications.
@@ -19,34 +17,43 @@ import Heading from '../../components/Heading/Heading';
 
 The writing style used in your app is an extension of its brand and a key part of its UX. A consistent, well-articulated writing style can enhance usability, comprehension, and the overall user experience. This guide outlines the core principles and best practices.
 
-<Heading type="article" level="2">
-  Principles of Writing Style
-</Heading>
+<Heading
+  name="Principles of Writing Style"
+  level="h2"
+  style="h2"
+  type="article"
+/>
 
 <div className="grid grid-cols-2 gap-8">
-<Heading type="article" level="3" size="4">Simplicity</Heading>
+<Heading name="Simplicity" level="h3" style="4" type="article" />
 Opt for clear and concise language that gets straight to the point. This makes your content accessible to a broader audience, including people who are not native English speakers or who have cognitive impairments.
 
-<Heading type="article" level="3" size="4">
-  Consistency
-</Heading>
+<Heading
+  name="Consistency
+"
+  level="h3"
+  style="4"
+  type="article"
+/>
 Maintain a consistent tone and vocabulary across all elements of your design system,
 from UI components to documentation.
 
-<Heading type="article" level="3" size="4">
-  Empathy
-</Heading>
+<Heading
+  name="Empathy
+"
+  level="h3"
+  style="4"
+  type="article"
+/>
 Write with the user's perspective in mind. Aim to make them feel understood and supported,
 rather than overwhelmed or frustrated.
 
-<Heading type="article" level="3" size="4">Accuracy</Heading>
+<Heading name="Accuracy" level="h3" style="4" type="article" />
 Be factual and precise in your messaging. Misleading or vague language can harm the user’s trust and make your system less reliable.
 </div>
  <hr className="my-8 "/>
 
-<Heading type="article" level="2">
-  Dos and Don'ts
-</Heading>
+<Heading name="Dos and Don'ts" level="h2" style="h2" type="article" />
 <DoAndDont
   direction="horizontal"
   doChildren={<p>Use active voice: "Click the button to save."</p>}
@@ -69,9 +76,12 @@ Be factual and precise in your messaging. Misleading or vague language can harm 
   }
 />
 
-<Heading type="article" level="3">
-  Capitalization and Punctuation
-</Heading>
+<Heading
+  name="Capitalization and Punctuation"
+  level="h3"
+  style="h3"
+  type="article"
+/>
 Use sentence case for most UI elements like buttons or headings, unless title case
 is a specific brand requirement.
 
@@ -89,17 +99,13 @@ Limit the use of exclamation marks to avoid sounding alarmist.
   dontChildren={<p>Your settings have been saved!</p>}
 />
 
-<Heading type="article" level="2">
-  Writing for Components
-</Heading>
+<Heading name="Writing for Components" level="h2" style="h2" type="article" />
 Make sure that the language used for each UI component is aligned with its function.
 For example, a button that submits a form should say "Submit" rather than "Go" to
 be more descriptive. Use verbs that clearly indicate the action, such as "Search,"
 "Filter," or "Download."
 
-<Heading type="article" level="3">
-  Error Messages
-</Heading>
+<Heading name="Error Messages" level="h3" style="h3" type="article" />
 Write error messages that guide the user toward a solution, rather than focusing
 on the problem.
 
@@ -109,9 +115,7 @@ on the problem.
   dontChildren={<p>Email address is wrong.</p>}
 />
 
-<Heading type="article" level="3">
-  In-App Guidance
-</Heading>
+<Heading name="In-App Guidance" level="h3" style="h3" type="article" />
 Tooltips, helper text, and other in-app guidance should be written to assist the
 user in completing their task, not just to describe the feature.
 
@@ -121,15 +125,11 @@ user in completing their task, not just to describe the feature.
   dontChildren={<p>Name field.</p>}
 />
 
-<Heading type="article" level="3">
-  Accessibility
-</Heading>
+<Heading name="Accessibility" level="h3" style="h3" type="article" />
 All text, including in-app messages, tooltips, and error messages, should meet accessibility
 guidelines like WCAG 2.1 AA, to ensure they are easily readable and understandable.
 
-<Heading type="article" level="3">
-  Conclusion
-</Heading>
+<Heading name="Conclusion" level="h3" style="h3" type="article" />
 Your writing style is an integral part of your design system and contributes significantly
 to the user experience. It requires the same level of thought, testing, and consistency
 as your visual components. Establishing a robust writing guide can improve both the

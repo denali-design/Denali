@@ -2,7 +2,7 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Heading } from './Heading';
+import Heading from './Heading';
 
 const meta: Meta<typeof Heading> = {
   component: Heading,
@@ -15,48 +15,90 @@ type Story = StoryObj<typeof Heading>;
 
 export const Default: Story = {
   args: {
-    children: 'Default Heading'
+    type: 'app',
+    level: 'h1',
+    style: 'h1',
+    name: 'Default Heading'
   }
 };
 
 export const LevelOne: Story = {
   args: {
-    level: 1,
-    children: 'H1 Level One'
+    type: 'app',
+    level: 'h1',
+    style: 'h1',
+    name: 'H1 Level One'
   }
 };
 
 export const LevelTwo: Story = {
   args: {
-    level: 2,
-    children: 'H2 Level One'
+    type: 'app',
+    level: 'h2',
+    style: 'h2',
+    name: 'H2 Level One'
   }
 };
 
 export const LevelThree: Story = {
   args: {
-    level: 3,
-    children: 'H3 Level Three'
+    type: 'app',
+    level: 'h3',
+    style: 'h3',
+    name: 'H3 Level Three'
   }
 };
 
 export const LevelFour: Story = {
   args: {
-    level: 4,
-    children: 'H4 Level Four'
+    type: 'app',
+    level: 'h4',
+    style: 'h4',
+    name: 'H4 Level Four'
   }
 };
 
 export const LevelFive: Story = {
   args: {
-    level: 5,
-    children: 'H5 Level Five'
+    type: 'app',
+    level: 'h5',
+    style: 'h5',
+    name: 'H5 Level Five'
   }
 };
 
 export const LevelSix: Story = {
   args: {
-    level: 6,
-    children: 'H6 Level Six'
+    type: 'app',
+    level: 'h6',
+    style: 'h6',
+    name: 'H6 Level Six'
+  }
+};
+
+export const Title: Story = {
+  args: {
+    type: 'app',
+    level: 'h1',
+    style: 'title',
+    name: 'Title Heading'
+  }
+};
+
+export const Body: Story = {
+  args: {
+    type: 'app',
+    level: 'h2',
+    style: 'body',
+    name: 'Body Heading'
+  }
+};
+
+export const Label: Story = {
+  args: {
+    type: 'app',
+    level: 'h3',
+    style: 'label',
+    name: 'Label Heading'
   }
 };
