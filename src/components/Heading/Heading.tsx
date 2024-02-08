@@ -19,6 +19,7 @@ export interface HeadingProps extends HTMLAttributes<HTMLElement> {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'title' | 'body' | 'label';
   type?: 'article' | 'app' | 'display';
+  id?: string;
 }
 
 /**
@@ -51,6 +52,7 @@ export const Heading = memo(
       size,
       type = 'app',
       className,
+      id = '',
       ...domProps
     } = props;
 
@@ -114,6 +116,7 @@ export const Heading = memo(
         {...domProps}
         className={`${computedClass} ${className || ''}`}
         ref={ref}
+        id={id || undefined}
       >
         {children}
       </Element>
