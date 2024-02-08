@@ -1,5 +1,5 @@
 import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
-import { Heading } from '../../components/Heading/Heading';
+import Heading from '../../components/Heading/Heading';
 import { Icon } from '../../components/Icon/Icon';
 import { Paragraph } from '../../components/Paragraph/Paragraph';
 import {
@@ -14,22 +14,24 @@ import Subheading from '../storybook-utilities/Subheading';
 
 <Unstyled>
   <Subheading>Foundations</Subheading>
-  <Heading level="1" type="article">Typography</Heading>
+  <Heading name="Typography" level="h1" style="h1" type="article" />
   <Lead>Bridging Legibility and Design</Lead>
   Typography serves as a fundamental tool in establishing both information hierarchy and clarity. This guide presents each standard HTML typography element, detailing its specific use-case.
 
 {' '}
 
 <div class="flex items-center gap-2">
-  <Heading level="2" type="article" className="">
-    Heading
-  </Heading>
+  <Heading name="Heading" level="h2" style="h2" type="article" />
 </div>
 
 <div className="mb-8 rounded p-4 canvas-alt">
-  <Heading type="app" level={3}>
-    Type: App <span className="text-alt font-light italic">(Default)</span>
-  </Heading>
+
+  <Heading
+    name="Type: App (Default)"
+    level="h2"
+    style="h2"
+    type="app"
+  />
   <table className="mt-8 min-w-full">
     <thead>
       <tr>
@@ -42,9 +44,12 @@ import Subheading from '../storybook-utilities/Subheading';
         <tr key={`app-${level}`}>
           <td>{level}</td>
           <td>
-            <Heading type="app" level={level} className="">
-              Heading
-            </Heading>
+            <Heading
+              name="Heading"
+              level={`h${level}`}
+              style={`h${level}`}
+              type="app"
+            />
           </td>
         </tr>
       ))}
@@ -53,9 +58,7 @@ import Subheading from '../storybook-utilities/Subheading';
 </div>
 
 <div className="mb-8 rounded p-4 canvas-alt">
-  <Heading type="app" level={3}>
-    Type: Display
-  </Heading>
+  <Heading name="Type Display" level="h2" style="h2" type="display" />
   <table className="mt-8 min-w-full">
     <thead>
       <tr>
@@ -68,9 +71,12 @@ import Subheading from '../storybook-utilities/Subheading';
         <tr key={`display-${level}`}>
           <td>{level}</td>
           <td class="max-w-full">
-            <Heading type="display" level={level} className="">
-              Heading
-            </Heading>
+            <Heading
+              name="Display"
+              level={`h${level}`}
+              style={`h${level}`}
+              type="display"
+            />
           </td>
         </tr>
       ))}
@@ -79,9 +85,7 @@ import Subheading from '../storybook-utilities/Subheading';
 </div>
 
 <div className="mb-8 rounded p-4 canvas-alt">
-  <Heading type="article" level={3}>
-    Type: Article
-  </Heading>
+  <Heading name="Article" level="h3" style="h3" type="article" />
   <table className="mt-8 min-w-full">
     <thead>
       <tr>
@@ -94,9 +98,12 @@ import Subheading from '../storybook-utilities/Subheading';
         <tr key={`article-${level}`}>
           <td>{level}</td>
           <td>
-            <Heading type="article" level={level} className="">
-              Heading
-            </Heading>
+            <Heading
+              name="Heading"
+              level={`h${level}`}
+              style={`h${level}`}
+              type="article"
+            />
           </td>
         </tr>
       ))}
@@ -107,9 +114,7 @@ import Subheading from '../storybook-utilities/Subheading';
 {' '}
 
 <div class="flex items-center gap-2">
-  <Heading type="article" level="2">
-    Lead
-  </Heading>
+  <Heading name="Lead" level="h2" style="h2" type="article" />
 </div>
 <div class="p-8 canvas-alt">
   <Lead>
@@ -121,9 +126,7 @@ import Subheading from '../storybook-utilities/Subheading';
 {' '}
 
 <div class="flex items-center gap-2">
-  <Heading type="article" level="2">
-    Paragraph
-  </Heading>
+  <Heading name="Paragraph" level="h2" style="h2" type="article" />
 </div>
 <div class="p-8 canvas-alt">
   <Paragraph>
@@ -134,17 +137,17 @@ import Subheading from '../storybook-utilities/Subheading';
 </div>
 
  <div class="flex items-center gap-2">
-    <Heading type="article" level="2">List</Heading>
+    <Heading name="Lists" level="h2" style="h2" type="article" />
   </div>
   <div class="canvas-alt p-8">
-   <Heading type="article" level="3">Unordered List</Heading>
+    <Heading name="Unordered List" level="h3" style="h3" type="article" />
     <ul class="list-inside list-disc">
       <li>Item 1</li>
       <li>Item 2</li>
       <li>Item 3</li>
     </ul>
 
-    <Heading level="3" className="mt-4">Ordered List</Heading>
+    <Heading className="mt-4" name="Ordered Lits" level="h3" style="h3" type="article" />
     <ol class="list-inside list-decimal">
       <li>First item</li>
       <li>Second item</li>
@@ -154,9 +157,7 @@ import Subheading from '../storybook-utilities/Subheading';
   </div>
 
 <div class="flex items-center gap-2">
-  <Heading type="article" level="2">
-    Link
-  </Heading>
+  <Heading name="Link" level="h2" style="h2" type="article" />
 </div>
 <div class="p-8 canvas-alt">
   <a href="#">This is a hyperlink</a>
@@ -165,9 +166,7 @@ import Subheading from '../storybook-utilities/Subheading';
 {' '}
 
 <div class="flex items-center gap-2">
-  <Heading type="article" level="2">
-    Strong & Emphasis
-  </Heading>
+  <Heading name="Strong & Emphasis" level="h2" style="h2" type="article" />
 </div>
 <div class="p-8 canvas-alt">
   <strong>This text is strongly emphasized.</strong>
@@ -175,16 +174,16 @@ import Subheading from '../storybook-utilities/Subheading';
 </div>
 
   <div class="flex items-center gap-2">
-    <Heading type="article" level="2">Inline Text Element</Heading>
+    <Heading name="Inline Text Element" level="h2" style="h2" type="article" />
   </div>
   <div class="canvas-alt p-8">
-    <Heading type="article" level="3">Small Text</Heading>
+    <Heading name="Small Text" level="h3" style="h3" type="article" />
     <small>This is smaller text.</small>
 
-    <Heading type="article" level="3">Highlight</Heading>
+    <Heading name="Highlight" level="h3" style="h3" type="article" />
     <mark>This text is highlighted or marked for emphasis.</mark>
 
-    <Heading type="article" level="3">Deleted & Inserted</Heading>
+    <Heading name="Deleted & Inserted" level="h3" style="h3" type="article" />
     <del>This text is deleted.</del>
      <ins>This text is inserted.</ins>
 

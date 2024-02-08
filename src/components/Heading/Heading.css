@@ -1,0 +1,111 @@
+/**
+ * Heading Styles
+ */
+
+.heading-type-article-h1 {
+  @apply my-4 text-6xl font-bold;
+}
+
+.heading-type-article-h2 {
+  @apply mb-3 mt-6 text-3xl font-medium;
+}
+
+.heading-type-article-h3 {
+  @apply my-2 text-2xl font-medium;
+}
+
+.heading-type-article-h4 {
+  @apply my-2 text-xl font-medium;
+}
+
+.heading-type-article-h5 {
+  @apply my-1 text-lg font-medium;
+}
+
+.heading-type-article-h6 {
+  @apply my-1 text-base font-medium;
+}
+
+.heading-type-article-body {
+  @apply text-sm font-normal;
+}
+
+.heading-type-article-title {
+  @apply text-sm font-bold;
+}
+
+.heading-type-article-label {
+  @apply text-xs font-normal;
+}
+
+.heading-type-app-h1 {
+  @apply text-4xl font-bold;
+}
+
+.heading-type-app-h2 {
+  @apply text-2xl font-bold;
+}
+
+.heading-type-app-h3 {
+  @apply text-xl font-medium;
+}
+
+.heading-type-app-h4 {
+  @apply text-lg font-medium;
+}
+
+.heading-type-app-h5 {
+  @apply text-base font-medium;
+}
+
+.heading-type-app-h6 {
+  @apply text-base font-normal;
+}
+
+.heading-type-app-body {
+  @apply text-sm font-normal;
+}
+
+.heading-type-app-title {
+  @apply text-sm font-bold;
+}
+
+.heading-type-app-label {
+  @apply text-xs font-normal;
+}
+
+.heading-type-display-h1 {
+  @apply text-9xl font-bold;
+}
+
+.heading-type-display-h2 {
+  @apply text-8xl font-bold;
+}
+
+.heading-type-display-h3 {
+  @apply text-7xl font-bold;
+}
+
+.heading-type-display-h4 {
+  @apply text-6xl font-bold;
+}
+
+.heading-type-display-h5 {
+  @apply text-5xl font-bold;
+}
+
+.heading-type-display-h6 {
+  @apply text-4xl font-bold;
+}
+
+.heading-type-display-body {
+  @apply text-sm font-normal;
+}
+
+.heading-type-display-title {
+  @apply text-sm font-bold;
+}
+
+.heading-type-display-label {
+  @apply text-xs font-normal;
+}
