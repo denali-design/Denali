@@ -51,7 +51,7 @@ export const TWSpacingSystem = () => {
 
   return (
     <div>
-      <Heading level={2}>Spacing Primatives</Heading>
+      <Heading name="Spacing Primatives" level="h2" style="h2" type="article" />
       <p>
         Spacing primitives give you more control but should be used cautiously
         to ensure design consistency.

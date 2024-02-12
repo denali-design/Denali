@@ -3,6 +3,8 @@
  * @since 1.0.0
  */
 
+import { useState } from 'react';
+import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Heading from '../Heading/Heading';
 import Paragraph from '../Paragraph/Paragraph';
@@ -23,10 +25,21 @@ export interface AlertProps {
   type?: AlertType;
   className?: string;
   title: string;
-  message?: string; // alertMessage is optional
+  message?: string;
+  dismissible?: boolean;
 }
 
-const Alert = ({ type, className, title, message }: AlertProps) => {
+const Alert = ({
+  type,
+  className,
+  title,
+  message,
+  dismissible
+}: AlertProps) => {
+  // Set alert visibility state
+  const [isVisible, setIsVisible] = useState(true);
+  if (!isVisible) return null;
+
   let alertClass;
   let iconName;
   let iconColor: IconColor;
@@ -58,18 +71,37 @@ const Alert = ({ type, className, title, message }: AlertProps) => {
       iconColor = 'default';
   }
 
+  // Close alert when close button is clicked
+  const handleClose = () => setIsVisible(false);
+
   return (
-    <div className={`alert ${alertClass} ${className ?? ''}`}>
-      <div className="alert__heading">
-        <Icon color={iconColor} name={iconName} size="md" />
-        <Heading className="alert__title" level={2} size={5} type="app">
-          {title}
-        </Heading>
-      </div>
-      {message && (
-        <div className="alert__content">
-          <Paragraph className="alert__message">{message}</Paragraph>
+    <div className={`alert ${alertClass} ${className ?? ''}`} role="alert">
+      <div className="w-full">
+        <div className="alert__heading">
+          <Icon color={iconColor} name={iconName} size="md" />
+          <Heading
+            className="alert__title"
+            name={title}
+            level="h2"
+            style="h5"
+            type="app"
+          />
         </div>
+        {message && (
+          <div className="alert__content">
+            <Paragraph className="alert__message">{message}</Paragraph>
+          </div>
+        )}
+      </div>
+      {dismissible && (
+        <Button
+          iconColor="default"
+          iconOnly
+          iconRight="icon-control-close"
+          label="Close Alert"
+          variety="plain"
+          onPressEnd={handleClose}
+        />
       )}
     </div>
   );

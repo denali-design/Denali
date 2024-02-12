@@ -25,7 +25,13 @@ export const SpacingSystem = () => {
 
   return (
     <div>
-      <Heading level={2}>Spacing Tokens</Heading>
+      <Heading
+        className="calendar__heading"
+        name="Spacing Tokens"
+        level="h2"
+        style="h2"
+        type="article"
+      />
       <p>
         Spacing tokens are the recommended way to handle spacing in your app.
         They adhere to predefined scales which helps in maintaining consistency.

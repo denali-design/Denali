@@ -9,16 +9,11 @@ import {
   Button,
   Label,
   ListBox,
-  ListBoxItem,
   Popover,
   Select,
   SelectValue
 } from 'react-aria-components';
-import type {
-  ListBoxItemProps,
-  SelectProps,
-  ValidationResult
-} from 'react-aria-components';
+import type { SelectProps, ValidationResult } from 'react-aria-components';
 import { FieldError, Text } from 'react-aria-components';
 import Icon from '../Icon/Icon';
 import './SelectField.css';
@@ -71,23 +66,4 @@ function SelectField<T extends object>({
   );
 }
 
-/**
- * Represents an item in the SelectField.
- *
- * @param {ListBoxItemProps} props - The properties passed to the ListBoxItem component.
- * @returns {JSX.Element} The ListBoxItem component for the SelectField.
- */
-function SelectItem(props: ListBoxItemProps) {
-  return (
-    <ListBoxItem
-      {...props}
-      className={({ isFocused, isSelected }) =>
-        `select-item w-full ${isFocused ? 'focused' : ''} ${
-          isSelected ? 'selected' : ''
-        }`
-      }
-    />
-  );
-}
-
-export { SelectItem, SelectField as default };
+export default SelectField;

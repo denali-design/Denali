@@ -1,5 +1,5 @@
 import './assets/css/App.css';
-import { Heading } from './components/Heading/Heading';
+import Heading from './components/Heading/Heading';
 import denaliLogo from './assets/denali-logo.svg';
 
 function App() {
@@ -9,9 +9,13 @@ function App() {
         <img className="block h-24 w-auto" src={denaliLogo} alt="Denali" />
       </div>
 
-      <Heading className="sr-only" level={1}>
-        Denali
-      </Heading>
+      <Heading
+        className="text-center"
+        name="Denali"
+        level="h1"
+        style="h1"
+        type="app"
+      />
     </div>
   );
 }

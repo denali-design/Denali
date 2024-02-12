@@ -1,0 +1,33 @@
+/**
+ * Standard Padding
+ *
+ * Use these classes to add consistent padding to elements.
+ */
+.standard-padding {
+  @apply p-4 md:p-6 lg:p-8;
+}
+
+.standard-x-padding {
+  @apply px-4 md:px-6 lg:px-8;
+}
+
+.standard-y-padding {
+  @apply px-4 md:px-6 lg:px-8;
+}
+
+/**
+ * Standard Margin
+ *
+ * Use these classes to add consistent margin to elements.
+ */
+.standard-margin {
+  @apply my-4 md:my-6 lg:my-8;
+}
+
+.standard-x-margin {
+  @apply mx-4 md:mx-6 lg:mx-8;
+}
+
+.standard-y-margin {
+  @apply my-4 md:my-6 lg:my-8;
+}
