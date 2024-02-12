@@ -3,7 +3,7 @@
  * @since 1.0.0
  */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Heading from '../Heading/Heading';
