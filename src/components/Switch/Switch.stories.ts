@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Switch } from './Switch';
+import Switch from './Switch';
 
 const meta: Meta<typeof Switch> = {
   component: Switch,
@@ -13,6 +13,23 @@ type Story = StoryObj<typeof Switch>;
 
 export const Default: Story = {
   args: {
-    children: 'Switch'
+    value: 'Switch',
+    name: 'Switch'
+  }
+};
+
+export const Disabled: Story = {
+  args: {
+    value: 'Switch',
+    name: 'Switch',
+    isDisabled: true
+  }
+};
+
+export const ReadOnly: Story = {
+  args: {
+    value: 'Switch',
+    name: 'Switch',
+    isReadOnly: true
   }
 };

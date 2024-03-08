@@ -1,0 +1,42 @@
+/**
+ * Switch Styles
+ */
+.switch {
+  @apply flex items-center gap-2;
+}
+
+.switch__indicator {
+  @apply h-6 w-11 rounded-full border-2 transition duration-200 ease-in-out stroke-secondary;
+}
+
+.switch__indicator:before {
+  content: ' ';
+  @apply block h-5 w-5 rounded-full transition-all duration-200 canvas-secondary;
+}
+
+/**
+ * Indicator States
+ */
+.switch[data-selected] .switch__indicator:before {
+  @apply translate-x-full;
+}
+
+.switch[data-focused] > .switch__indicator {
+  @apply click-focus;
+}
+
+.switch[data-focus-visible] > .switch__indicator {
+  @apply tab-focus;
+}
+
+.switch[data-disabled] .switch__indicator {
+  @apply stroke-disabled;
+}
+
+.switch[data-disabled] .switch__indicator:before {
+  @apply canvas-pressed;
+}
+
+.switch[data-readonly] .switch__indicator:before {
+  @apply canvas-pressed;
+}
