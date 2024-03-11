@@ -161,6 +161,11 @@
   @apply type-danger;
 }
 
+.form-group__input::-webkit-search-cancel-button,
+.form-group__input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 /**
  * Error & Disabled States
  */
