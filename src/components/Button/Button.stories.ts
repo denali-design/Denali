@@ -46,6 +46,18 @@ export const IconOnly: Story = {
   }
 };
 
+export const IconOnlyNoPadding: Story = {
+  args: {
+    label: 'No Padding Icon Only',
+    iconColor: 'default',
+    iconRight: 'icon-action-arrowhead-down',
+    variety: 'plain',
+    iconOnly: true,
+    size: 'none',
+    iconSize: 'lg',
+  }
+};
+
 export const Black: Story = {
   args: {
     label: 'Black',
