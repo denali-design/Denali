@@ -13,7 +13,7 @@ import './Button.css';
 
 export interface ButtonProps extends AriaButtonProps {
   label: string;
-  size?: 'jumbo';
+  size?: 'jumbo' | 'default' | 'none';
   iconOnly?: boolean;
   variety?:
     | 'default'
@@ -25,6 +25,7 @@ export interface ButtonProps extends AriaButtonProps {
     | 'warning'
     | 'danger'
     | 'info';
+  iconSize?: 'sm' | 'md' | 'lg';
   iconColor?:
     | 'default'
     | 'primary'
@@ -61,7 +62,8 @@ const button = tv({
     },
     size: {
       jumbo: 'py-2 px-8 text-lg',
-      default: 'py-2 px-4'
+      default: 'py-2 px-4',
+      none: 'p-0'
     }
   },
   defaultVariants: {
@@ -88,7 +90,11 @@ function Button({
 
   // Handles rendering of the icons, if provided.
   const renderIcon = (iconName: string) => (
-    <Icon color={props.iconColor || 'default'} name={iconName} size="sm" />
+    <Icon
+      color={props.iconColor || 'default'}
+      name={iconName}
+      size={props.iconSize || 'md'}
+    />
   );
 
   return (
