@@ -9,7 +9,7 @@ const meta: Meta<typeof Avatar> = {
   parameters: {
     docs: {
       description: {
-        component: 'Displays an avatar image with fallbacks to icons or initials if the image is not available. Supports multiple sizes and modes. Designed to be accessible and meet WCAG 2.1 AA and Section 508 requirements.',
+        component: 'Displays an avatar image with fallbacks to icons or letters if the image is not available. Supports multiple sizes and modes. Designed to be accessible and meet WCAG 2.1 AA and Section 508 requirements.',
       },
     },
   },
@@ -19,17 +19,17 @@ const meta: Meta<typeof Avatar> = {
       description: 'Sets the size of the avatar.',
     },
     mode: {
-      control: { type: 'select', options: ['photo', 'icon', 'initial'] },
-      description: 'Determines the mode of the avatar: displaying a photo, an icon, or initials.',
+      control: { type: 'select', options: ['photo', 'icon', 'letter'] },
+      description: 'Determines the mode of the avatar: displaying a photo, an icon, or letters.',
     },
     fallbackMode: {
-      control: { type: 'select', options: ['icon', 'initial'] },
+      control: { type: 'select', options: ['icon', 'letter'] },
       description: 'Specifies the fallback mode used when the primary content (image or icon) is not available.',
-      defaultValue: 'initial',
+      defaultValue: 'letter',
     },
     name: { 
       control: 'text',
-      description: 'The name of the person or entity represented by the avatar. Used for alt text and initials.',
+      description: 'The name of the person or entity represented by the avatar. Used for alt text and letters.',
     },
     imageUrl: { 
       control: 'text',
@@ -45,13 +45,13 @@ export default meta;
 
 type Story = StoryObj<typeof Avatar>;
 
-export const Default: Story = {
+export const Large: Story = {
   args: {
     name: 'Denali Avatar',
     size: 'lg',
     mode: 'photo',
     imageUrl: 'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
-    fallbackMode: 'initial',
+    fallbackMode: 'letter',
     onPress: () => alert('OnPress event triggered'),
   },
   parameters: {
@@ -67,7 +67,7 @@ export const Medium: Story = {
     size: 'md',
     mode: 'photo',
     imageUrl: 'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
-    fallbackMode: 'initial',
+    fallbackMode: 'letter',
     onPress: () => alert('OnPress event triggered')
   }
 };
@@ -78,40 +78,34 @@ export const Small: Story = {
     size: 'sm',
     mode: 'photo',
     imageUrl: 'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
-    fallbackMode: 'initial',
+    fallbackMode: 'letter',
     onPress: () => alert('OnPress event triggered')
   }
 };
 
-export const NoImageLarge: Story = {
+export const LetterLarge: Story = {
   args: {
     name: 'Denali Avatar',
     size: 'lg',
-    mode: 'photo',
-    imageUrl: '',
-    fallbackMode: 'initial',
+    mode: 'letter',
     onPress: () => alert('OnPress event triggered')
   }
 };
 
-export const NoImageMedium: Story = {
+export const LetterMedium: Story = {
   args: {
     name: 'Denali Avatar',
     size: 'md',
-    mode: 'photo',
-    imageUrl: '',
-    fallbackMode: 'initial',
+    mode: 'letter',
     onPress: () => alert('OnPress event triggered')
   }
 };
 
-export const NoImageSmall: Story = {
+export const LetterSmall: Story = {
   args: {
     name: 'Denali Avatar',
     size: 'sm',
-    mode: 'photo',
-    imageUrl: '',
-    fallbackMode: 'initial',
+    mode: 'letter',
     onPress: () => alert('OnPress event triggered')
   }
 };

@@ -1,0 +1,31 @@
+/**
+ * Avatar Styles
+ */
+
+.avatar {
+  @apply flex items-center gap-0.5;
+}
+
+.avatar__img {
+  @apply block rounded-full border-2 stroke;
+}
+
+.avatar__img--lg {
+  @apply h-16 w-16 text-4xl font-bold;
+}
+
+.avatar__img--md {
+  @apply h-8 w-8 text-lg;
+}
+
+.avatar__img--sm {
+  @apply h-6 w-6 text-lg;
+}
+
+.avatar__circle {
+  @apply flex items-center justify-center rounded-full canvas-info;
+}
+
+.avatar abbr {
+  @apply no-underline;
+}
