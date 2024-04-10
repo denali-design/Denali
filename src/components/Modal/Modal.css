@@ -1,0 +1,61 @@
+/**
+ * Modal Styles
+ */
+
+.modal_overlay {
+  @apply fixed inset-0 z-40 flex items-center justify-center;
+  background: rgba(0, 0, 0, 0.5);
+  height: var(--visual-viewport-height);
+
+  &[data-entering] {
+    animation: modal-fade 200ms;
+  }
+
+  &[data-exiting] {
+    animation: modal-fade 150ms reverse ease-in;
+  }
+}
+
+.modal {
+  @apply min-h-[300px] min-w-[400px] max-w-[960px] rounded-lg border border-gray-400 bg-white text-black shadow-lg outline-none canvas type;
+
+  &[data-entering] {
+    animation: modal-zoom 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+.modal__header {
+  @apply flex flex-1 items-center justify-between p-2;
+}
+
+.modal__title {
+  @apply ml-4 text-2xl font-bold;
+}
+
+.modal__close-button {
+  @apply ml-auto flex h-12 w-12 items-center justify-center;
+}
+
+.modal__content {
+  @apply pb-8;
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-zoom {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
