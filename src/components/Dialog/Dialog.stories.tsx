@@ -39,11 +39,9 @@ export const Default: Story = {
       size: 'default',
       variety: 'danger'
     }
-    // Uncomment the following line to demonstrate navigating to a URL
-    // yesUrl: "https://example.com"
   },
   argTypes: {
-    onYes: { action: 'clicked' } // This makes the Storybook UI display an interactive part for the onYes prop
+    onYes: { action: 'clicked' }
   }
 };
 

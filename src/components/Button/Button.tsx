@@ -13,6 +13,7 @@ import './Button.css';
 
 export interface ButtonProps extends AriaButtonProps {
   label: string;
+  className?: string;
   size?: 'jumbo' | 'default' | 'none';
   iconOnly?: boolean;
   variety?:
@@ -78,6 +79,7 @@ const defaultProps = {
 };
 
 function Button({
+  className,
   iconOnly,
   label,
   iconLeft,
@@ -105,7 +107,7 @@ function Button({
       className={`button ${button({
         size: props.size || 'default',
         color: colorVariant
-      })} flex items-center gap-2`}
+      })} flex items-center gap-2 ${className}`}
     >
       {iconLeft && renderIcon(iconLeft)}
       {!iconOnly && label}
