@@ -12,7 +12,6 @@
 
 import React from 'react';
 import {
-  Button as AriaButton,
   Dialog as AriaDialog,
   DialogTrigger,
   Modal
