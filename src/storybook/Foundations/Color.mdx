@@ -1,0 +1,26 @@
+import { Meta, Unstyled } from '@storybook/blocks';
+import SwatchBook from '../storybook-utilities/SwatchBook';
+import Heading from '../../components/Heading/Heading';
+import Lead from '../../components/Lead/Lead';
+import Subheading from '../storybook-utilities/Subheading';
+
+<Meta title="Foundations/Colors" />
+
+<Unstyled>
+  <Subheading>Foundations</Subheading>
+
+  <Heading name="Color" level="h1" style="h1" type="article" />
+
+  <Lead>Harness the power of color to convey meaning, evoke emotions, and elevate design aesthetics.</Lead>
+
+  Denali leverages the [Tailwind CSS Color Palette](https://tailwindcss.com/docs/customizing-colors)
+  to use in components plus several custom additions, documented below. Like all Tailwind
+  color classes, you can use these custom colors by appending a context to the start
+  of the name, for example, bg-success-base will generate a background color using
+  the success-base color; using text-danger-base and hover:text-danger-focus will use
+  the base and focus versions of the danger color when viewed or hovered on.
+
+  <Heading name="Color Tokens" level="h2" style="h2" type="article" />
+
+  <SwatchBook />
+</Unstyled>

@@ -14,20 +14,19 @@ const meta: Meta<typeof Image> = {
   tags: ['autodocs'],
   argTypes: {
     imageProps: { control: 'object' },
-    caption: { control: 'text' },
-  },
+    caption: { control: 'text' }
+  }
 } as Meta;
 
 export default meta;
-
 
 type Story = StoryObj<typeof Figure>;
 export const Default: Story = {
   args: {
     imageProps: {
       src: 'https://placehold.co/400x300',
-      alt: 'Example image',
+      alt: 'Example image'
     },
-    caption: 'This is an example caption.',
-  },
+    caption: 'This is an example caption.'
+  }
 };

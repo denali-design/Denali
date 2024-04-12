@@ -20,8 +20,8 @@ const meta: Meta<typeof Image> = {
     width: { control: 'number' },
     height: { control: 'number' },
     onClick: { action: 'clicked' },
-    onError: { action: 'error' },
-  },
+    onError: { action: 'error' }
+  }
 } as Meta;
 
 export default meta;
@@ -30,23 +30,23 @@ type Story = StoryObj<typeof Image>;
 export const Default: Story = {
   args: {
     src: 'https://placehold.co/400x300',
-    alt: 'Example image',
-  },
+    alt: 'Example image'
+  }
 };
 
 export const AltTextMissing: Story = {
   args: {
     src: 'https://placehold.co/400x300',
-    alt: '',
-  },
+    alt: ''
+  }
 };
 
 export const WithCustomRole: Story = {
   args: {
     src: 'https://placehold.co/400x300',
     alt: 'Example image',
-    role: 'presentation',
-  },
+    role: 'presentation'
+  }
 };
 
 export const WithDimensions: Story = {
@@ -54,6 +54,6 @@ export const WithDimensions: Story = {
     src: 'https://placehold.co/400x300',
     alt: 'Example image',
     width: 400,
-    height: 300,
-  },
+    height: 300
+  }
 };

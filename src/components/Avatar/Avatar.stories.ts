@@ -9,39 +9,42 @@ const meta: Meta<typeof Avatar> = {
   parameters: {
     docs: {
       description: {
-        component: 'Displays an avatar image with fallbacks to icons or letters if the image is not available. Supports multiple sizes and modes. Designed to be accessible and meet WCAG 2.1 AA and Section 508 requirements.',
-      },
-    },
+        component:
+          'Displays an avatar image with fallbacks to icons or letters if the image is not available. Supports multiple sizes and modes. Designed to be accessible and meet WCAG 2.1 AA and Section 508 requirements.'
+      }
+    }
   },
   argTypes: {
     size: {
       control: { type: 'select', options: ['lg', 'md', 'sm'] },
-      description: 'Sets the size of the avatar.',
+      description: 'Sets the size of the avatar.'
     },
     mode: {
       control: { type: 'select', options: ['photo', 'icon', 'letter'] },
-      description: 'Determines the mode of the avatar: displaying a photo, an icon, or letters.',
+      description:
+        'Determines the mode of the avatar: displaying a photo, an icon, or letters.'
     },
     fallbackMode: {
       control: { type: 'select', options: ['icon', 'letter'] },
-      description: 'Specifies the fallback mode used when the primary content (image or icon) is not available.',
-      defaultValue: 'letter',
+      description:
+        'Specifies the fallback mode used when the primary content (image or icon) is not available.',
+      defaultValue: 'letter'
     },
-    name: { 
+    name: {
       control: 'text',
-      description: 'The name of the person or entity represented by the avatar. Used for alt text and letters.',
+      description:
+        'The name of the person or entity represented by the avatar. Used for alt text and letters.'
     },
-    imageUrl: { 
+    imageUrl: {
       control: 'text',
-      description: 'URL of the avatar image.',
+      description: 'URL of the avatar image.'
     },
     onPress: {
-      description: 'Handler for the press event, demonstrating interactivity.',
-    },
-  },
+      description: 'Handler for the press event, demonstrating interactivity.'
+    }
+  }
 };
 export default meta;
-
 
 type Story = StoryObj<typeof Avatar>;
 
@@ -50,15 +53,17 @@ export const Large: Story = {
     name: 'Denali Avatar',
     size: 'lg',
     mode: 'photo',
-    imageUrl: 'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
+    imageUrl:
+      'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
     fallbackMode: 'letter',
-    onPress: () => alert('OnPress event triggered'),
+    onPress: () => alert('OnPress event triggered')
   },
   parameters: {
     docs: {
-      storyDescription: 'The default large avatar displaying a photo. Demonstrates the `lg` size with a photo mode and includes an onPress event handler.',
-    },
-  },
+      storyDescription:
+        'The default large avatar displaying a photo. Demonstrates the `lg` size with a photo mode and includes an onPress event handler.'
+    }
+  }
 };
 
 export const Medium: Story = {
@@ -66,7 +71,8 @@ export const Medium: Story = {
     name: 'Denali Avatar',
     size: 'md',
     mode: 'photo',
-    imageUrl: 'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
+    imageUrl:
+      'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
     fallbackMode: 'letter',
     onPress: () => alert('OnPress event triggered')
   }
@@ -77,7 +83,8 @@ export const Small: Story = {
     name: 'Denali Avatar',
     size: 'sm',
     mode: 'photo',
-    imageUrl: 'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
+    imageUrl:
+      'https://fastly.picsum.photos/id/237/64/64.jpg?hmac=X2TqfZbF_z3IKVgBxfyhQe8zZCTFJNwJbUTlpJLP0hc',
     fallbackMode: 'letter',
     onPress: () => alert('OnPress event triggered')
   }

@@ -25,6 +25,6 @@ export const Default: Story = {
   args: {
     children: 'This is an example of a lead',
     variety: 'default',
-    className: '' 
+    className: ''
   }
 };
