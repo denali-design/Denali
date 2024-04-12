@@ -1,0 +1,322 @@
+import { Meta, Unstyled } from '@storybook/blocks';
+import Heading from '../../components/Heading/Heading';
+import { Icon } from '../../components/Icon/Icon';
+import { Paragraph } from '../../components/Paragraph/Paragraph';
+import {
+  DescriptionItem,
+  DescriptionList
+} from '../../components/DescriptionList/DescriptionList';
+
+import Lead from '../../components/Lead/Lead';
+import Subheading from '../storybook-utilities/Subheading';
+
+<Meta title="Foundations/Typography" />
+
+<Unstyled>
+  <Subheading>Foundations</Subheading>
+
+  <Heading name="Typography" level="h1" style="h1" type="article" />
+
+  <Lead>Bridging Legibility and Design</Lead>
+  Typography serves as a fundamental tool in establishing both information hierarchy and clarity. This guide presents each standard HTML typography element, detailing its specific use-case.
+
+  {' '}
+
+  <div class="flex items-center gap-2">
+    <Heading name="Heading" level="h2" style="h2" type="article" />
+  </div>
+
+  <div className="mb-8 rounded p-4 canvas-alt">
+    <Heading name="Type: App (Default)" level="h2" style="h2" type="app" />
+
+    <table className="mt-8 min-w-full">
+      <thead>
+        <tr>
+          <th className="w-24 text-left">Level</th>
+          <th className="text-left">Example</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {Array.from({ length: 6 }, (_, i) => i + 1).map((level) => (
+                <tr key={`app-${level}`}>
+                  <td>{level}</td>
+                  <td>
+                    <Heading
+                      name="Heading"
+                      level={`h${level}`}
+                      style={`h${level}`}
+                      type="app"
+                    />
+                  </td>
+                </tr>
+              ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div className="mb-8 rounded p-4 canvas-alt">
+    <Heading name="Type Display" level="h2" style="h2" type="display" />
+
+    <table className="mt-8 min-w-full">
+      <thead>
+        <tr>
+          <th className="w-24 text-left">Level</th>
+          <th className="text-left">Example</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {Array.from({ length: 6 }, (_, i) => i + 1).map((level) => (
+                <tr key={`display-${level}`}>
+                  <td>{level}</td>
+                  <td class="max-w-full">
+                    <Heading
+                      name="Display"
+                      level={`h${level}`}
+                      style={`h${level}`}
+                      type="display"
+                    />
+                  </td>
+                </tr>
+              ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div className="mb-8 rounded p-4 canvas-alt">
+    <Heading name="Article" level="h3" style="h3" type="article" />
+
+    <table className="mt-8 min-w-full">
+      <thead>
+        <tr>
+          <th className="w-24 text-left">Level</th>
+          <th className="text-left">Example</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {Array.from({ length: 6 }, (_, i) => i + 1).map((level) => (
+                <tr key={`article-${level}`}>
+                  <td>{level}</td>
+                  <td>
+                    <Heading
+                      name="Heading"
+                      level={`h${level}`}
+                      style={`h${level}`}
+                      type="article"
+                    />
+                  </td>
+                </tr>
+              ))}
+      </tbody>
+    </table>
+  </div>
+
+  {' '}
+
+  <div class="flex items-center gap-2">
+    <Heading name="Lead" level="h2" style="h2" type="article" />
+  </div>
+
+  <div class="p-8 canvas-alt">
+    <Lead>
+      The Lead text is designed to capture attention and provide a succinct
+      summary of the content that follows.{' '}
+    </Lead>
+  </div>
+
+  {' '}
+
+  <div class="flex items-center gap-2">
+    <Heading name="Paragraph" level="h2" style="h2" type="article" />
+  </div>
+
+  <div class="p-8 canvas-alt">
+    <Paragraph>
+      Whiskers, the tabby cat, defies nature by hiking Mount Denali. With keen
+      instincts and nimble paws, he reaches the summit, proving he's not just a
+      cat but a true mountaineer.
+    </Paragraph>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <Heading name="Lists" level="h2" style="h2" type="article" />
+  </div>
+
+  <div class="canvas-alt p-8">
+    <Heading name="Unordered List" level="h3" style="h3" type="article" />
+
+    <ul class="list-inside list-disc">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <Heading className="mt-4" name="Ordered Lits" level="h3" style="h3" type="article" />
+
+    <ol class="list-inside list-decimal">
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <Heading name="Link" level="h2" style="h2" type="article" />
+  </div>
+
+  <div class="p-8 canvas-alt">
+    <a href="#">This is a hyperlink</a>
+  </div>
+
+  {' '}
+
+  <div class="flex items-center gap-2">
+    <Heading name="Strong & Emphasis" level="h2" style="h2" type="article" />
+  </div>
+
+  <div class="p-8 canvas-alt">
+    <strong>This text is strongly emphasized.</strong>
+    <em>This text is emphasized.</em>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <Heading name="Inline Text Element" level="h2" style="h2" type="article" />
+  </div>
+
+  <div class="canvas-alt p-8">
+    <Heading name="Small Text" level="h3" style="h3" type="article" />
+
+    <small>This is smaller text.</small>
+
+    <Heading name="Highlight" level="h3" style="h3" type="article" />
+
+    <mark>This text is highlighted or marked for emphasis.</mark>
+
+    <Heading name="Deleted & Inserted" level="h3" style="h3" type="article" />
+
+    <del>This text is deleted.</del>
+    <ins>This text is inserted.</ins>
+  </div>
+
+  ###
+
+  ### Keyboard Input
+
+  {' '}
+
+  <kbd>Ctrl + S</kbd>
+
+  ### Variable
+
+  {' '}
+
+  <var>v</var>
+
+  ### Sample Output
+
+  {' '}
+
+  <samp>Output sample</samp>
+
+  ### Time
+
+  {' '}
+
+  <time dateTime="2022-10-09">October 9, 2022</time>
+
+  ### Citation
+
+  {' '}
+
+  <cite>Author Name</cite>
+
+  ## Block Elements <a name="block-elements" />
+
+  ### Blockquote
+
+  {' '}
+
+  <blockquote>This is a blockquote.</blockquote>
+
+  ### Code
+
+  For inline code: <code>`code`</code>
+
+  {' '}
+
+  <pre>This is preformatted text for blocks of code.</pre>
+
+  ### Address
+
+  {' '}
+
+  <address>
+    Denali Mountain
+
+    <br />
+
+    123 Elm Street
+
+    <br />
+
+    Denali Park, AK 99755
+  </address>
+
+  ### Description List
+
+  {' '}
+
+  <DescriptionList>
+    <DescriptionItem term="Term 1" description="Description for Term 1" />
+
+    <DescriptionItem term="Term 2" description="Description for Term 2" />
+  </DescriptionList>
+
+  ## Special Text Elements <a name="special-text-elements" />
+
+  ### Abbreviation
+
+  {' '}
+
+  <abbr title="Hypertext Markup Language">HTML</abbr>
+
+  ### Bold Text
+
+  {' '}
+
+  <b>Bolded text</b>
+
+  ### Italicized Text
+
+  {' '}
+
+  <i>Italicized text</i>
+
+  ### Defining Term
+
+  {' '}
+
+  <dfn>Term</dfn>
+
+  ### Inline Quotation
+
+  {' '}
+
+  <q>Inline quote</q>
+
+  ### Subscript and Superscript
+
+  H<sub>2</sub>O and E = mc<sup>2</sup>
+
+  ### Bidirectional Override
+
+  {' '}
+
+  <bdo dir="rtl">This text will go right-to-left.</bdo>
+
+  ### Line Break
+
+  Line 1<br />Line 2
+</Unstyled>

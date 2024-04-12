@@ -54,7 +54,7 @@ export const IconOnlyNoPadding: Story = {
     variety: 'plain',
     iconOnly: true,
     size: 'none',
-    iconSize: 'lg',
+    iconSize: 'lg'
   }
 };
 

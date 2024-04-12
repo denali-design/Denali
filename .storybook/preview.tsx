@@ -4,7 +4,6 @@ import './style.css';
 
 // Global parameters for Storybook
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'centered',
   docs: {
     toc: true
