@@ -43,6 +43,7 @@ export default {
   plugins: [
     require('@tailwindcss/container-queries'),
     require('./tailwind-plugins/semantic-colors'),
-    require('@tailwindcss/typography')
+    require('@tailwindcss/typography'),
+    require('tailwindcss-react-aria-components')
   ]
 };
