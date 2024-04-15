@@ -5,11 +5,14 @@
 
 import { useRef } from 'react';
 import { Button as AriaButton } from 'react-aria-components';
-import { ButtonProps as AriaButtonProps } from 'react-aria-components';
+import {
+  composeRenderProps,
+  ButtonProps as AriaButtonProps
+} from 'react-aria-components';
 import Icon from '../Icon/Icon';
 import { tv } from 'tailwind-variants';
+import { focusRing } from '../../utilities/focusRing';
 import '../../assets/css/App.css';
-import './Button.css';
 
 export interface ButtonProps extends AriaButtonProps {
   label: string;
@@ -40,7 +43,8 @@ export interface ButtonProps extends AriaButtonProps {
 }
 
 const button = tv({
-  base: 'rounded',
+  extend: focusRing,
+  base: 'rounded border-2 border-transparent outline-none flex items-center gap-2',
   variants: {
     color: {
       default:
@@ -79,7 +83,6 @@ const defaultProps = {
 };
 
 function Button({
-  className,
   iconOnly,
   label,
   iconLeft,
@@ -87,8 +90,6 @@ function Button({
   ...props
 }: ButtonProps) {
   const ref = useRef(null);
-  const colorVariant: keyof typeof button.variants.color =
-    props.variety || 'default';
 
   // Handles rendering of the icons, if provided.
   const renderIcon = (iconName: string) => (
@@ -104,10 +105,14 @@ function Button({
       ref={ref}
       {...props}
       aria-label={iconOnly ? label : undefined}
-      className={`button ${button({
-        size: props.size || 'default',
-        color: colorVariant
-      })} flex items-center gap-2 ${className}`}
+      className={composeRenderProps(props.className, (className, renderProps) =>
+        button({
+          ...renderProps,
+          color: props.variety,
+          size: props.size,
+          className
+        })
+      )}
     >
       {iconLeft && renderIcon(iconLeft)}
       {!iconOnly && label}

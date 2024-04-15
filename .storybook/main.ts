@@ -1,7 +1,11 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    '../src/**/*.mdx',
+    '../src/**/*.mdx',
+    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'
+  ],
   addons: [
     '@storybook/addon-docs',
     '@storybook/addon-links',
@@ -11,7 +15,8 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-themes',
     '@storybook/addon-mdx-gfm',
-    '@chromatic-com/storybook'
+    '@chromatic-com/storybook',
+    '@whitespace/storybook-addon-html'
   ],
   framework: {
     name: '@storybook/react-vite',
